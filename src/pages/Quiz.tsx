@@ -4,9 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import ProgressBar from '@/components/ProgressBar';
 import QuizQuestion from '@/components/QuizQuestion';
-import Button from '@/components/Button';
+import { Button } from '@/components/ui/button';
 import { useQuiz } from '@/contexts/QuizContext';
 import { questions } from '@/utils/quiz';
+import { ArrowLeft } from 'lucide-react';
 
 const Quiz = () => {
   const navigate = useNavigate();
@@ -34,6 +35,10 @@ const Quiz = () => {
     } else {
       nextQuestion();
     }
+  };
+
+  const handleBackToHome = () => {
+    navigate('/');
   };
   
   const isOptionSelected = currentQuestion && answers[currentQuestion.id];
@@ -66,8 +71,9 @@ const Quiz = () => {
             <div className="mt-10 flex gap-4">
               {!isFirstQuestion && (
                 <Button 
-                  variant="secondary"
+                  variant="outline"
                   onClick={previousQuestion}
+                  className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-colors uppercase font-semibold tracking-wide rounded-md"
                 >
                   Voltar
                 </Button>
@@ -76,9 +82,20 @@ const Quiz = () => {
               <Button
                 onClick={handleNext}
                 disabled={!isOptionSelected}
-                className={!isOptionSelected ? 'opacity-50 cursor-not-allowed' : ''}
+                className={`bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] transition-colors uppercase font-semibold tracking-wide rounded-md ${!isOptionSelected ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 {isLastQuestion ? 'Ver resultados' : 'Próxima'}
+              </Button>
+            </div>
+
+            <div className="mt-8">
+              <Button
+                variant="ghost"
+                onClick={handleBackToHome}
+                className="text-[#D4AF37] hover:text-[#E5BF48] hover:bg-transparent"
+              >
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                Voltar para página inicial
               </Button>
             </div>
           </div>

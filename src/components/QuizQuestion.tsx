@@ -26,7 +26,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
             className={`option-card bg-[#121212] hover:bg-[#1a1a1a] ${selectedOption === option.id ? 'selected border-[#D4AF37]' : 'border-gray-700'}`}
             onClick={() => onSelectOption(option.id)}
           >
-            <p className="text-[#E0E0E0] font-serif">{option.text}</p>
+            <p className="text-[#E0E0E0] font-serif text-justify">{option.text}</p>
           </div>
         ))}
       </div>

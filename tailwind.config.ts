@@ -71,6 +71,9 @@ export default {
 					DEFAULT: '#D4AF37',
 					light: '#CFB57C',
 					dark: '#AA8C2C',
+				},
+				amber: {
+					400: '#D4AF37',
 				}
 			},
 			borderRadius: {

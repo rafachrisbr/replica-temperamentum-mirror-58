@@ -2,9 +2,10 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
-import Button from '@/components/Button';
+import { Button } from '@/components/ui/button';
 import TemperamentCard from '@/components/TemperamentCard';
 import { useQuiz } from '@/contexts/QuizContext';
+import { ArrowLeft } from 'lucide-react';
 
 const Results = () => {
   const navigate = useNavigate();
@@ -45,7 +46,7 @@ const Results = () => {
           </div>
           
           <div className="mt-8">
-            <h3 className="text-xl font-serif mb-4">Outros Temperamentos em sua Personalidade</h3>
+            <h3 className="text-xl font-serif mb-4 text-amber-400">Outros Temperamentos em sua Personalidade</h3>
             <div className="grid gap-4">
               {results.slice(1).map((temperament) => (
                 <TemperamentCard
@@ -57,13 +58,17 @@ const Results = () => {
           </div>
           
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <Button onClick={handleRetakeQuiz}>
+            <Button 
+              onClick={handleRetakeQuiz}
+              className="bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] transition-colors uppercase font-semibold tracking-wide rounded-md"
+            >
               Refazer o teste
             </Button>
             
             <Button
               onClick={() => navigate('/')}
-              variant="secondary"
+              variant="outline"
+              className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-colors uppercase font-semibold tracking-wide rounded-md"
             >
               Página inicial
             </Button>
