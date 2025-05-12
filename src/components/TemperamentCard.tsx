@@ -15,20 +15,30 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
   const getTemperamentClass = () => {
     switch (name.toLowerCase()) {
       case 'sanguíneo':
-        return 'temperament-sanguine';
+        return 'bg-sanguine';
       case 'colérico':
-        return 'temperament-choleric';
+        return 'bg-choleric';
       case 'melancólico':
-        return 'temperament-melancholic';
+        return 'bg-melancholic';
       case 'fleumático':
-        return 'temperament-phlegmatic';
+        return 'bg-phlegmatic';
       default:
         return '';
     }
   };
   
+  const getTextClass = () => {
+    switch (name.toLowerCase()) {
+      case 'colérico':
+      case 'fleumático':
+        return 'text-black';
+      default:
+        return 'text-white';
+    }
+  };
+  
   return (
-    <div className={`temperament-card ${getTemperamentClass()}`}>
+    <div className={`rounded-lg p-6 ${getTemperamentClass()} ${getTextClass()} font-serif`}>
       <div className="flex justify-between items-center mb-4">
         <h3 className="text-xl font-semibold">{name}</h3>
         <span className="text-2xl font-bold">{percentage}%</span>

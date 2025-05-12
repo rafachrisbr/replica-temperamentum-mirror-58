@@ -12,7 +12,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({ currentStep, totalSteps }) =>
   return (
     <div className="progress-bar w-full">
       <div 
-        className="progress-fill bg-black"
+        className="progress-fill bg-[#D4AF37]"
         style={{ width: `${progress}%` }}
       />
     </div>

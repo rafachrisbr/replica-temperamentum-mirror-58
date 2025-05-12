@@ -66,6 +66,11 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				gold: {
+					DEFAULT: '#D4AF37',
+					light: '#CFB57C',
+					dark: '#AA8C2C',
 				}
 			},
 			borderRadius: {
@@ -91,6 +96,11 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				fadeIn: 'fadeIn 0.5s ease-in-out'
+			},
+			fontFamily: {
+				serif: ['Cinzel', 'serif'],
+				sans: ['Lato', 'sans-serif'],
+				text: ['Merriweather', 'serif'],
 			}
 		}
 	},

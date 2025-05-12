@@ -39,7 +39,7 @@ const Quiz = () => {
   const isOptionSelected = currentQuestion && answers[currentQuestion.id];
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
       
       <main className="flex-1 flex flex-col items-center justify-center p-6">
@@ -50,7 +50,7 @@ const Quiz = () => {
               totalSteps={questions.length}
             />
             
-            <div className="mt-2 flex justify-between text-sm text-gray-500">
+            <div className="mt-2 flex justify-between text-sm text-gray-400">
               <span>Pergunta {currentQuestionIndex + 1} de {questions.length}</span>
               {!isLastQuestion && <span>{Math.round(((currentQuestionIndex + 1) / questions.length) * 100)}%</span>}
               {isLastQuestion && <span>100%</span>}
@@ -86,6 +86,17 @@ const Quiz = () => {
           </div>
         </div>
       </main>
+      
+      <footer className="p-6 text-center text-[#A9A9A9] bg-[#121212]">
+        <div className="max-w-3xl mx-auto">
+          <div className="border-t border-[#444444] pt-4"></div>
+          <p className="text-[#D4AF37] font-serif uppercase italic my-3">IN TE, DOMINE, SPERAVI: NON CONFUNDAR IN AETERNUM.</p>
+          <p className="text-sm my-2">Este teste é uma ferramenta de autoconhecimento e não substitui o acompanhamento espiritual.</p>
+          <p className="text-xs my-2">Fontes principais: Ensinamentos do Pe. Paulo Ricardo (curso "Os Quatro Temperamentos") e Canção Nova (artigo "Qual é o seu temperamento?").</p>
+          <p className="text-xs my-2">© 2025 Rafael Christiano</p>
+          <p className="text-[#D4AF37] font-serif uppercase my-3">DEUS CARITAS EST.</p>
+        </div>
+      </footer>
     </div>
   );
 };
