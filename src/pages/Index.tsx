@@ -13,13 +13,11 @@ const Index = () => {
       
       <main className="flex-1 flex flex-col items-center justify-center p-6">
         <div className="max-w-2xl w-full text-center space-y-8">
-          <h1 className="text-3xl md:text-4xl font-serif font-semibold uppercase tracking-wider text-white">Descubra seu Temperamento</h1>
-          
           <div className="py-4">
             <img 
               src="/lovable-uploads/a13f180c-bb8c-4cbb-9bc1-7f0b7cb95564.png" 
               alt="Nossa Senhora com o Menino Jesus"
-              className="mx-auto max-w-full h-auto shadow-lg"
+              className="mx-auto w-48 h-auto shadow-lg"
             />
           </div>
           
@@ -65,7 +63,7 @@ const Index = () => {
           
           <div className="text-[#E0E0E0] text-justify font-serif max-w-2xl mx-auto">
             <p>
-              Bem-vindo à aplicação para descobrir o seu temperamento. Este teste é baseado nos ensinamentos sobre os quatro temperamentos: Colérico, Sanguíneo, Melancólico e Fleumático. Responda às 12 perguntas seguintes com sinceridade para uma análise mais precisa.
+              Bem-vindo à aplicação para descobrir o seu temperamento. Este teste é baseado nos ensinamentos sobre os quatro temperamentos: Colérico, Sanguíneo, Melancólico e Fleumático. Responda às 13 perguntas seguintes com sinceridade para uma análise mais precisa.
             </p>
           </div>
           
@@ -83,11 +81,11 @@ const Index = () => {
       <footer className="p-6 text-center text-[#A9A9A9] bg-[#121212]">
         <div className="max-w-3xl mx-auto">
           <div className="border-t border-[#444444] pt-4"></div>
-          <p className="text-[#D4AF37] font-serif uppercase italic my-3">IN TE, DOMINE, SPERAVI: NON CONFUNDAR IN AETERNUM.</p>
+          <p className="text-[#D4AF37] font-serif uppercase italic my-3">IN TE, DOMINE, SPERAVI NON CONFUNDAR IN AETERNUM</p>
           <p className="text-sm my-2">Este teste é uma ferramenta de autoconhecimento e não substitui o acompanhamento espiritual.</p>
           <p className="text-xs my-2">Fontes principais: Ensinamentos do Pe. Paulo Ricardo (curso "Os Quatro Temperamentos") e Canção Nova (artigo "Qual é o seu temperamento?").</p>
           <p className="text-xs my-2">© 2025 Rafael Christiano</p>
-          <p className="text-[#D4AF37] font-serif uppercase my-3">DEUS CARITAS EST.</p>
+          <p className="text-[#D4AF37] font-serif uppercase my-3">DEUS CARITAS EST</p>
         </div>
       </footer>
     </div>

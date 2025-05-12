@@ -6,12 +6,12 @@ const Header: React.FC = () => {
   const navigate = useNavigate();
   
   return (
-    <header className="w-full py-6 px-4 md:px-6 flex justify-between items-center">
+    <header className="w-full py-6 px-4 md:px-6 flex justify-center items-center">
       <div 
-        className="text-xl font-serif text-white cursor-pointer uppercase tracking-wider" 
+        className="text-2xl md:text-3xl font-serif text-white cursor-pointer uppercase tracking-wider" 
         onClick={() => navigate('/')}
       >
-        Temperamentum
+        Descubra seu Temperamento
       </div>
     </header>
   );
