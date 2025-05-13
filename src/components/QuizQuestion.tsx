@@ -19,7 +19,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
     <div className="flex flex-col gap-6 w-full max-w-2xl">
       <h2 className="text-xl md:text-2xl font-serif font-medium text-center text-white">{question}</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="flex flex-col gap-4">
         {options.map((option) => (
           <div
             key={option.id}
