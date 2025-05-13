@@ -61,7 +61,7 @@ const Quiz = () => {
             />
             
             <div className="mt-2 flex justify-between text-sm text-gray-400">
-              <span>Pergunta {currentQuestionIndex + 1} de {questions.length}</span>
+              <span className="first-letter:uppercase">pergunta {currentQuestionIndex + 1} de {questions.length}</span>
             </div>
           </div>
           
@@ -75,7 +75,7 @@ const Quiz = () => {
               size="sm"
             >
               <ArrowLeft className="mr-1 h-3 w-3" />
-              Voltar
+              voltar
             </Button>
             
             <Button 
@@ -85,7 +85,7 @@ const Quiz = () => {
               size="sm"
             >
               <RefreshCcw className="mr-1 h-3 w-3" />
-              Refazer
+              refazer
             </Button>
             
             <Button
@@ -95,7 +95,7 @@ const Quiz = () => {
               size="sm"
             >
               <Home className="mr-1 h-3 w-3" />
-              Início
+              início
             </Button>
           </div>
           
@@ -122,11 +122,11 @@ const Quiz = () => {
       <footer className="p-6 text-center text-[#A9A9A9] bg-[#121212]">
         <div className="max-w-3xl mx-auto">
           <div className="border-t border-[#444444] pt-4"></div>
-          <p className="text-[#D4AF37] font-serif uppercase italic my-3 text-center">IN TE, DOMINE, SPERAVI NON CONFUNDAR IN AETERNUM</p>
+          <p className="text-[#D4AF37] font-serif uppercase my-3 text-center">IN TE, DOMINE, SPERAVI NON CONFUNDAR IN AETERNUM</p>
           <p className="text-[#D4AF37] font-serif uppercase my-3 text-center">DEUS CARITAS EST</p>
-          <p className="text-sm my-2 text-center">© 2025 Rafael Christiano</p>
-          <p className="text-sm my-2">Este teste é uma ferramenta de autoconhecimento e não substitui o acompanhamento espiritual.</p>
-          <p className="text-xs my-2">Fontes principais: Ensinamentos do Pe. Paulo Ricardo (curso "Os Quatro Temperamentos") e Canção Nova (artigo "Qual é o seu temperamento?").</p>
+          <p className="text-sm my-2 text-center first-letter:uppercase">© 2025 rafael christiano</p>
+          <p className="text-sm my-2 first-letter:uppercase">este teste é uma ferramenta de autoconhecimento e não substitui o acompanhamento espiritual.</p>
+          <p className="text-xs my-2 first-letter:uppercase">fontes principais: ensinamentos do pe. paulo ricardo (curso "os quatro temperamentos") e canção nova (artigo "qual é o seu temperamento?").</p>
         </div>
       </footer>
     </div>
