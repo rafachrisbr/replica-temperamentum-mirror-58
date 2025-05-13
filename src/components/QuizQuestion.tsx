@@ -23,7 +23,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
         {options.map((option) => (
           <div
             key={option.id}
-            className={`option-card bg-[#121212] hover:bg-[#1a1a1a] ${selectedOption === option.id ? 'selected border-[#D4AF37]' : 'border-gray-700'}`}
+            className={`option-card bg-[#121212] hover:bg-[#1a1a1a] transition-colors ${selectedOption === option.id ? 'selected border-[#D4AF37]' : 'border-gray-700'}`}
             onClick={() => onSelectOption(option.id)}
           >
             <p className="text-[#E0E0E0] font-serif text-justify">{option.text}</p>

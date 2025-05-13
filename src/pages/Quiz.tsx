@@ -65,7 +65,41 @@ const Quiz = () => {
             </div>
           </div>
           
-          <div className="mt-8 flex flex-col items-center">
+          {/* Botões de navegação no topo */}
+          <div className="mb-6 flex justify-center gap-3">
+            <Button 
+              variant="outline"
+              onClick={handlePreviousQuestion}
+              disabled={currentQuestionIndex === 0}
+              className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-colors uppercase font-semibold tracking-wide text-xs rounded-md py-1 px-2"
+              size="sm"
+            >
+              <ArrowLeft className="mr-1 h-3 w-3" />
+              Voltar
+            </Button>
+            
+            <Button 
+              variant="outline"
+              onClick={handleResetQuiz}
+              className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-colors uppercase font-semibold tracking-wide text-xs rounded-md py-1 px-2"
+              size="sm"
+            >
+              <RefreshCcw className="mr-1 h-3 w-3" />
+              Refazer
+            </Button>
+            
+            <Button
+              variant="outline"
+              onClick={handleBackToHome}
+              className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-colors uppercase font-semibold tracking-wide text-xs rounded-md py-1 px-2"
+              size="sm"
+            >
+              <Home className="mr-1 h-3 w-3" />
+              Início
+            </Button>
+          </div>
+          
+          <div className="flex flex-col items-center">
             <QuizQuestion
               question={currentQuestion.text}
               options={currentQuestion.options}
@@ -76,41 +110,10 @@ const Quiz = () => {
             {/* Imagem centralizada abaixo das perguntas */}
             <div className="mt-6 flex justify-center">
               <img 
-                src="/temperamentum-image.png" 
-                alt="Os quatro temperamentos" 
+                src="/lovable-uploads/a4947d4e-6c78-4866-b111-328cfdc3e4f8.png" 
+                alt="Santo Agostinho" 
                 className="h-[100px] w-auto object-contain"
               />
-            </div>
-            
-            {/* Botões de navegação fixos */}
-            <div className="mt-10 flex gap-4 justify-center">
-              <Button 
-                variant="outline"
-                onClick={handlePreviousQuestion}
-                disabled={currentQuestionIndex === 0}
-                className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-colors uppercase font-semibold tracking-wide rounded-md"
-              >
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Voltar à questão anterior
-              </Button>
-              
-              <Button 
-                variant="outline"
-                onClick={handleResetQuiz}
-                className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-colors uppercase font-semibold tracking-wide rounded-md"
-              >
-                <RefreshCcw className="mr-2 h-4 w-4" />
-                Refazer o teste
-              </Button>
-              
-              <Button
-                variant="outline"
-                onClick={handleBackToHome}
-                className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-colors uppercase font-semibold tracking-wide rounded-md"
-              >
-                <Home className="mr-2 h-4 w-4" />
-                Voltar à página principal
-              </Button>
             </div>
           </div>
         </div>

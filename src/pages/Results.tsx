@@ -28,6 +28,7 @@ const Results = () => {
   }
   
   const dominantTemperament = results[0];
+  const secondTemperament = results[1];
   
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
@@ -45,7 +46,7 @@ const Results = () => {
               isDominant={true}
             />
             
-            <TemperamentChart results={results} />
+            <TemperamentChart results={[dominantTemperament, secondTemperament]} />
           </div>
           
           <div className="mt-10 flex gap-4 justify-center">
