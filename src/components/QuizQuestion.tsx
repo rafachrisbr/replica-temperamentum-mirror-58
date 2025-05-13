@@ -17,7 +17,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-6 w-full max-w-2xl">
-      <h2 className="text-xl md:text-2xl font-serif font-medium text-center text-white first-letter:uppercase">{question.toLowerCase()}</h2>
+      <h2 className="text-xl md:text-2xl font-text font-medium text-center text-white first-letter:uppercase">{question.toLowerCase()}</h2>
       
       <div className="flex flex-col gap-4">
         {options.map((option) => (
@@ -26,7 +26,7 @@ const QuizQuestion: React.FC<QuizQuestionProps> = ({
             className={`option-card bg-[#121212] hover:bg-[#1a1a1a] transition-colors ${selectedOption === option.id ? 'selected border-[#D4AF37]' : 'border-gray-700'}`}
             onClick={() => onSelectOption(option.id)}
           >
-            <p className="text-[#E0E0E0] font-serif text-justify first-letter:uppercase">{option.text.toLowerCase()}</p>
+            <p className="text-[#E0E0E0] font-text text-justify first-letter:uppercase">{option.text.toLowerCase()}</p>
           </div>
         ))}
       </div>

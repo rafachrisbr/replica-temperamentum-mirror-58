@@ -30,21 +30,21 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
   };
   
   return (
-    <div className="rounded-lg p-6 bg-[#121212] text-white font-serif shadow-md border border-gray-800">
+    <div className="rounded-lg p-6 bg-[#121212] text-white font-text shadow-md border border-gray-800">
       <div className="flex flex-col mb-4">
-        <h3 className="text-2xl font-semibold text-center mb-2" style={{ color: getTemperamentColor() }}>
+        <h3 className="text-2xl font-serif font-semibold text-center mb-2" style={{ color: getTemperamentColor() }}>
           {temperament.name}
         </h3>
         <div className="flex justify-center my-2">
           <span className="text-2xl text-white">✝</span>
         </div>
-        <p className="text-lg text-justify mb-6">{temperament.description}</p>
+        <p className="text-lg text-justify mb-6 first-letter:uppercase">{temperament.description.toLowerCase()}</p>
         
         {/* Tabela de Virtudes e Defeitos */}
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Book className="h-5 w-5 text-[#D4AF37]" />
-            <h4 className="text-xl text-[#D4AF37]">Virtudes e Defeitos</h4>
+            <h4 className="text-xl text-[#D4AF37]">virtudes e defeitos</h4>
           </div>
           
           <Card className="bg-transparent border-[#333333]">
@@ -52,8 +52,8 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
               <Table>
                 <TableHeader className="bg-[#222222]">
                   <TableRow>
-                    <TableCell className="font-serif text-lg text-[#D4AF37] w-1/2">Virtudes</TableCell>
-                    <TableCell className="font-serif text-lg text-[#D4AF37] w-1/2">Defeitos</TableCell>
+                    <TableCell className="font-serif text-lg text-[#D4AF37] w-1/2">virtudes</TableCell>
+                    <TableCell className="font-serif text-lg text-[#D4AF37] w-1/2">defeitos</TableCell>
                   </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -61,14 +61,14 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
                     <TableCell className="align-top p-4">
                       <ul className="list-disc pl-5 space-y-1">
                         {temperament.virtues.map((virtue, index) => (
-                          <li key={`virtue-${index}`} className="text-white">{virtue}</li>
+                          <li key={`virtue-${index}`} className="text-white first-letter:uppercase">{virtue.toLowerCase()}</li>
                         ))}
                       </ul>
                     </TableCell>
                     <TableCell className="align-top p-4 border-l border-[#333333]">
                       <ul className="list-disc pl-5 space-y-1">
                         {temperament.weaknesses.map((weakness, index) => (
-                          <li key={`weakness-${index}`} className="text-white">{weakness}</li>
+                          <li key={`weakness-${index}`} className="text-white first-letter:uppercase">{weakness.toLowerCase()}</li>
                         ))}
                       </ul>
                     </TableCell>
@@ -83,14 +83,14 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <User className="h-5 w-5 text-[#D4AF37]" />
-            <h4 className="text-xl text-[#D4AF37]">Santos com este temperamento</h4>
+            <h4 className="text-xl text-[#D4AF37]">santos com este temperamento</h4>
           </div>
           
           <Card className="bg-transparent border-[#333333] p-4">
             <CardContent className="pt-0">
               <ul className="list-disc pl-5 space-y-2">
                 {temperament.saints.map((saint, index) => (
-                  <li key={`saint-${index}`} className="text-white">{saint}</li>
+                  <li key={`saint-${index}`} className="text-white first-letter:uppercase">{saint.toLowerCase()}</li>
                 ))}
               </ul>
             </CardContent>
@@ -101,20 +101,20 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
         <div className="mb-8">
           <div className="flex items-center gap-2 mb-4">
             <Briefcase className="h-5 w-5 text-[#D4AF37]" />
-            <h4 className="text-xl text-[#D4AF37]">Profissões Recomendadas</h4>
+            <h4 className="text-xl text-[#D4AF37]">profissões recomendadas</h4>
           </div>
           
           <Card className="bg-transparent border-[#333333] p-4">
             <CardContent className="pt-0">
               <div className="text-white">
-                <p className="mb-3 text-justify">{temperament.careerProfile}</p>
+                <p className="mb-3 text-justify first-letter:uppercase">{temperament.careerProfile.toLowerCase()}</p>
                 <div className="flex flex-wrap gap-2 mt-3">
                   {temperament.suggestedProfessions.map((profession, index) => (
                     <span 
                       key={`profession-${index}`}
-                      className="px-3 py-1 bg-[#222222] rounded-full text-white text-sm"
+                      className="px-3 py-1 bg-[#222222] rounded-full text-white text-sm first-letter:uppercase"
                     >
-                      {profession}
+                      {profession.toLowerCase()}
                     </span>
                   ))}
                 </div>
@@ -127,18 +127,18 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
         <div className="mb-6">
           <div className="flex items-center gap-2 mb-4">
             <Quote className="h-5 w-5 text-[#D4AF37]" />
-            <h4 className="text-xl text-[#D4AF37]">Dicas Espirituais</h4>
+            <h4 className="text-xl text-[#D4AF37]">dicas espirituais</h4>
           </div>
           
           <Card className="bg-transparent border-[#333333] p-4">
             <CardContent className="pt-0">
-              <blockquote className="border-l-4 border-[#D4AF37] pl-4 italic text-white">
-                "{temperament.spiritualTips}"
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 italic text-white first-letter:uppercase">
+                "{temperament.spiritualTips.toLowerCase()}"
               </blockquote>
               <div className="mt-6 text-center">
                 <blockquote className="italic text-[#D4AF37] font-serif">
-                  "O tempo é uma impressão da eternidade. Assim, o homem, que é tempo, carrega em si os sinais da eternidade."
-                  <footer className="text-sm mt-2 text-white">— Santo Agostinho</footer>
+                  "o tempo é uma impressão da eternidade. assim, o homem, que é tempo, carrega em si os sinais da eternidade."
+                  <footer className="text-sm mt-2 text-white first-letter:uppercase">— santo agostinho</footer>
                 </blockquote>
               </div>
             </CardContent>

@@ -29,11 +29,11 @@ const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
   return (
     <Card className="bg-[#121212] text-white border-gray-700 w-full mt-6">
       <CardContent className="pt-6">
-        <h3 className="text-lg font-serif mb-4 text-center">Seu Temperamento Principal</h3>
+        <h3 className="text-lg font-serif mb-4 text-center first-letter:uppercase">seu temperamento principal</h3>
         
         <div className="flex justify-between mb-2">
-          <span style={{ color: getTemperamentColor(dominantTemperament.type) }}>
-            {dominantTemperament.name}
+          <span style={{ color: getTemperamentColor(dominantTemperament.type) }} className="first-letter:uppercase">
+            {dominantTemperament.name.toLowerCase()}
           </span>
           <span>{dominantTemperament.percentage}%</span>
         </div>
@@ -48,8 +48,8 @@ const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
         </div>
         
         <div className="flex justify-between mb-2 mt-4">
-          <span style={{ color: getTemperamentColor(secondTemperament.type) }}>
-            {secondTemperament.name}
+          <span style={{ color: getTemperamentColor(secondTemperament.type) }} className="first-letter:uppercase">
+            {secondTemperament.name.toLowerCase()}
           </span>
           <span>{secondTemperament.percentage}%</span>
         </div>

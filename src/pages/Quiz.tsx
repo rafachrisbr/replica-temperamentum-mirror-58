@@ -1,5 +1,5 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import ProgressBar from '@/components/ProgressBar';
@@ -20,6 +20,20 @@ const Quiz = () => {
     resetQuiz,
     calculateFinalResults
   } = useQuiz();
+  
+  const [shuffledOptions, setShuffledOptions] = useState([...questions[currentQuestionIndex].options]);
+  
+  // Function to shuffle options
+  const shuffleOptions = () => {
+    const currentQuestion = questions[currentQuestionIndex];
+    const shuffled = [...currentQuestion.options].sort(() => Math.random() - 0.5);
+    setShuffledOptions(shuffled);
+  };
+  
+  useEffect(() => {
+    // Shuffle options when question changes
+    shuffleOptions();
+  }, [currentQuestionIndex]);
 
   const currentQuestion = questions[currentQuestionIndex];
   const isLastQuestion = currentQuestionIndex === questions.length - 1;
@@ -102,7 +116,7 @@ const Quiz = () => {
           <div className="flex flex-col items-center">
             <QuizQuestion
               question={currentQuestion.text}
-              options={currentQuestion.options}
+              options={shuffledOptions}
               selectedOption={answers[currentQuestion.id] || null}
               onSelectOption={handleSelectOption}
             />

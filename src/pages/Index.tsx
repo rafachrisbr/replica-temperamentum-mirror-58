@@ -26,7 +26,7 @@ const Index = () => {
               a teoria dos temperamentos e as essências do ser humano
             </h2>
             
-            <div className="space-y-4 text-[#E0E0E0] text-justify font-serif">
+            <div className="space-y-4 text-[#E0E0E0] text-justify font-text">
               <p className="first-letter:uppercase">
                 a teoria dos temperamentos tem suas raízes na grécia antiga. hipócrates, conhecido como o pai da medicina, foi um dos primeiros a formular essa teoria. ele baseou-se nos quatro elementos primários do universo (terra, ar, fogo e água) e nas suas qualidades (calor, frio, úmido e seco) para deduzir quatro humores corporais: sangue, fleuma, bile amarela e bile negra.
               </p>
@@ -67,7 +67,7 @@ const Index = () => {
             </div>
           </div>
           
-          <div className="text-[#E0E0E0] text-justify font-serif max-w-2xl mx-auto">
+          <div className="text-[#E0E0E0] text-justify font-text max-w-2xl mx-auto">
             <p className="first-letter:uppercase">
               bem-vindo à aplicação para descobrir o seu temperamento. este teste é baseado nos ensinamentos sobre os quatro temperamentos: colérico, sanguíneo, melancólico e fleumático. responda às 13 perguntas seguintes com sinceridade para uma análise mais precisa.
             </p>
@@ -88,10 +88,10 @@ const Index = () => {
         <div className="max-w-3xl mx-auto">
           <div className="border-t border-[#444444] pt-4"></div>
           <p className="text-[#D4AF37] font-serif uppercase my-3">IN TE, DOMINE, SPERAVI NON CONFUNDAR IN AETERNUM</p>
+          <p className="text-[#D4AF37] font-serif uppercase my-3">DEUS CARITAS EST</p>
+          <p className="text-sm my-2 text-center first-letter:uppercase">© 2025 rafael christiano</p>
           <p className="text-sm my-2 first-letter:uppercase">este teste é uma ferramenta de autoconhecimento e não substitui o acompanhamento espiritual.</p>
           <p className="text-xs my-2 first-letter:uppercase">fontes principais: ensinamentos do pe. paulo ricardo (curso "os quatro temperamentos") e canção nova (artigo "qual é o seu temperamento?").</p>
-          <p className="text-xs my-2 first-letter:uppercase">© 2025 rafael christiano</p>
-          <p className="text-[#D4AF37] font-serif uppercase my-3">DEUS CARITAS EST</p>
         </div>
       </footer>
     </div>
