@@ -38,7 +38,7 @@ const Index = () => {
                 <h3 className="text-lg font-semibold mb-2 text-left">
                   <span className="text-[#D4AF37]">Temperamento</span>
                 </h3>
-                <p className="text-left first-letter:uppercase">
+                <p className="text-justify first-letter:uppercase">
                   o temperamento é a parte da nossa personalidade que é inata e influenciada por fatores biológicos. ele determina como reagimos emocionalmente e comportamentalmente às situações. existem quatro tipos principais de temperamentos, conforme descrito por galeno: sanguíneo, colérico, melancólico e fleumático.
                 </p>
               </div>
@@ -47,7 +47,7 @@ const Index = () => {
                 <h3 className="text-lg font-semibold mb-2 text-left">
                   <span className="text-[#D4AF37]">Carne</span>
                 </h3>
-                <p className="text-left first-letter:uppercase">
+                <p className="text-justify first-letter:uppercase">
                   a carne refere-se ao corpo físico, a parte tangível e material do ser humano. é através da carne que experimentamos o mundo físico e realizamos ações. o corpo é perecível e sujeito ao envelhecimento e à morte. no contexto espiritual, a carne pode ser vista como a parte que deve ser vencida, muitas vezes associada às tentações e aos impulsos naturais.
                 </p>
               </div>
@@ -56,12 +56,12 @@ const Index = () => {
                 <h3 className="text-lg font-semibold mb-2 text-left">
                   <span className="text-[#D4AF37]">Alma</span>
                 </h3>
-                <p className="text-left first-letter:uppercase">
+                <p className="text-justify first-letter:uppercase">
                   a alma é a essência imaterial e eterna do ser humano. ela é responsável pela nossa consciência, moralidade e conexão espiritual. a alma é vista como o princípio inteligente que reside em nós e que continua existindo após a morte física.
                 </p>
               </div>
               
-              <p className="pt-2 first-letter:uppercase">
+              <p className="text-justify pt-2 first-letter:uppercase">
                 essas três essências trabalham juntas para formar a complexidade do ser humano, integrando aspectos físicos, emocionais e espirituais.
               </p>
             </div>
