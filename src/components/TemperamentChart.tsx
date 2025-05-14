@@ -71,7 +71,7 @@ const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
             </div>
             {!isMobile && (
               <p className="text-xs text-gray-400 mt-1 italic">
-                {dominantTemperament.shortDescription || `Características predominantes de temperamento ${dominantTemperament.name.toLowerCase()}`}
+                {dominantTemperament.description ? dominantTemperament.description.substring(0, 100) + '...' : `Características predominantes de temperamento ${dominantTemperament.name.toLowerCase()}`}
               </p>
             )}
           </div>
@@ -98,7 +98,7 @@ const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
             </div>
             {!isMobile && (
               <p className="text-xs text-gray-400 mt-1 italic">
-                {secondTemperament.shortDescription || `Influência secundária do temperamento ${secondTemperament.name.toLowerCase()}`}
+                {secondTemperament.description ? secondTemperament.description.substring(0, 100) + '...' : `Influência secundária do temperamento ${secondTemperament.name.toLowerCase()}`}
               </p>
             )}
           </div>

@@ -65,7 +65,7 @@ const Results = () => {
               <h3 className="text-xl md:text-2xl font-serif uppercase" style={{ color: getTemperamentColor(dominantTemperament.type) }}>
                 {dominantTemperament.name}
               </h3>
-              <p className="text-sm md:text-base text-gray-300 italic mt-1">"{dominantTemperament.shortDescription || 'Conheça mais sobre este temperamento'}"</p>
+              <p className="text-sm md:text-base text-gray-300 italic mt-1">"{dominantTemperament.description ? dominantTemperament.description.substring(0, 120) + '...' : 'Conheça mais sobre este temperamento'}"</p>
             </div>
           </div>
           
