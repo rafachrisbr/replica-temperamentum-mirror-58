@@ -11,6 +11,11 @@ export interface Question {
   options: Option[];
 }
 
+export interface SaintWithQuote {
+  name: string;
+  quote: string;
+}
+
 export const questions: Question[] = [
   {
     id: 'q1',
@@ -361,7 +366,7 @@ export interface TemperamentResult {
   weaknesses: string[];
   careerProfile: string;
   suggestedProfessions: string[];
-  saints: string[];
+  saintsWithQuotes: SaintWithQuote[];
   spiritualTips: string;
 }
 
@@ -373,7 +378,16 @@ export const temperamentInfo = {
     weaknesses: ['Inconstância', 'Superficialidade', 'Falta de perseverança', 'Vaidade', 'Dificuldade de concentração', 'Ser muito falante'],
     careerProfile: 'O sanguíneo é excelente em lidar com pessoas e criar um ambiente positivo. São comunicativos, persuasivos e gostam de variedade. Tendem a ser bons em vendas, relações públicas, ensino e áreas que envolvam interação social e criatividade.',
     suggestedProfessions: ['Vendedor', 'Relações Públicas', 'Professor', 'Artista', 'Organizador de Eventos', 'Jornalista'],
-    saints: ['São Pedro Apóstolo', 'São Filipe Néri'],
+    saintsWithQuotes: [
+      {
+        name: 'São Pedro Apóstolo',
+        quote: "Mesmo depois de ter negado Cristo, seu temperamento o ajudou a se reerguer com esperança."
+      },
+      {
+        name: 'São Filipe Néri',
+        quote: "Prefiro o paraíso! A santidade consiste em estar sempre alegre."
+      }
+    ],
     spiritualTips: 'Buscar a perseverança, o autocontrole, a profundidade nos compromissos e a moderação. Pedir aptidão para abstinência, paciência, fé e paz.'
   },
   choleric: {
@@ -383,7 +397,16 @@ export const temperamentInfo = {
     weaknesses: ['Orgulho', 'Ira', 'Impaciência', 'Intolerância', 'Autoritarismo', 'Dificuldade em perdoar', 'Tendência a dominar'],
     careerProfile: 'No trabalho, o colérico é geralmente o líder, o pioneiro, aquele que toma a frente e busca resultados. São motivados por desafios e têm grande capacidade de execução. Podem se destacar em cargos de gestão, empreendedorismo, militarismo, política ou qualquer área que exija comando e ação rápida.',
     suggestedProfessions: ['CEO/Diretor', 'Empreendedor', 'Gerente de Projetos', 'Militar', 'Político', 'Advogado de Litígio'],
-    saints: ['São Paulo Apóstolo', 'Santo Inácio de Loyola'],
+    saintsWithQuotes: [
+      {
+        name: 'São Paulo Apóstolo',
+        quote: "Combati o bom combate, acabei a carreira, guardei a fé."
+      },
+      {
+        name: 'Santo Inácio de Loyola',
+        quote: "Dai-me vossa graça, que isso me basta. Tudo para a maior glória de Deus."
+      }
+    ],
     spiritualTips: 'Buscar a humildade, a mansidão, a paciência e a caridade. Aprender a depender de Deus, pedindo amor, bondade e benevolência.'
   },
   melancholic: {
@@ -393,7 +416,16 @@ export const temperamentInfo = {
     weaknesses: ['Pessimismo', 'Tendência à tristeza', 'Indecisão', 'Egocentrismo', 'Dificuldade em perdoar', 'Isolamento', 'Ser muito crítico'],
     careerProfile: 'O melancólico é detalhista, analítico e busca a perfeição em tudo que faz. São profundos e dedicados, preferindo trabalhos que exijam concentração e qualidade. Podem se destacar em áreas como pesquisa, artes, filosofia, escrita, e qualquer profissão que valorize a atenção aos detalhes e a profundidade.',
     suggestedProfessions: ['Pesquisador', 'Cientista', 'Artista Plástico', 'Músico', 'Escritor', 'Filósofo', 'Analista de Sistemas'],
-    saints: ['São João Evangelista', 'Santa Teresinha do Menino Jesus'],
+    saintsWithQuotes: [
+      {
+        name: 'São João Evangelista',
+        quote: "Permaneçamos no amor, pois Deus é amor, e quem permanece no amor, permanece em Deus."
+      },
+      {
+        name: 'Santa Teresinha do Menino Jesus',
+        quote: "Minha vocação é o amor. No coração da Igreja, eu serei o amor."
+      }
+    ],
     spiritualTips: 'Buscar a alegria, a esperança e a confiança em Deus e nos outros. Cultivar a ação e a objetividade, pedindo amor, paz, bondade e fé.'
   },
   phlegmatic: {
@@ -403,7 +435,16 @@ export const temperamentInfo = {
     weaknesses: ['Lentidão', 'Falta de iniciativa', 'Acomodação', 'Indiferença', 'Teimosia passiva', 'Falta de entusiasmo'],
     careerProfile: 'O fleumático é constante, confiável e bom em manter a paz e a ordem. São excelentes em trabalhos que exigem paciência, método e pouca pressão. São bons diplomatas, administradores, professores e em funções que requerem estabilidade e consistência.',
     suggestedProfessions: ['Administrador', 'Diplomata', 'Professor', 'Bibliotecário', 'Funcionário Público', 'Assistente Social'],
-    saints: ['São Tomás de Aquino', 'São Francisco de Sales'],
+    saintsWithQuotes: [
+      {
+        name: 'São Tomás de Aquino',
+        quote: "A graça não destrói a natureza, mas a aperfeiçoa."
+      },
+      {
+        name: 'São Francisco de Sales',
+        quote: "Nada por força, tudo por amor. As maiores tempestades se acalmam com uma gota de óleo."
+      }
+    ],
     spiritualTips: 'Buscar o zelo, a diligência e o entusiasmo pelas coisas de Deus. Cultivar a generosidade e a prontidão para servir, pedindo vontade determinada, amor, bondade e docilidade.'
   }
 };
@@ -427,8 +468,6 @@ export const calculateResults = (answers: Record<string, string>): TemperamentRe
     }
   });
   
-  const total = Object.values(counts).reduce((sum, count) => sum + count, 0);
-  
   // Create array of temperaments with their counts
   let temperaments = [
     { type: 'sanguine', count: counts.sanguine },
@@ -442,7 +481,6 @@ export const calculateResults = (answers: Record<string, string>): TemperamentRe
   let tiedTemps = temperaments.filter(t => t.count === topCount);
   
   // If there's a tie for first place, break it by giving a slight boost to one
-  // We'll do this deterministically based on a predefined order so results are consistent
   if (tiedTemps.length > 1) {
     // Predefined order of precedence (arbitrary but consistent)
     const precedenceOrder = ['sanguine', 'choleric', 'melancholic', 'phlegmatic'];
@@ -460,67 +498,81 @@ export const calculateResults = (answers: Record<string, string>): TemperamentRe
   }
   
   // Calculate percentages for each temperament
+  const total = Object.values(counts).reduce((sum, count) => sum + count, 0);
+  
   const results: TemperamentResult[] = [
     {
       type: 'sanguine',
       name: temperamentInfo.sanguine.name,
-      percentage: Math.round((counts.sanguine / (total + (tiedTemps.length > 1 ? 0.1 : 0))) * 100),
+      percentage: Math.round((counts.sanguine / total) * 100),
       description: temperamentInfo.sanguine.description,
       virtues: temperamentInfo.sanguine.virtues,
       weaknesses: temperamentInfo.sanguine.weaknesses,
       careerProfile: temperamentInfo.sanguine.careerProfile,
       suggestedProfessions: temperamentInfo.sanguine.suggestedProfessions,
-      saints: temperamentInfo.sanguine.saints,
+      saintsWithQuotes: temperamentInfo.sanguine.saintsWithQuotes,
       spiritualTips: temperamentInfo.sanguine.spiritualTips
     },
     {
       type: 'choleric',
       name: temperamentInfo.choleric.name,
-      percentage: Math.round((counts.choleric / (total + (tiedTemps.length > 1 ? 0.1 : 0))) * 100),
+      percentage: Math.round((counts.choleric / total) * 100),
       description: temperamentInfo.choleric.description,
       virtues: temperamentInfo.choleric.virtues,
       weaknesses: temperamentInfo.choleric.weaknesses,
       careerProfile: temperamentInfo.choleric.careerProfile,
       suggestedProfessions: temperamentInfo.choleric.suggestedProfessions,
-      saints: temperamentInfo.choleric.saints,
+      saintsWithQuotes: temperamentInfo.choleric.saintsWithQuotes,
       spiritualTips: temperamentInfo.choleric.spiritualTips
     },
     {
       type: 'melancholic',
       name: temperamentInfo.melancholic.name,
-      percentage: Math.round((counts.melancholic / (total + (tiedTemps.length > 1 ? 0.1 : 0))) * 100),
+      percentage: Math.round((counts.melancholic / total) * 100),
       description: temperamentInfo.melancholic.description,
       virtues: temperamentInfo.melancholic.virtues,
       weaknesses: temperamentInfo.melancholic.weaknesses,
       careerProfile: temperamentInfo.melancholic.careerProfile,
       suggestedProfessions: temperamentInfo.melancholic.suggestedProfessions,
-      saints: temperamentInfo.melancholic.saints,
+      saintsWithQuotes: temperamentInfo.melancholic.saintsWithQuotes,
       spiritualTips: temperamentInfo.melancholic.spiritualTips
     },
     {
       type: 'phlegmatic',
       name: temperamentInfo.phlegmatic.name,
-      percentage: Math.round((counts.phlegmatic / (total + (tiedTemps.length > 1 ? 0.1 : 0))) * 100),
+      percentage: Math.round((counts.phlegmatic / total) * 100),
       description: temperamentInfo.phlegmatic.description,
       virtues: temperamentInfo.phlegmatic.virtues,
       weaknesses: temperamentInfo.phlegmatic.weaknesses,
       careerProfile: temperamentInfo.phlegmatic.careerProfile,
       suggestedProfessions: temperamentInfo.phlegmatic.suggestedProfessions,
-      saints: temperamentInfo.phlegmatic.saints,
+      saintsWithQuotes: temperamentInfo.phlegmatic.saintsWithQuotes,
       spiritualTips: temperamentInfo.phlegmatic.spiritualTips
     }
   ];
   
-  // Sort by percentage (highest first)
-  return results.sort((a, b) => {
-    // First sort by percentage
-    if (b.percentage !== a.percentage) {
-      return b.percentage - a.percentage;
+  // Double-check for exact percentage ties and adjust if necessary
+  // This ensures no two temperaments have the same percentage
+  const sortedResults = results.sort((a, b) => b.percentage - a.percentage);
+  
+  for (let i = 0; i < sortedResults.length - 1; i++) {
+    if (sortedResults[i].percentage === sortedResults[i + 1].percentage) {
+      // Add 1 to the higher precedence temperament and reduce 1 from the lower
+      sortedResults[i].percentage += 1;
+      sortedResults[i + 1].percentage -= 1;
+      
+      // Ensure no negative percentages
+      if (sortedResults[i + 1].percentage < 0) {
+        sortedResults[i + 1].percentage = 0;
+      }
+      
+      // Ensure no percentage over 100
+      if (sortedResults[i].percentage > 100) {
+        sortedResults[i].percentage = 100;
+      }
     }
-    
-    // If percentages are equal (which should be rare now with our tie-breaking),
-    // use the predefined order as a secondary sort
-    const precedenceOrder = ['sanguine', 'choleric', 'melancholic', 'phlegmatic'];
-    return precedenceOrder.indexOf(a.type) - precedenceOrder.indexOf(b.type);
-  });
+  }
+  
+  // Final sort by percentage
+  return sortedResults.sort((a, b) => b.percentage - a.percentage);
 };

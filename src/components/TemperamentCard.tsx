@@ -29,6 +29,13 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
     }
   };
   
+  // Helper function to properly capitalize names
+  const capitalizeNames = (name: string) => {
+    return name.split(' ').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    ).join(' ');
+  };
+  
   return (
     <div className="rounded-lg p-6 bg-[#121212] text-white font-text shadow-md border border-gray-800">
       <div className="flex flex-col mb-4">
@@ -88,9 +95,12 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
           
           <Card className="bg-transparent border-[#333333] p-4">
             <CardContent className="pt-0">
-              <ul className="list-disc pl-5 space-y-2">
-                {temperament.saints.map((saint, index) => (
-                  <li key={`saint-${index}`} className="text-white first-letter:uppercase">{saint.toLowerCase()}</li>
+              <ul className="list-disc pl-5 space-y-4">
+                {temperament.saintsWithQuotes.map((saintWithQuote, index) => (
+                  <li key={`saint-${index}`} className="text-white">
+                    <span className="font-semibold">{capitalizeNames(saintWithQuote.name)}</span>: 
+                    <span className="italic ml-2">"{saintWithQuote.quote}"</span>
+                  </li>
                 ))}
               </ul>
             </CardContent>
