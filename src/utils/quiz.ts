@@ -429,12 +429,42 @@ export const calculateResults = (answers: Record<string, string>): TemperamentRe
   
   const total = Object.values(counts).reduce((sum, count) => sum + count, 0);
   
+  // Create array of temperaments with their counts
+  let temperaments = [
+    { type: 'sanguine', count: counts.sanguine },
+    { type: 'choleric', count: counts.choleric },
+    { type: 'melancholic', count: counts.melancholic },
+    { type: 'phlegmatic', count: counts.phlegmatic }
+  ];
+  
+  // Check for ties in the top position
+  let topCount = Math.max(...temperaments.map(t => t.count));
+  let tiedTemps = temperaments.filter(t => t.count === topCount);
+  
+  // If there's a tie for first place, break it by giving a slight boost to one
+  // We'll do this deterministically based on a predefined order so results are consistent
+  if (tiedTemps.length > 1) {
+    // Predefined order of precedence (arbitrary but consistent)
+    const precedenceOrder = ['sanguine', 'choleric', 'melancholic', 'phlegmatic'];
+    
+    // Find the temperament with highest precedence among the tied ones
+    let highestPrecedenceTemp = tiedTemps.reduce((highest, current) => {
+      const currentIndex = precedenceOrder.indexOf(current.type);
+      const highestIndex = precedenceOrder.indexOf(highest.type);
+      
+      return currentIndex < highestIndex ? current : highest;
+    }, tiedTemps[0]);
+    
+    // Add a small fractional boost to break the tie
+    counts[highestPrecedenceTemp.type as keyof typeof counts] += 0.1;
+  }
+  
   // Calculate percentages for each temperament
   const results: TemperamentResult[] = [
     {
       type: 'sanguine',
       name: temperamentInfo.sanguine.name,
-      percentage: Math.round((counts.sanguine / total) * 100),
+      percentage: Math.round((counts.sanguine / (total + (tiedTemps.length > 1 ? 0.1 : 0))) * 100),
       description: temperamentInfo.sanguine.description,
       virtues: temperamentInfo.sanguine.virtues,
       weaknesses: temperamentInfo.sanguine.weaknesses,
@@ -446,7 +476,7 @@ export const calculateResults = (answers: Record<string, string>): TemperamentRe
     {
       type: 'choleric',
       name: temperamentInfo.choleric.name,
-      percentage: Math.round((counts.choleric / total) * 100),
+      percentage: Math.round((counts.choleric / (total + (tiedTemps.length > 1 ? 0.1 : 0))) * 100),
       description: temperamentInfo.choleric.description,
       virtues: temperamentInfo.choleric.virtues,
       weaknesses: temperamentInfo.choleric.weaknesses,
@@ -458,7 +488,7 @@ export const calculateResults = (answers: Record<string, string>): TemperamentRe
     {
       type: 'melancholic',
       name: temperamentInfo.melancholic.name,
-      percentage: Math.round((counts.melancholic / total) * 100),
+      percentage: Math.round((counts.melancholic / (total + (tiedTemps.length > 1 ? 0.1 : 0))) * 100),
       description: temperamentInfo.melancholic.description,
       virtues: temperamentInfo.melancholic.virtues,
       weaknesses: temperamentInfo.melancholic.weaknesses,
@@ -470,7 +500,7 @@ export const calculateResults = (answers: Record<string, string>): TemperamentRe
     {
       type: 'phlegmatic',
       name: temperamentInfo.phlegmatic.name,
-      percentage: Math.round((counts.phlegmatic / total) * 100),
+      percentage: Math.round((counts.phlegmatic / (total + (tiedTemps.length > 1 ? 0.1 : 0))) * 100),
       description: temperamentInfo.phlegmatic.description,
       virtues: temperamentInfo.phlegmatic.virtues,
       weaknesses: temperamentInfo.phlegmatic.weaknesses,
@@ -482,5 +512,15 @@ export const calculateResults = (answers: Record<string, string>): TemperamentRe
   ];
   
   // Sort by percentage (highest first)
-  return results.sort((a, b) => b.percentage - a.percentage);
+  return results.sort((a, b) => {
+    // First sort by percentage
+    if (b.percentage !== a.percentage) {
+      return b.percentage - a.percentage;
+    }
+    
+    // If percentages are equal (which should be rare now with our tie-breaking),
+    // use the predefined order as a secondary sort
+    const precedenceOrder = ['sanguine', 'choleric', 'melancholic', 'phlegmatic'];
+    return precedenceOrder.indexOf(a.type) - precedenceOrder.indexOf(b.type);
+  });
 };

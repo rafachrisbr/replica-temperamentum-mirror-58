@@ -2,6 +2,8 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
+import LatinPhrase from '@/components/LatinPhrase';
+import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import TemperamentCard from '@/components/TemperamentCard';
 import TemperamentChart from '@/components/TemperamentChart';
@@ -33,6 +35,7 @@ const Results = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
+      <LatinPhrase />
       
       <main className="flex-1 flex flex-col items-center p-6">
         <div className="max-w-4xl w-full text-center space-y-8 animate-fadeIn">
@@ -70,16 +73,7 @@ const Results = () => {
         </div>
       </main>
       
-      <footer className="p-6 text-center text-[#A9A9A9] bg-[#121212]">
-        <div className="max-w-3xl mx-auto">
-          <div className="border-t border-[#444444] pt-4"></div>
-          <p className="text-[#D4AF37] font-serif uppercase my-3 text-center">IN TE, DOMINE, SPERAVI NON CONFUNDAR IN AETERNUM</p>
-          <p className="text-[#D4AF37] font-serif uppercase my-3 text-center">DEUS CARITAS EST</p>
-          <p className="text-sm my-2 text-center first-letter:uppercase">© 2025 rafael christiano</p>
-          <p className="text-sm my-2 first-letter:uppercase">este teste é uma ferramenta de autoconhecimento e não substitui o acompanhamento espiritual.</p>
-          <p className="text-xs my-2 first-letter:uppercase">fontes principais: ensinamentos do pe. paulo ricardo (curso "os quatro temperamentos") e canção nova (artigo "qual é o seu temperamento?").</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };
