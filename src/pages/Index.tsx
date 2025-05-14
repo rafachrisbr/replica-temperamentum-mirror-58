@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import Button from '@/components/Button';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import LatinPhrase from '@/components/LatinPhrase';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { ArrowRight } from 'lucide-react';
 
@@ -15,9 +14,8 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
-      <LatinPhrase />
       
-      <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-6 animate-fadeIn">
+      <main className="flex-1 flex flex-col items-center justify-center p-4 md:p-6 animate-fadeIn mt-8">
         <div className="max-w-2xl w-full text-center space-y-6 md:space-y-8">
           <div className="py-4">
             <img 
@@ -96,7 +94,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="mt-6 md:mt-8 animate-bounce">
+          <div className="mt-6 md:mt-8">
             <Button
               onClick={() => navigate('/quiz')}
               className="text-lg py-4 px-8 group relative overflow-hidden"
