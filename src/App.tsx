@@ -8,6 +8,7 @@ import { QuizProvider } from "@/contexts/QuizContext";
 import Index from "./pages/Index";
 import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
+import Temperamentos from "./pages/Temperamentos";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/quiz" element={<Quiz />} />
             <Route path="/results" element={<Results />} />
+            <Route path="/temperamentos" element={<Temperamentos />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
