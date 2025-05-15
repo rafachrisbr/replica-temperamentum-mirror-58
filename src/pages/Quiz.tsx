@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
-import LatinPhrase from '@/components/LatinPhrase';
 import Footer from '@/components/Footer';
 import ProgressBar from '@/components/ProgressBar';
 import QuizQuestion from '@/components/QuizQuestion';
@@ -67,7 +66,6 @@ const Quiz = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
-      <LatinPhrase />
       
       <main className="flex-1 flex flex-col items-center justify-center p-6">
         <div className="w-full max-w-4xl">

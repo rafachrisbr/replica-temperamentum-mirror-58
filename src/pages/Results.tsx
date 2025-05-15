@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
-import LatinPhrase from '@/components/LatinPhrase';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import TemperamentCard from '@/components/TemperamentCard';
@@ -50,7 +49,6 @@ const Results = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
-      <LatinPhrase />
       
       <main className="flex-1 flex flex-col items-center p-4 md:p-6 animate-fadeIn">
         <div className="max-w-4xl w-full text-center space-y-6 md:space-y-8">
