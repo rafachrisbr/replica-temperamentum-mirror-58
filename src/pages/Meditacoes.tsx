@@ -27,15 +27,43 @@ const Meditacoes = () => {
             Esta meditação busca explorar a figura singular de São João Evangelista, o discípulo a quem Jesus amava, sob a perspectiva de seu temperamento melancólico. Através da análise de passagens bíblicas e da reflexão sobre suas características – sensibilidade, intensidade e profundidade – procuraremos compreender como essa natureza particular moldou sua relação única com o Mestre e influenciou sua jornada espiritual. A identificação com João, especialmente para aqueles que compartilham traços melancólicos, pode oferecer um caminho de autoconhecimento e uma apreciação mais profunda do chamado ao amor e à caridade, tão centrais em seus escritos e em sua vida.
           </p>
           
-          <Separator className="my-10 bg-gray-700" />
-          
-          <h2 className="text-2xl md:text-3xl font-serif text-[#D4AF37] mb-6">
-            O Temperamento Melancólico de João: Sensibilidade, Intensidade e Profundidade
-          </h2>
-          
-          <p className="text-lg font-text text-gray-200 leading-relaxed mb-8">
-            O temperamento melancólico, frequentemente associado a uma rica vida interior, uma percepção aguçada das realidades espirituais e uma capacidade de sentir e amar com grande intensidade, parece encontrar um eco profundo na figura de São João Evangelista. Sua sensibilidade é palpável nos momentos de intimidade com Jesus, como na Última Ceia, onde, reclinado sobre o peito do Senhor, demonstra uma necessidade de proximidade e um carinho que transcendem a simples camaradagem. Essa mesma sensibilidade o torna receptivo aos mistérios divinos, permitindo-lhe captar nuances da mensagem de Cristo que talvez passassem despercebidas a outros. A intensidade de suas emoções se manifesta não apenas no amor devotado a Jesus, mas também na sua fidelidade inabalável, permanecendo ao pé da cruz em um momento de desolação e abandono quase universal. A profundidade de seu ser se reflete em seus escritos, especialmente no Evangelho que leva seu nome e no livro do Apocalipse, obras que mergulham nos mistérios da Palavra Encarnada e na consumação dos tempos com uma visão teológica e espiritual de rara penetração. Jesus, conhecendo intimamente a alma de cada um de seus discípulos, certamente percebia essa riqueza interior em João, o que pode ter contribuído para o laço especial que os unia, um laço que o próprio João descreve ao se referir a si mesmo como "o discípulo a quem Jesus amava" (Jo 13:23, <span className="italic">discipulus ille, quem diligebat Iesus</span>). Este amor não era exclusivo, mas certamente reconhecia e valorizava a singularidade da alma melancólica de João, capaz de um amor profundo, leal e contemplativo.
-          </p>
+<Separator className="my-10 bg-gray-700" />
+
+<h2 className="text-2xl md:text-3xl font-serif text-[#D4AF37] mb-6">
+  O Temperamento Melancólico de João: Sensibilidade, Intensidade e Profundidade
+</h2>
+
+{/* 
+  Aqui eu uso uma div como contêiner para aplicar os estilos de texto
+  e espaçamento entre parágrafos (space-y-8 cria gap vertical).
+*/}
+<div className="text-lg font-text text-gray-200 leading-relaxed mb-8 space-y-8">
+  <p>
+    O temperamento melancólico, frequentemente associado a uma rica vida interior, 
+    uma percepção aguçada das realidades espirituais e uma capacidade de sentir 
+    e amar com grande intensidade, parece encontrar um eco profundo na figura de 
+    São João Evangelista. Sua sensibilidade é palpável nos momentos de intimidade 
+    com Jesus, como na Última Ceia, onde, reclinado sobre o peito do Senhor, demonstra 
+    uma necessidade de proximidade e um carinho que transcendem a simples camaradagem. 
+    Essa mesma sensibilidade o torna receptivo aos mistérios divinos, permitindo-lhe 
+    captar nuances da mensagem de Cristo que talvez passassem despercebidas a outros. 
+    A intensidade de suas emoções se manifesta não apenas no amor devotado a Jesus, 
+    mas também na sua fidelidade inabalável, permanecendo ao pé da cruz em um momento 
+    de desolação e abandono quase universal.
+  </p>
+  <p>
+    A profundidade de seu ser se reflete em seus escritos, especialmente no Evangelho 
+    que leva seu nome e no livro do Apocalipse, obras que mergulham nos mistérios da 
+    Palavra Encarnada e na consumação dos tempos com uma visão teológica e espiritual 
+    de rara penetração. Jesus, conhecendo intimamente a alma de cada um de seus 
+    discípulos, certamente percebia essa riqueza interior em João, o que pode ter 
+    contribuído para o laço especial que os unia, um laço que o próprio João descreve 
+    ao se referir a si mesmo como "o discípulo a quem Jesus amava" (Jo 13:23, 
+    <span className="italic">discipulus ille, quem diligebat Iesus</span>). Este amor 
+    não era exclusivo, mas certamente reconhecia e valorizava a singularidade da alma 
+    melancólica de João, capaz de um amor profundo, leal e contemplativo.
+  </p>
+</div>
           
           <div className="w-full flex justify-center my-10">
             <img 
