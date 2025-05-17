@@ -76,8 +76,8 @@ const Meditacoes = () => {
               </CardHeader>
               <div className="relative h-48 overflow-hidden">
                 <img 
-                  src="/lovable-uploads/2fdedce6-694d-49cb-9385-8965e3582984.png" 
-                  alt="Os Três Amores"
+                  src="/lovable-uploads/1633b334-1fa7-4520-b9c9-31d93e65a940.png" 
+                  alt="Os Três Amores - Sagrado Coração"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -92,12 +92,11 @@ const Meditacoes = () => {
                 <Button 
                   variant="outline" 
                   className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
-                  onClick={openPdf}
                 >
-                  <span className="flex items-center justify-center gap-2">
-                    Abrir documento PDF
-                    <FileText size={16} />
-                  </span>
+                  <Link to="/meditacao-tres-amores" className="flex items-center justify-center gap-2 w-full">
+                    Ler meditação completa
+                    <ArrowRight size={16} />
+                  </Link>
                 </Button>
               </CardFooter>
             </Card>

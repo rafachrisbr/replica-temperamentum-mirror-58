@@ -11,6 +11,7 @@ import Results from "./pages/Results";
 import Temperamentos from "./pages/Temperamentos";
 import Meditacoes from "./pages/Meditacoes";
 import MeditacaoJoao from "./pages/MeditacaoJoao";
+import MeditacaoTresAmores from "./pages/MeditacaoTresAmores";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/temperamentos" element={<Temperamentos />} />
             <Route path="/meditacoes" element={<Meditacoes />} />
             <Route path="/meditacao-joao" element={<MeditacaoJoao />} />
+            <Route path="/meditacao-tres-amores" element={<MeditacaoTresAmores />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
