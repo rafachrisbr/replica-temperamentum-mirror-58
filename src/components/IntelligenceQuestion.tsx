@@ -19,13 +19,13 @@ const IntelligenceQuestion: React.FC<IntelligenceQuestionProps> = ({
       
       <div className="flex flex-col gap-4">
         {question.options.map((option) => (
-          <div
+          <button
             key={option.value}
-            className={`option-card bg-[#121212] hover:bg-[#1a1a1a] transition-colors ${selectedValue === option.value ? 'selected border-[#D4AF37]' : 'border-gray-700'}`}
+            className={`option-card p-4 rounded-lg text-center cursor-pointer transition-all transform hover:scale-102 border-2 ${selectedValue === option.value ? 'bg-[#1a1a1a] border-[#D4AF37]' : 'bg-[#121212] border-gray-700 hover:bg-[#1a1a1a]'}`}
             onClick={() => onSelectOption(option.value)}
           >
             <p className="text-[#E0E0E0] font-text text-center">{option.text}</p>
-          </div>
+          </button>
         ))}
       </div>
     </div>

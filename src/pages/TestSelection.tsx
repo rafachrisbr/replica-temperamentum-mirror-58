@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { Brain, Users, BookOpen } from 'lucide-react';
 
 const TestSelection = () => {
   const navigate = useNavigate();
@@ -30,7 +29,6 @@ const TestSelection = () => {
             {/* Teste de Temperamento */}
             <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full">
               <div className="mb-4 text-center">
-                <Users className="mx-auto mb-3 h-12 w-12 text-amber-400" />
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste de Temperamentos</h2>
               </div>
               <p className="text-gray-300 font-text flex-grow mb-6">
@@ -42,7 +40,6 @@ const TestSelection = () => {
                 className="w-full bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] 
                   transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
               >
-                <Users className="mr-2 h-4 w-4" />
                 Fazer Teste de Temperamento
               </Button>
             </div>
@@ -50,7 +47,6 @@ const TestSelection = () => {
             {/* Teste de Inteligências Múltiplas */}
             <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full">
               <div className="mb-4 text-center">
-                <Brain className="mx-auto mb-3 h-12 w-12 text-amber-400" />
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste de Inteligências</h2>
               </div>
               <p className="text-gray-300 font-text flex-grow mb-6">
@@ -62,7 +58,6 @@ const TestSelection = () => {
                 className="w-full bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] 
                   transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
               >
-                <Brain className="mr-2 h-4 w-4" />
                 Fazer Teste de Inteligências
               </Button>
             </div>
@@ -70,7 +65,6 @@ const TestSelection = () => {
             {/* Teste Completo */}
             <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-[#D4AF37]/30 flex flex-col h-full">
               <div className="mb-4 text-center">
-                <BookOpen className="mx-auto mb-3 h-12 w-12 text-amber-400" />
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste Completo</h2>
               </div>
               <p className="text-gray-300 font-text flex-grow mb-6">
@@ -83,7 +77,6 @@ const TestSelection = () => {
                 className="w-full bg-[#D4AF37] text-black border border-[#D4AF37] hover:bg-[#CFB57C] 
                   transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
               >
-                <BookOpen className="mr-2 h-4 w-4" />
                 Fazer Teste Completo
               </Button>
             </div>

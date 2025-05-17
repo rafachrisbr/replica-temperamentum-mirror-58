@@ -4,7 +4,6 @@ import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import TemperamentCard from '@/components/TemperamentCard';
 import IntelligenceCard from '@/components/IntelligenceCard';
 import { useCombinedTest } from '@/contexts/CombinedTestContext';
 import { getCombinedAnalysis, getPersonalDevelopmentTips } from '@/utils/combinedResults';
@@ -67,10 +66,10 @@ const CombinedResults = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-4 md:mt-8">
             <div>
               <h3 className="text-lg font-serif uppercase mb-4 text-amber-400">Temperamento Predominante</h3>
-              <TemperamentCard 
-                temperament={dominantTemperament}
-                isDominant={true}
-              />
+              <div className="p-4 bg-[#121212] rounded-lg border border-gray-700">
+                <h4 className="text-lg font-serif text-amber-400">{dominantTemperament.name}</h4>
+                <p className="text-gray-300 mt-2">{dominantTemperament.shortDescription || dominantTemperament.name}</p>
+              </div>
             </div>
             
             <div>

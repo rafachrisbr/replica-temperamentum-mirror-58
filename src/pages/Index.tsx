@@ -96,7 +96,7 @@ const Index = () => {
           
           <div className="mt-6 md:mt-8">
             <Button
-              onClick={() => navigate('/quiz')}
+              onClick={() => navigate('/testes')}
               className="text-lg py-4 px-8 group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center">

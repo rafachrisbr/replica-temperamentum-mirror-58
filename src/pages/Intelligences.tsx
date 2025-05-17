@@ -28,9 +28,8 @@ const Intelligences = () => {
   
   const handleSelectOption = (value: number) => {
     selectAnswer(currentQuestion.id, value);
-  };
-  
-  const handleNextQuestion = () => {
+    
+    // Avanço automático após selecionar uma opção
     if (isLastQuestion) {
       calculateFinalResults();
       navigate('/inteligencias-resultados');
@@ -108,16 +107,6 @@ const Intelligences = () => {
               selectedValue={answers[currentQuestion.id] || null}
               onSelectOption={handleSelectOption}
             />
-            
-            <div className="mt-6 w-full flex justify-center">
-              <Button 
-                onClick={handleNextQuestion}
-                disabled={!answers[currentQuestion.id]}
-                className="bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md px-6 py-2 w-full max-w-xs"
-              >
-                {isLastQuestion ? 'Ver resultados' : 'Próxima pergunta'}
-              </Button>
-            </div>
             
             {/* Imagem centralizada abaixo das perguntas com tamanho aumentado */}
             <div className="mt-6 flex justify-center">

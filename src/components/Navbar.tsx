@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { name: 'Início', path: '/' },
     { name: 'Temperamentos', path: '/temperamentos' },
-    { name: 'Teste', path: '/quiz' },
+    { name: 'Testes', path: '/testes' },
     { name: 'Meditações', path: '/meditacoes' },
   ];
 

@@ -60,7 +60,7 @@ const Quiz = () => {
   };
 
   const handleBackToHome = () => {
-    navigate('/');
+    navigate('/testes');
   };
 
   return (

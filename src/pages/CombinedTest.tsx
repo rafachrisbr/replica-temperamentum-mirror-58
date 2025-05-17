@@ -135,14 +135,6 @@ const CombinedTest = () => {
               onSelectTemperamentOption={handleSelectTemperamentOption}
               onSelectIntelligenceOption={handleSelectIntelligenceOption}
             />
-            
-            <div className="mt-6 flex justify-center">
-              <img 
-                src="/lovable-uploads/a4947d4e-6c78-4866-b111-328cfdc3e4f8.png" 
-                alt="Teste Combinado" 
-                className="h-[150px] w-auto object-contain opacity-50" 
-              />
-            </div>
           </div>
         </div>
       </main>
