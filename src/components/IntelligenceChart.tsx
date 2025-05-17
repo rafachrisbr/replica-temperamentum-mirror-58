@@ -1,0 +1,50 @@
+
+import React from 'react';
+import { IntelligenceResult } from '@/utils/intelligences';
+import { 
+  ResponsiveContainer, 
+  RadarChart, 
+  PolarGrid, 
+  PolarAngleAxis, 
+  PolarRadiusAxis, 
+  Radar, 
+  Tooltip 
+} from 'recharts';
+
+interface IntelligenceChartProps {
+  results: IntelligenceResult[];
+}
+
+const IntelligenceChart: React.FC<IntelligenceChartProps> = ({ results }) => {
+  // Prepare data for chart
+  const chartData = results.map(result => ({
+    subject: result.name.replace("Inteligência ", ""),
+    value: result.percentage,
+    fullMark: 100
+  }));
+
+  return (
+    <div className="w-full h-[400px] bg-[#121212] rounded-xl p-4 border border-gray-800">
+      <ResponsiveContainer width="100%" height="100%">
+        <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
+          <PolarGrid stroke="#444" />
+          <PolarAngleAxis dataKey="subject" tick={{ fill: '#e0e0e0', fontSize: 12 }} />
+          <PolarRadiusAxis angle={30} domain={[0, 100]} tick={{ fill: '#e0e0e0' }} />
+          <Radar
+            name="Suas Inteligências"
+            dataKey="value"
+            stroke="#D4AF37"
+            fill="#D4AF37"
+            fillOpacity={0.6}
+          />
+          <Tooltip 
+            contentStyle={{ backgroundColor: '#212121', borderColor: '#444', color: '#fff' }}
+            formatter={(value) => [`${value}%`, 'Pontuação']} 
+          />
+        </RadarChart>
+      </ResponsiveContainer>
+    </div>
+  );
+};
+
+export default IntelligenceChart;
