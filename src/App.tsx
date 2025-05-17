@@ -10,6 +10,7 @@ import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
 import Temperamentos from "./pages/Temperamentos";
 import Meditacoes from "./pages/Meditacoes";
+import MeditacaoJoao from "./pages/MeditacaoJoao";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,6 +28,7 @@ const App = () => (
             <Route path="/results" element={<Results />} />
             <Route path="/temperamentos" element={<Temperamentos />} />
             <Route path="/meditacoes" element={<Meditacoes />} />
+            <Route path="/meditacao-joao" element={<MeditacaoJoao />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
