@@ -88,7 +88,7 @@ const Temperamentos = () => {
               onClick={() => navigate('/quiz')}
               className="bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] transition-all uppercase font-semibold tracking-wide rounded-md"
             >
-              refazer o teste
+              Testes
             </Button>
           </div>
           
