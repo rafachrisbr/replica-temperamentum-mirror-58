@@ -40,10 +40,10 @@ const Index = () => {
                 // Versão completa para desktop
                 <>
                   <p className="first-letter:uppercase">
-                    a teoria dos temperamentos tem suas raízes na grécia antiga. hipócrates, conhecido como o pai da medicina, foi um dos primeiros a formular essa teoria. ele baseou-se nos quatro elementos primários do universo (terra, ar, fogo e água) e nas suas qualidades (calor, frio, úmido e seco) para deduzir quatro humores corporais: sangue, fleuma, bile amarela e bile negra.
+                    a teoria dos temperamentos tem suas raízes na grécia antiga. Hipócrates, conhecido como o pai da medicina, foi um dos primeiros a formular essa teoria. ele baseou-se nos quatro elementos primários do universo (terra, ar, fogo e água) e nas suas qualidades (calor, frio, úmido e seco) para deduzir quatro humores corporais: sangue, fleuma, bile amarela e bile negra.
                   </p>
                   <p className="first-letter:uppercase">
-                    mais tarde, galeno, outro influente médico grego, expandiu essa teoria em sua obra "de temperamentis". ele descreveu nove temperamentos, incluindo os quatro principais: sanguíneo, colérico, melancólico e fleumático. esses temperamentos foram relacionados ao equilíbrio dos humores no corpo e às características comportamentais das pessoas.
+                    mais tarde, Galeno, outro influente médico grego, expandiu essa teoria em sua obra "de temperamentis". ele descreveu nove temperamentos, incluindo os quatro principais: sanguíneo, colérico, melancólico e fleumático. esses temperamentos foram relacionados ao equilíbrio dos humores no corpo e às características comportamentais das pessoas.
                   </p>
                 </>
               )}
