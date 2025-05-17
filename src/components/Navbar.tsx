@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
             className="text-xl md:text-2xl font-serif text-white cursor-pointer tracking-wider" 
             onClick={() => navigate('/')}
           >
-            Descubra seu Temperamento
+            Conhece-te a ti mesmo
           </div>
           
           <div className="flex space-x-4">
