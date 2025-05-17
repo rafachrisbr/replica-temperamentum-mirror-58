@@ -73,7 +73,7 @@ const Index = () => {
                       <span className="text-[#D4AF37]">Alma</span>
                     </h3>
                     <p className="text-justify first-letter:uppercase">
-                      a alma é a essência imaterial e eterna do ser humano. ela é responsável pela nossa consciência, moralidade e conexão espiritual. a alma é vista como o princípio inteligente que reside em nós e que continua existindo após a morte física.
+                      a alma é a essência imaterial e imortal do ser humano. ela é responsável pela nossa consciência, moralidade e conexão espiritual. a alma é vista como o princípio inteligente que reside em nós e que continua existindo após a morte física.
                     </p>
                   </div>
                 </>
