@@ -40,7 +40,7 @@ const TestSelection = () => {
                 className="w-full bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] 
                   transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
               >
-                Fazer Teste de Temperamento
+                Teste de Temperamento
               </Button>
             </div>
             
@@ -58,7 +58,7 @@ const TestSelection = () => {
                 className="w-full bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] 
                   transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
               >
-                Fazer Teste de Inteligências
+                Teste de Inteligências
               </Button>
             </div>
             
@@ -77,7 +77,7 @@ const TestSelection = () => {
                 className="w-full bg-[#D4AF37] text-black border border-[#D4AF37] hover:bg-[#CFB57C] 
                   transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
               >
-                Fazer Teste Completo
+                Teste Completo
               </Button>
             </div>
           </div>
