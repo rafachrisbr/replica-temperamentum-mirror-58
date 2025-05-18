@@ -26,21 +26,21 @@ const TestSelection = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            {/* Teste de Temperamento */}
+            {/* Teste Rápido de Temperamento */}
             <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full">
               <div className="mb-4 text-center">
-                <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste de Temperamentos</h2>
+                <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste Rápido</h2>
               </div>
               <p className="text-gray-300 font-text flex-grow mb-6">
-                Descubra seu temperamento predominante: Sanguíneo, Colérico, Melancólico ou Fleumático. 
-                Aprenda como seus traços naturais influenciam suas emoções e comportamentos.
+                Descubra seu temperamento predominante através de 13 questões. 
+                Teste rápido e prático, porém menos preciso que os testes completos.
               </p>
               <Button 
                 onClick={() => navigate('/quiz')}
                 className="w-full bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] 
                   transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
               >
-                Teste de Temperamento
+                Teste Rápido
               </Button>
             </div>
             
@@ -66,14 +66,14 @@ const TestSelection = () => {
             {/* Teste de Inteligências Múltiplas */}
             <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full">
               <div className="mb-4 text-center">
-                <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste de Inteligências</h2>
+                <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Inteligências Múltiplas</h2>
               </div>
               <p className="text-gray-300 font-text flex-grow mb-6">
-                Identifique suas inteligências predominantes dentre as 8 inteligências múltiplas 
-                de Howard Gardner. Descubra suas habilidades naturais e como potencializá-las.
+                Identifique suas inteligências predominantes dentre as 7 inteligências múltiplas 
+                de Howard Gardner. Descubra suas habilidades naturais em 10 etapas de avaliação.
               </p>
               <Button 
-                onClick={() => navigate('/inteligencias')}
+                onClick={() => navigate('/inteligencias-multiplas')}
                 className="w-full bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] 
                   transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
               >
@@ -87,7 +87,8 @@ const TestSelection = () => {
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste Completo</h2>
               </div>
               <p className="text-gray-300 font-text flex-grow mb-6">
-                Realize o teste combinado de temperamento e inteligências múltiplas. 
+                Realize o teste completo que integra os três testes em sequência: Teste Rápido, 
+                Teste de Pe. Hock e Teste de Inteligências Múltiplas. 
                 Receba um relatório integrado mostrando como seus traços de personalidade 
                 e habilidades se complementam.
               </p>
@@ -106,7 +107,7 @@ const TestSelection = () => {
             <div className="font-text text-gray-300 space-y-4">
               <p>
                 Nossos testes são baseados em teorias consolidadas sobre temperamento e inteligências múltiplas.
-                O teste de temperamento identifica a predominância de quatro tipos clássicos: Sanguíneo (extrovertido e sociável), 
+                O teste rápido identifica a predominância de quatro tipos clássicos: Sanguíneo (extrovertido e sociável), 
                 Colérico (determinado e líder), Melancólico (analítico e perfeccionista) e Fleumático (calmo e equilibrado).
               </p>
               <p>
@@ -115,12 +116,13 @@ const TestSelection = () => {
               </p>
               <p>
                 O teste de inteligências múltiplas fundamenta-se na teoria do psicólogo Howard Gardner, que 
-                identificou oito tipos distintos de inteligência: Linguística, Lógico-matemática, Espacial, 
-                Musical, Corporal-cinestésica, Interpessoal, Intrapessoal e Naturalista.
+                identificou sete tipos distintos de inteligência: Verbal-Linguística, Lógico-matemática, Espacial, 
+                Musical, Corporal-cinestésica, Interpessoal e Intrapessoal.
               </p>
               <p>
-                Ao combinar os resultados de ambos os testes, você poderá entender melhor como sua personalidade 
-                e suas habilidades naturais se complementam e influenciam sua vida, relacionamentos e carreira.
+                O teste completo combina os três testes em sequência, fornecendo uma análise integrada de como seu temperamento
+                e suas inteligências se complementam, oferecendo insights valiosos para seu autoconhecimento, vida pessoal e 
+                desenvolvimento profissional.
               </p>
             </div>
           </div>

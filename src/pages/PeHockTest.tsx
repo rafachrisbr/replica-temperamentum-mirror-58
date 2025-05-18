@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -8,12 +7,15 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, Home } from 'lucide-react';
 import { peHockQuestions } from '@/utils/peHockQuiz';
+import { useCompleteTest } from '@/contexts/CompleteTestContext';
 
 const PeHockTest = () => {
   const navigate = useNavigate();
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, any>>({});
   const [startTime, setStartTime] = useState<Date | null>(null);
+  
+  const { currentTestStep, setPeHockResults, setCurrentTestStep } = useCompleteTest();
   
   useEffect(() => {
     setStartTime(new Date());
@@ -139,8 +141,15 @@ const PeHockTest = () => {
     // Store results in session storage
     sessionStorage.setItem('peHockResults', JSON.stringify(temperamentScores));
     
-    // Navigate to results page
-    navigate('/pe-hock-results');
+    // If part of the complete test flow, store results and navigate accordingly
+    if (currentTestStep === 'peHock') {
+      setPeHockResults(temperamentScores);
+      setCurrentTestStep('multipleIntelligences');
+      navigate('/inteligencias-multiplas');
+    } else {
+      // Otherwise, navigate to results page
+      navigate('/pe-hock-results');
+    }
   };
   
   const handleBackToHome = () => {
@@ -237,6 +246,17 @@ const PeHockTest = () => {
       
       <main className="flex-1 flex flex-col items-center justify-center p-6">
         <div className="w-full max-w-4xl">
+          {currentTestStep === 'peHock' && (
+            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-4 rounded-lg shadow-lg border border-gray-800 mb-6 text-center">
+              <h2 className="text-xl md:text-2xl font-serif text-center uppercase tracking-wider mb-2 text-amber-400">
+                Teste Completo
+              </h2>
+              <p className="text-sm md:text-base text-gray-300">
+                Etapa 2: Teste de Temperamento Pe. Hock
+              </p>
+            </div>
+          )}
+          
           <div className="mb-6">
             <ProgressBar 
               currentStep={currentQuestionIndex + 1}
