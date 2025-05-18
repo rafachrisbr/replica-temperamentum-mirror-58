@@ -19,7 +19,8 @@ interface ChartData {
 interface IntelligenceChartProps {
   results: Array<{
     name: string;
-    percentage: number;
+    percentage?: number;
+    score?: number;
     type: string;
   }>;
 }
@@ -28,7 +29,8 @@ const IntelligenceChart: React.FC<IntelligenceChartProps> = ({ results }) => {
   // Prepare data for chart
   const chartData: ChartData[] = results.map(result => ({
     subject: result.name.replace("Inteligência ", ""),
-    value: result.percentage,
+    value: result.percentage !== undefined ? result.percentage : 
+           result.score !== undefined ? Math.round((result.score / 70) * 100) : 0,
     fullMark: 100
   }));
 

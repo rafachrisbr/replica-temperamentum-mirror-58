@@ -87,8 +87,8 @@ const TestSelection = () => {
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste Completo</h2>
               </div>
               <p className="text-gray-300 font-text flex-grow mb-6">
-                Realize o teste completo que integra os três testes em sequência: Teste Rápido, 
-                Teste de Pe. Hock e Teste de Inteligências Múltiplas. 
+                Realize o teste completo que integra dois testes em sequência: 
+                Teste de Pe. Hock (50 questões) e Teste de Inteligências Múltiplas (10 etapas). 
                 Receba um relatório integrado mostrando como seus traços de personalidade 
                 e habilidades se complementam.
               </p>
@@ -120,9 +120,9 @@ const TestSelection = () => {
                 Musical, Corporal-cinestésica, Interpessoal e Intrapessoal.
               </p>
               <p>
-                O teste completo combina os três testes em sequência, fornecendo uma análise integrada de como seu temperamento
-                e suas inteligências se complementam, oferecendo insights valiosos para seu autoconhecimento, vida pessoal e 
-                desenvolvimento profissional.
+                O teste completo combina o teste de Pe. Hock e o teste de inteligências múltiplas em sequência, 
+                fornecendo uma análise integrada de como seu temperamento e suas inteligências se complementam, 
+                oferecendo insights valiosos para seu autoconhecimento, vida pessoal e desenvolvimento profissional.
               </p>
             </div>
           </div>

@@ -27,25 +27,34 @@ const Index = () => {
           
           <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-4 md:p-8 rounded-lg shadow-lg border border-gray-800">
             <h2 className="text-xl md:text-2xl font-serif uppercase tracking-wide text-[#D4AF37] mb-4 md:mb-6">
-              a teoria dos temperamentos e as essências do ser humano
+              Teoria dos Temperamentos e as Essências do Ser Humano
             </h2>
             
             <div className="space-y-4 text-[#E0E0E0] text-justify font-text">
-              {isMobile ? (
-                // Versão compacta para dispositivos móveis
+              <p className="first-letter:uppercase">
+                A teoria dos temperamentos tem suas raízes na Grécia Antiga, sendo inicialmente formulada por Hipócrates, conhecido como o pai da medicina. Ele baseou-se nos quatro elementos primários do universo (terra, ar, fogo e água) e em suas qualidades (calor, frio, úmido e seco) para deduzir quatro humores corporais: sangue, fleuma, bile amarela e bile negra. Esses humores, segundo Hipócrates, influenciavam diretamente a saúde e o comportamento das pessoas.
+              </p>
+              
+              {!isMobile && (
                 <p className="first-letter:uppercase">
-                  a teoria dos temperamentos, originada na grécia antiga, descreve quatro principais tipos de personalidade: sanguíneo, colérico, melancólico e fleumático. cada pessoa possui uma combinação única destes temperamentos, influenciando como reagimos às situações e nos relacionamos com os outros.
+                  Mais tarde, Galeno, outro influente médico grego, expandiu essa teoria em sua obra "De Temperamentis", descrevendo nove temperamentos, incluindo os quatro principais: sanguíneo, colérico, melancólico e fleumático. Galeno relacionou esses temperamentos ao equilíbrio dos humores no corpo e às características comportamentais de cada indivíduo. Apesar de suas origens antigas, a classificação dos quatro temperamentos permanece relevante, sendo frequentemente citada em obras modernas de psicologia e desenvolvimento humano (Feist, Feist & Roberts; Schultz & Schultz).
+                </p>
+              )}
+              
+              {!isMobile && (
+                <p className="first-letter:uppercase">
+                  O temperamento, portanto, é entendido como a parte inata da nossa personalidade, fortemente influenciada por fatores biológicos e genéticos. Ele determina como reagimos emocional e comportamentalmente às situações do cotidiano e permanece relativamente estável ao longo da vida. Pesquisadores contemporâneos, como Mary K. Rothbart e Stella Chess & Alexander Thomas, reforçam que o temperamento aparece já nos primeiros anos de vida, manifestando-se em padrões de reatividade, autorregulação e adaptação ao ambiente.
+                </p>
+              )}
+              
+              {isMobile ? (
+                <p className="first-letter:uppercase">
+                  O temperamento é entendido como a parte inata da nossa personalidade, influenciada por fatores biológicos e genéticos, que determina como reagimos às situações e permanece relativamente estável ao longo da vida.
                 </p>
               ) : (
-                // Versão completa para desktop
-                <>
-                  <p className="first-letter:uppercase">
-                    a teoria dos temperamentos tem suas raízes na grécia antiga. Hipócrates, conhecido como o pai da medicina, foi um dos primeiros a formular essa teoria. ele baseou-se nos quatro elementos primários do universo (terra, ar, fogo e água) e nas suas qualidades (calor, frio, úmido e seco) para deduzir quatro humores corporais: sangue, fleuma, bile amarela e bile negra.
-                  </p>
-                  <p className="first-letter:uppercase">
-                    mais tarde, Galeno, outro influente médico grego, expandiu essa teoria em sua obra "de temperamentis". ele descreveu nove temperamentos, incluindo os quatro principais: sanguíneo, colérico, melancólico e fleumático. esses temperamentos foram relacionados ao equilíbrio dos humores no corpo e às características comportamentais das pessoas.
-                  </p>
-                </>
+                <p className="first-letter:uppercase">
+                  No contexto da compreensão integral do ser humano, é fundamental considerar também as três essências que nos compõem: carne, alma e temperamento.
+                </p>
               )}
               
               <div className="pt-2">
@@ -53,7 +62,11 @@ const Index = () => {
                   <span className="text-[#D4AF37]">Temperamento</span>
                 </h3>
                 <p className="text-justify first-letter:uppercase">
-                  o temperamento é a parte da nossa personalidade que é inata e influenciada por fatores biológicos. ele determina como reagimos emocionalmente e comportamentalmente às situações. existem quatro tipos principais de temperamentos, conforme descrito por galeno: sanguíneo, colérico, melancólico e fleumático.
+                  {isMobile ? 
+                    "O temperamento é a parte da nossa personalidade que é inata e influenciada por fatores biológicos. Ele determina como reagimos emocionalmente e comportamentalmente às situações."
+                    :
+                    "O temperamento atua como ponte entre a carne e a alma, influenciando como sentimos, pensamos e agimos. É por meio do temperamento que se expressam tanto as tendências naturais do corpo quanto as aspirações mais profundas do espírito."
+                  }
                 </p>
               </div>
               
@@ -64,7 +77,7 @@ const Index = () => {
                       <span className="text-[#D4AF37]">Carne</span>
                     </h3>
                     <p className="text-justify first-letter:uppercase">
-                      a carne refere-se ao corpo físico, a parte tangível e material do ser humano. é através da carne que experimentamos o mundo físico e realizamos ações. o corpo é perecível e sujeito ao envelhecimento e à morte. no contexto espiritual, a carne pode ser vista como a parte que deve ser vencida, muitas vezes associada às tentações e aos impulsos naturais.
+                      A carne refere-se ao corpo físico, a parte tangível e material do ser humano. É por meio dela que experimentamos o mundo, realizamos ações e enfrentamos os limites da existência, como o envelhecimento e a morte. Em muitos contextos espirituais, a carne é vista como a dimensão que precisa ser disciplinada, pois está associada aos impulsos e às tentações naturais.
                     </p>
                   </div>
                   
@@ -73,7 +86,7 @@ const Index = () => {
                       <span className="text-[#D4AF37]">Alma</span>
                     </h3>
                     <p className="text-justify first-letter:uppercase">
-                      a alma é a essência imaterial e imortal do ser humano. ela é responsável pela nossa consciência, moralidade e conexão espiritual. a alma é vista como o princípio inteligente que reside em nós e que continua existindo após a morte física.
+                      A alma é a essência imaterial e imortal, responsável pela consciência, moralidade e conexão espiritual. Representa o princípio inteligente e transcendente que sobrevive à existência física, sendo fonte de valores, propósito e sentido.
                     </p>
                   </div>
                 </>
@@ -81,16 +94,30 @@ const Index = () => {
               
               <p className="text-justify pt-2 first-letter:uppercase">
                 {isMobile 
-                  ? "conheça seu temperamento e entenda melhor como ele influencia sua personalidade e relacionamentos."
-                  : "essas três essências trabalham juntas para formar a complexidade do ser humano, integrando aspectos físicos, emocionais e espirituais."
+                  ? "Conheça seu temperamento e entenda melhor como ele influencia sua personalidade e relacionamentos."
+                  : "Essas três dimensões – corpo, alma e temperamento – trabalham juntas para formar a complexidade do ser humano, integrando aspectos físicos, emocionais e espirituais. Compreender essa integração é essencial para o autoconhecimento, o crescimento pessoal e a busca pelo equilíbrio em todas as áreas da vida."
                 }
               </p>
+              
+              {!isMobile && (
+                <div className="text-sm text-gray-400 border-t border-gray-700 pt-4 mt-4">
+                  <p className="text-left">Fontes:</p>
+                  <ul className="list-disc list-inside text-left space-y-1">
+                    <li>Galeno. De Temperamentis.</li>
+                    <li>Feist, J.; Feist, G.J.; Roberts, T.-A. Teorias da Personalidade.</li>
+                    <li>Schultz, D.P.; Schultz, S.E. Teorias da Personalidade.</li>
+                    <li>Rothbart, M.K. (1981, 2004).</li>
+                    <li>Thomas, A.; Chess, S. (1977).</li>
+                    <li>Pereira Ito, Patrícia do Carmo; Guzzo, Raquel Souza Lobo. "Diferenças individuais: temperamento e personalidade; importância da teoria." Revista Estudos de Psicologia, PUC-Campinas, v. 19, n. 1, 2002.</li>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
           
           <div className="text-[#E0E0E0] text-justify font-text max-w-2xl mx-auto">
             <p className="first-letter:uppercase">
-              bem-vindo à aplicação para descobrir o seu temperamento. este teste é baseado nos ensinamentos sobre os quatro temperamentos: colérico, sanguíneo, melancólico e fleumático. responda às 13 perguntas seguintes com sinceridade para uma análise mais precisa.
+              Bem-vindo à aplicação para descobrir o seu temperamento e suas inteligências múltiplas. Nossos testes são baseados nos ensinamentos sobre os quatro temperamentos e na teoria das inteligências múltiplas de Howard Gardner. Responda às perguntas com sinceridade para uma análise mais precisa.
             </p>
           </div>
           
@@ -100,7 +127,7 @@ const Index = () => {
               className="text-lg py-4 px-8 group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center">
-                iniciar teste
+                Iniciar Teste
                 <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </span>
               <span className="absolute inset-0 bg-gradient-to-r from-[#2E7D32] to-[#1B5E20] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -111,7 +138,7 @@ const Index = () => {
                 onClick={() => navigate('/temperamentos')} 
                 className="text-[#D4AF37] hover:text-[#FFD700] underline underline-offset-4 text-sm transition-colors"
               >
-                conhecer os quatro temperamentos
+                Conhecer os quatro temperamentos
               </button>
             </div>
           </div>

@@ -53,7 +53,7 @@ const Intelligences = () => {
   // Get the current stage ID and look up any existing answer for this question
   const stageId = currentQuestion ? currentQuestion.id : '';
   const currentAnswerValue = stageId && answers[stageId] ? 
-    Object.values(answers[stageId])[0] : null;
+    (typeof answers[stageId] === 'number' ? answers[stageId] : null) : null;
 
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
