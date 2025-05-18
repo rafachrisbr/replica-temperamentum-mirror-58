@@ -15,10 +15,11 @@ import {
 import { toast } from 'sonner';
 import type { IntelligenceResult as IntelligencesResult } from '@/utils/intelligences';
 
-// Create a compatible adapter type
+// Corrigindo a interface para incluir todas as propriedades necessárias
 interface AdaptedIntelligenceResult extends IntelligencesResult {
   score?: number;
-  percentage?: number;
+  percentage: number; // Mudado de opcional para obrigatório
+  color: string; // Adicionando a propriedade color que estava faltando
 }
 
 const MultipleIntelligencesResults = () => {

@@ -22,6 +22,7 @@ interface IntelligenceChartProps {
     percentage?: number;
     score?: number;
     type: string;
+    color?: string; // Tornando color opcional para compatibilidade
   }>;
 }
 
