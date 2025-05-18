@@ -68,7 +68,7 @@ const CombinedResults = () => {
               <h3 className="text-lg font-serif uppercase mb-4 text-amber-400">Temperamento Predominante</h3>
               <div className="p-4 bg-[#121212] rounded-lg border border-gray-700">
                 <h4 className="text-lg font-serif text-amber-400">{dominantTemperament.name}</h4>
-                <p className="text-gray-300 mt-2">{dominantTemperament.shortDescription || dominantTemperament.name}</p>
+                <p className="text-gray-300 mt-2">{dominantTemperament.description}</p>
               </div>
             </div>
             
