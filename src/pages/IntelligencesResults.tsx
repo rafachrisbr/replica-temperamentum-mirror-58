@@ -87,7 +87,7 @@ const IntelligencesResults = () => {
                 considere incorporar estas atividades ao seu cotidiano:
               </p>
               <ul className="list-disc pl-5 space-y-1">
-                {dominantIntelligence.activities.slice(0, 3).map((activity, index) => (
+                {dominantIntelligence.activities && dominantIntelligence.activities.slice(0, 3).map((activity, index) => (
                   <li key={index}>{activity}</li>
                 ))}
               </ul>
@@ -114,7 +114,7 @@ const IntelligencesResults = () => {
             
             <Button
               variant="outline"
-              className="bg-transparent text-white border border-[#D4AF37]/50 hover:bg-[#D4AF37]/10 transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
+              className="bg-transparent text-white border border-white/20 hover:bg-[#D4AF37]/10 transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
               onClick={() => {
                 try {
                   navigator.share({

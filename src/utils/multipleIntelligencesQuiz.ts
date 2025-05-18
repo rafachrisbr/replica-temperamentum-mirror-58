@@ -1,4 +1,3 @@
-
 export interface IntelligenceStage {
   id: string;
   title: string;
@@ -14,6 +13,7 @@ export interface IntelligenceDescription {
   name: string;
   description: string;
   color: string;
+  activities: string[];
 }
 
 export const intelligenceDescriptions: Record<string, IntelligenceDescription> = {
@@ -21,43 +21,50 @@ export const intelligenceDescriptions: Record<string, IntelligenceDescription> =
     type: 'kinesthetic',
     name: 'Inteligência Corporal-Cinestésica',
     description: 'Habilidade para usar o corpo todo na expressão de ideias e sentimentos, e facilidade no uso das mãos para produzir ou transformar coisas. Inclui coordenação, equilíbrio, destreza, força, flexibilidade e velocidade.',
-    color: '#4CAF50' // Green
+    color: '#4CAF50', // Green
+    activities: ['Praticar exercícios físicos regularmente', 'Experimentar diferentes esportes', 'Aprender dança ou artes marciais']
   },
   spatial: {
     type: 'spatial',
     name: 'Inteligência Espacial',
     description: 'Capacidade de perceber com precisão o mundo visuo-espacial e realizar transformações nas próprias percepções iniciais. Envolve sensibilidade a cores, linhas, formas, espaços e as relações entre esses elementos.',
-    color: '#FF9800' // Orange
+    color: '#FF9800', // Orange
+    activities: ['Praticar desenho ou pintura', 'Montar quebra-cabeças complexos', 'Estudar mapas e criar rotas']
   },
   interpersonal: {
     type: 'interpersonal',
     name: 'Inteligência Interpessoal',
     description: 'Capacidade de perceber e fazer distinções no humor, intenções, motivações e sentimentos de outras pessoas. Inclui sensibilidade a expressões faciais, voz e gestos, e a capacidade de responder efetivamente a estes sinais.',
-    color: '#2196F3' // Blue
+    color: '#2196F3', // Blue
+    activities: ['Participar de trabalhos voluntários', 'Organizar eventos sociais', 'Praticar a escuta ativa em conversas']
   },
   intrapersonal: {
     type: 'intrapersonal',
     name: 'Inteligência Intrapessoal',
     description: 'Autoconhecimento e capacidade de agir adaptativamente com base neste conhecimento. Inclui ter uma imagem precisa de si mesmo, consciência dos estados de humor, intenções, motivações, temperamento e desejos.',
-    color: '#673AB7' // Deep Purple
+    color: '#673AB7', // Deep Purple
+    activities: ['Manter um diário pessoal', 'Praticar meditação regularmente', 'Definir metas pessoais e acompanhá-las']
   },
   linguistic: {
     type: 'linguistic',
     name: 'Inteligência Verbal-Linguística',
     description: 'Capacidade de usar as palavras de forma efetiva, seja oralmente ou na escrita. Inclui a habilidade de manipular a sintaxe, a semântica e as dimensões pragmáticas da linguagem.',
-    color: '#E91E63' // Pink
+    color: '#E91E63', // Pink
+    activities: ['Ler diferentes gêneros literários', 'Praticar escrita criativa', 'Aprender novos idiomas']
   },
   logical: {
     type: 'logical',
     name: 'Inteligência Lógico-Matemática',
     description: 'Habilidade de usar números de forma efetiva e raciocinar bem. Inclui sensibilidade a padrões lógicos, relações, proposições, funções e outras abstrações relacionadas.',
-    color: '#3F51B5' // Indigo
+    color: '#3F51B5', // Indigo
+    activities: ['Resolver problemas lógicos e puzzles', 'Praticar jogos estratégicos', 'Aprender programação ou estatística']
   },
   musical: {
     type: 'musical',
     name: 'Inteligência Musical',
     description: 'Capacidade de perceber, discriminar, transformar e expressar formas musicais. Inclui sensibilidade ao ritmo, tom ou melodia e timbre de uma peça musical.',
-    color: '#FFC107' // Amber
+    color: '#FFC107', // Amber
+    activities: ['Aprender a tocar um instrumento musical', 'Explorar diferentes gêneros musicais', 'Participar de um coral ou grupo musical']
   }
 };
 
@@ -201,6 +208,10 @@ export interface IntelligenceResult {
   percentage: number;
   description: string;
   color: string;
+  activities: string[];
+  strengths?: string[];
+  careers?: string[];
+  icon?: string;
 }
 
 export const calculateMultipleIntelligencesResults = (answers: Record<string, Record<string, number>>): IntelligenceResult[] => {
@@ -230,7 +241,7 @@ export const calculateMultipleIntelligencesResults = (answers: Record<string, Re
   // Calculate percentage (max score per intelligence is 70 - 7 points max per stage × 10 stages)
   const maxScorePerType = 70;
   
-  // Create results array
+  // Create results array with the updated properties
   const results: IntelligenceResult[] = Object.keys(scores).map(type => {
     const intelligenceType = type as keyof typeof scores;
     return {
@@ -239,7 +250,10 @@ export const calculateMultipleIntelligencesResults = (answers: Record<string, Re
       score: scores[intelligenceType],
       percentage: Math.round((scores[intelligenceType] / maxScorePerType) * 100),
       description: intelligenceDescriptions[intelligenceType].description,
-      color: intelligenceDescriptions[intelligenceType].color
+      color: intelligenceDescriptions[intelligenceType].color,
+      activities: intelligenceDescriptions[intelligenceType].activities || [],
+      strengths: [],
+      careers: []
     };
   });
   

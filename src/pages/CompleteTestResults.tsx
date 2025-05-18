@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -148,7 +147,7 @@ const CompleteTestResults = () => {
               <div>
                 <h3 className="text-center text-gray-300 mb-3">Teste Rápido</h3>
                 <div className="p-4 bg-[#0a0a0a] rounded-lg">
-                  <TemperamentChart temperaments={quickTemperamentResults} />
+                  <TemperamentChart results={quickTemperamentResults} />
                 </div>
               </div>
             </div>

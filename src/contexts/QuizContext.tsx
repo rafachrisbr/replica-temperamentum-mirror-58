@@ -9,9 +9,10 @@ interface QuizContextType {
   selectAnswer: (questionId: string, optionId: string) => void;
   nextQuestion: () => void;
   previousQuestion: () => void;
-  calculateFinalResults: () => void;
+  calculateFinalResults: () => TemperamentResult[]; // Update return type to match expected type
   resetQuiz: () => void;
   isQuizComplete: boolean;
+  isComplete: boolean; // Add this missing property
 }
 
 const QuizContext = createContext<QuizContextType | undefined>(undefined);
@@ -21,6 +22,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [results, setResults] = useState<TemperamentResult[] | null>(null);
   const [isQuizComplete, setIsQuizComplete] = useState(false);
+  const [isComplete, setIsComplete] = useState(false); // Add state for isComplete
 
   const selectAnswer = (questionId: string, optionId: string) => {
     setAnswers(prev => ({
@@ -41,10 +43,12 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  const calculateFinalResults = () => {
+  const calculateFinalResults = (): TemperamentResult[] => {
     const calculatedResults = calculateResults(answers);
     setResults(calculatedResults);
     setIsQuizComplete(true);
+    setIsComplete(true); // Set isComplete to true when calculations are done
+    return calculatedResults; // Ensure we return the calculated results
   };
 
   const resetQuiz = () => {
@@ -52,6 +56,7 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
     setAnswers({});
     setResults(null);
     setIsQuizComplete(false);
+    setIsComplete(false); // Reset isComplete state
   };
 
   return (
@@ -65,7 +70,8 @@ export const QuizProvider: React.FC<{ children: React.ReactNode }> = ({ children
         previousQuestion,
         calculateFinalResults,
         resetQuiz,
-        isQuizComplete
+        isQuizComplete,
+        isComplete // Include isComplete in the provider value
       }}
     >
       {children}
