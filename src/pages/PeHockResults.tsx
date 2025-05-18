@@ -78,6 +78,10 @@ const PeHockResults = () => {
     .sort((a, b) => b[1] - a[1])
     .map(([key, value]) => ({ key, value }));
   
+  // Obter o segundo temperamento mais forte
+  const secondTemperament = sortedTemperaments[1] ? sortedTemperaments[1].key : '';
+  const secondTemperamentDescription = secondTemperament ? getTemperamentDescription(secondTemperament) : '';
+  
   const totalPoints = Object.values(results).reduce((sum, score) => sum + score, 0);
   
   return (
@@ -103,12 +107,41 @@ const PeHockResults = () => {
             </div>
           </div>
           
-          {/* Resultados detalhados */}
-          <div className="p-6 bg-[#121212] rounded-lg border border-gray-800 mt-8 text-left">
-            <h3 className="text-xl font-serif uppercase mb-4 text-amber-400 text-center">Análise Detalhada</h3>
-            <div className="text-gray-300 font-text space-y-4">
-              <p>{temperamentDescription}</p>
+          {/* Resultados detalhados - Temperamentos principais */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Temperamento Dominante */}
+            <div className="p-6 bg-[#121212] rounded-lg border border-amber-500/30 text-left">
+              <h3 className="text-xl font-serif uppercase mb-2 text-amber-400">
+                {getTemperamentName(dominantTemperament)}
+              </h3>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm bg-amber-500/20 px-2 py-1 rounded text-amber-300">
+                  Predominante
+                </span>
+                <span className="text-lg font-semibold text-white">
+                  {Math.round((sortedTemperaments[0].value / totalPoints) * 100)}%
+                </span>
+              </div>
+              <p className="text-gray-300 text-sm">{temperamentDescription}</p>
             </div>
+            
+            {/* Segundo Temperamento */}
+            {secondTemperament && (
+              <div className="p-6 bg-[#121212] rounded-lg border border-gray-700 text-left">
+                <h3 className="text-xl font-serif uppercase mb-2 text-gray-200">
+                  {getTemperamentName(secondTemperament)}
+                </h3>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm bg-gray-700/30 px-2 py-1 rounded text-gray-300">
+                    Secundário
+                  </span>
+                  <span className="text-lg font-semibold text-white">
+                    {Math.round((sortedTemperaments[1].value / totalPoints) * 100)}%
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm">{secondTemperamentDescription}</p>
+              </div>
+            )}
           </div>
           
           {/* Tabela de pontuação */}

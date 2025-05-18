@@ -10,6 +10,7 @@ import {
   Bar, BarChart, XAxis, YAxis, CartesianGrid, Tooltip, 
   ResponsiveContainer, Cell, TooltipProps 
 } from 'recharts';
+import DetailedIntelligenceDescription from '@/components/DetailedIntelligenceDescription';
 
 const MultipleIntelligencesResults = () => {
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ const MultipleIntelligencesResults = () => {
   }));
   
   const dominantIntelligence = results[0];
+  const secondaryIntelligence = results[1];
   const totalMaxScore = 70; // 10 stages × 7 points max
 
   const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
@@ -159,6 +161,25 @@ const MultipleIntelligencesResults = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+          
+          {/* Descrições detalhadas das duas principais inteligências */}
+          <div className="bg-[#121212] p-6 rounded-lg border border-gray-800 mb-8">
+            <h2 className="text-xl font-serif uppercase mb-4 text-amber-400 text-center">
+              Suas Inteligências Dominantes
+            </h2>
+            
+            <div className="space-y-6">
+              <DetailedIntelligenceDescription 
+                type={dominantIntelligence.type} 
+                name={dominantIntelligence.name} 
+              />
+              
+              <DetailedIntelligenceDescription 
+                type={secondaryIntelligence.type} 
+                name={secondaryIntelligence.name} 
+              />
             </div>
           </div>
           

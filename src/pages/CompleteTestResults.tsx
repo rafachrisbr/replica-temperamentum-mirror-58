@@ -12,11 +12,12 @@ import {
   ResponsiveContainer, Cell, TooltipProps 
 } from 'recharts';
 import { getTemperamentDescription } from '@/utils/peHockQuiz';
+import DetailedIntelligenceDescription from '@/components/DetailedIntelligenceDescription';
+import TemperamentIntelligenceRelation from '@/components/TemperamentIntelligenceRelation';
 
 const CompleteTestResults = () => {
   const navigate = useNavigate();
   const { 
-    quickTemperamentResults, 
     peHockResults, 
     multipleIntelligencesResults, 
     resetAllTests,
@@ -25,23 +26,21 @@ const CompleteTestResults = () => {
   } = useCompleteTest();
   
   useEffect(() => {
-    if (!quickTemperamentResults || !peHockResults || !multipleIntelligencesResults) {
+    if (!peHockResults || !multipleIntelligencesResults) {
       navigate('/testes');
     } else {
       setCompleteTestFinished(true);
     }
-  }, [quickTemperamentResults, peHockResults, multipleIntelligencesResults, navigate, setCompleteTestFinished]);
+  }, [peHockResults, multipleIntelligencesResults, navigate, setCompleteTestFinished]);
   
   const handleRetakeTest = () => {
     resetAllTests();
     navigate('/teste-completo');
   };
   
-  if (!quickTemperamentResults || !peHockResults || !multipleIntelligencesResults || !isCompleteTestFinished) {
+  if (!peHockResults || !multipleIntelligencesResults || !isCompleteTestFinished) {
     return null;
   }
-  
-  const dominantQuickTemperament = quickTemperamentResults[0];
   
   // Format Pe. Hock results for display
   const peHockTemperaments = Object.entries(peHockResults).map(([type, score]) => ({
@@ -51,6 +50,7 @@ const CompleteTestResults = () => {
   })).sort((a, b) => b.score - a.score);
   
   const dominantPeHockTemperament = peHockTemperaments[0];
+  const secondaryPeHockTemperament = peHockTemperaments[1];
   
   // Prepare multiple intelligences data for chart
   const intelligencesChartData = multipleIntelligencesResults.map(result => ({
@@ -60,6 +60,7 @@ const CompleteTestResults = () => {
   }));
   
   const dominantIntelligence = multipleIntelligencesResults[0];
+  const secondaryIntelligence = multipleIntelligencesResults[1];
   const totalMaxScore = 70; // 10 stages × 7 points max
 
   const CustomTooltip = ({ active, payload }: TooltipProps<number, string>) => {
@@ -76,6 +77,21 @@ const CompleteTestResults = () => {
     }
     return null;
   };
+
+  const getTemperamentName = (key: string): string => {
+    switch (key) {
+      case 'choleric': return 'Colérico';
+      case 'sanguine': return 'Sanguíneo';
+      case 'melancholic': return 'Melancólico';
+      case 'phlegmatic': return 'Fleumático';
+      default: return key;
+    }
+  };
+
+  const totalPeHockPoints = Object.values(peHockResults).reduce(
+    (sum, score) => sum + (typeof score === 'number' ? score : 0), 
+    0
+  );
 
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
@@ -95,69 +111,84 @@ const CompleteTestResults = () => {
             </p>
           </div>
           
-          {/* Temperamentos - Síntese dos dois testes */}
+          {/* Temperamentos */}
           <div className="bg-[#121212] p-4 md:p-6 rounded-lg border border-gray-800 mb-8">
             <h2 className="text-xl font-serif uppercase mb-4 text-amber-400 text-center">
-              Temperamento Dominante
+              Resultados do Teste de Temperamento
             </h2>
             
-            <div className="p-4 bg-[#0a0a0a] bg-opacity-40 rounded-lg mb-4">
-              <div className="flex flex-col md:flex-row items-center justify-between">
-                <div className="mb-4 md:mb-0">
-                  <h3 className="text-lg font-medium text-amber-400">
-                    {dominantPeHockTemperament.name}
-                  </h3>
-                  <p className="text-gray-300 text-sm line-clamp-2">
-                    {getTemperamentDescription(dominantPeHockTemperament.type)}
-                  </p>
-                </div>
-                <div className="flex gap-2 items-center">
-                  <span className="text-sm text-gray-400">Teste Rápido:</span>
-                  <span className="bg-[#1a1a1a] px-2 py-1 rounded text-sm">
-                    {dominantQuickTemperament.name} ({dominantQuickTemperament.percentage}%)
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              {/* Temperamento Dominante */}
+              <div className="p-6 bg-[#0a0a0a] rounded-lg border border-amber-500/30 text-left">
+                <h3 className="text-xl font-serif uppercase mb-2 text-amber-400">
+                  {getTemperamentName(dominantPeHockTemperament.type)}
+                </h3>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm bg-amber-500/20 px-2 py-1 rounded text-amber-300">
+                    Predominante
+                  </span>
+                  <span className="text-lg font-semibold text-white">
+                    {Math.round((dominantPeHockTemperament.score / totalPeHockPoints) * 100)}%
                   </span>
                 </div>
+                <p className="text-gray-300 text-sm">{getTemperamentDescription(dominantPeHockTemperament.type)}</p>
+              </div>
+              
+              {/* Segundo Temperamento */}
+              <div className="p-6 bg-[#0a0a0a] rounded-lg border border-gray-700 text-left">
+                <h3 className="text-xl font-serif uppercase mb-2 text-gray-200">
+                  {getTemperamentName(secondaryPeHockTemperament.type)}
+                </h3>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-sm bg-gray-700/30 px-2 py-1 rounded text-gray-300">
+                    Secundário
+                  </span>
+                  <span className="text-lg font-semibold text-white">
+                    {Math.round((secondaryPeHockTemperament.score / totalPeHockPoints) * 100)}%
+                  </span>
+                </div>
+                <p className="text-gray-300 text-sm">{getTemperamentDescription(secondaryPeHockTemperament.type)}</p>
               </div>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div>
-                <h3 className="text-center text-gray-300 mb-3">Teste Pe. Hock</h3>
-                <div className="p-4 bg-[#0a0a0a] rounded-lg">
-                  {peHockTemperaments.map((temp, index) => (
-                    <div key={temp.type} className="mb-2 last:mb-0">
-                      <div className="flex justify-between items-center mb-1">
-                        <span className={index === 0 ? 'text-amber-400 font-medium' : 'text-gray-300'}>
-                          {temp.name}
-                        </span>
-                        <span className={index === 0 ? 'text-amber-400 font-medium' : 'text-gray-300'}>
-                          {temp.score}
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-800 rounded-full h-1.5">
-                        <div 
-                          className={`h-1.5 rounded-full ${index === 0 ? 'bg-amber-400' : 'bg-gray-600'}`}
-                          style={{ width: `${(temp.score / 100) * 100}%` }}
-                        ></div>
-                      </div>
+            <div className="space-y-4">
+              {peHockTemperaments.map((temp, index) => (
+                <div key={temp.type} className="relative pt-1">
+                  <div className="flex mb-2 items-center justify-between">
+                    <div>
+                      <span className="text-sm font-medium text-white">
+                        {getTemperamentName(temp.type)}
+                      </span>
                     </div>
-                  ))}
+                    <div className="text-right">
+                      <span className="text-sm font-semibold inline-block text-amber-400">
+                        {temp.score} pontos
+                      </span>
+                      <span className="text-sm ml-1 text-gray-400">
+                        ({Math.round((temp.score / totalPeHockPoints) * 100)}%)
+                      </span>
+                    </div>
+                  </div>
+                  <div className="overflow-hidden h-2 text-xs flex rounded bg-gray-800">
+                    <div 
+                      style={{ 
+                        width: `${Math.round((temp.score / totalPeHockPoints) * 100)}%`,
+                        backgroundColor: index === 0 ? '#D4AF37' : 
+                                        index === 1 ? '#9CA3AF' :
+                                        '#4B5563'
+                      }} 
+                      className="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center"
+                    ></div>
+                  </div>
                 </div>
-              </div>
-              
-              <div>
-                <h3 className="text-center text-gray-300 mb-3">Teste Rápido</h3>
-                <div className="p-4 bg-[#0a0a0a] rounded-lg">
-                  <TemperamentChart results={quickTemperamentResults} />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
           
           {/* Inteligências Múltiplas */}
           <div className="bg-[#121212] p-4 md:p-6 rounded-lg border border-gray-800 mb-8">
             <h2 className="text-xl font-serif uppercase mb-6 text-amber-400 text-center">
-              Inteligências Múltiplas
+              Resultados das Inteligências Múltiplas
             </h2>
             
             <div className="p-4 bg-[#0a0a0a] bg-opacity-40 rounded-lg mb-4">
@@ -202,48 +233,59 @@ const CompleteTestResults = () => {
                 </BarChart>
               </ResponsiveContainer>
             </div>
+            
+            <div className="space-y-6">
+              <DetailedIntelligenceDescription 
+                type={dominantIntelligence.type} 
+                name={dominantIntelligence.name} 
+              />
+              
+              <DetailedIntelligenceDescription 
+                type={secondaryIntelligence.type} 
+                name={secondaryIntelligence.name} 
+              />
+            </div>
           </div>
           
-          {/* Correlações e orientações */}
+          {/* Relação Temperamento x Inteligências */}
           <div className="bg-[#121212] p-4 md:p-6 rounded-lg border border-gray-800 mb-8">
-            <h2 className="text-xl font-serif uppercase mb-4 text-amber-400 text-center">
-              Análise Combinada e Orientações
+            <h2 className="text-xl font-serif uppercase mb-6 text-amber-400 text-center">
+              Relação entre seu Temperamento e Inteligências
             </h2>
             
-            <div className="space-y-4 text-gray-300">
-              <p>
-                <span className="font-medium text-amber-400">Combinação de temperamento e inteligências:</span> Seu temperamento {dominantPeHockTemperament.name} 
-                combinado com sua {dominantIntelligence.name} predominante cria um perfil único de aprendizagem e interação.
-                Os temperamentos influenciam como expressamos nossas inteligências e como abordamos desafios.
+            <div className="p-5 bg-[#0a0a0a] rounded-lg border border-gray-700 mb-6">
+              <h3 className="text-lg font-medium text-amber-400 mb-3">
+                Como seu temperamento {getTemperamentName(dominantPeHockTemperament.type)} influencia suas inteligências
+              </h3>
+              <p className="text-gray-300 mb-4">
+                Cada temperamento possui características que influenciam como expressamos e desenvolvemos nossas inteligências. 
+                Confira abaixo como seu temperamento pode interagir com cada tipo de inteligência:
               </p>
               
-              <p>
-                <span className="font-medium text-amber-400">Potencialidades:</span> Com seu temperamento {dominantPeHockTemperament.name}, 
-                você tende a expressar sua {dominantIntelligence.name} de forma {dominantPeHockTemperament.type === 'choleric' ? 'determinada e focada em resultados' : 
-                  dominantPeHockTemperament.type === 'sanguine' ? 'entusiástica e expressiva' :
-                  dominantPeHockTemperament.type === 'melancholic' ? 'detalhista e profunda' :
-                  'equilibrada e estável'}.
-                Isso pode ser uma grande vantagem em contextos que valorizem essas qualidades.
-              </p>
-              
-              <p>
-                <span className="font-medium text-amber-400">Sugestões de desenvolvimento:</span>
-              </p>
-              
-              <ul className="list-disc pl-5 space-y-2">
-                <li>
-                  Busque atividades que combinem seu temperamento com suas inteligências predominantes.
-                </li>
-                <li>
-                  Trabalhe no desenvolvimento de outras inteligências menos dominantes para um perfil mais equilibrado.
-                </li>
-                <li>
-                  Considere como seu temperamento pode estar influenciando a expressão de suas inteligências - consciência é o primeiro passo para o crescimento.
-                </li>
-                <li>
-                  Explore carreiras e hobbies que valorizem tanto seu temperamento quanto suas inteligências predominantes.
-                </li>
-              </ul>
+              <div className="space-y-6">
+                {multipleIntelligencesResults.map(intelligence => (
+                  <TemperamentIntelligenceRelation
+                    key={intelligence.type}
+                    temperamentType={dominantPeHockTemperament.type}
+                    intelligenceType={intelligence.type}
+                  />
+                ))}
+              </div>
+            </div>
+            
+            <div className="bg-[#0a0a0a] p-4 rounded-lg">
+              <h3 className="text-lg font-medium text-amber-400 mb-3">Sugestões para seu desenvolvimento</h3>
+              <div className="text-gray-300 space-y-3">
+                <p>
+                  Com seu temperamento predominante {getTemperamentName(dominantPeHockTemperament.type)} e suas inteligências mais fortes ({dominantIntelligence.name.replace('Inteligência ', '')} e {secondaryIntelligence.name.replace('Inteligência ', '')}), você pode:
+                </p>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>Buscar atividades que combinem seu temperamento com suas inteligências predominantes.</li>
+                  <li>Trabalhar no desenvolvimento de outras inteligências menos dominantes para um perfil mais equilibrado.</li>
+                  <li>Considerar como seu temperamento pode estar influenciando a expressão de suas inteligências.</li>
+                  <li>Explorar carreiras e hobbies que valorizem tanto seu temperamento quanto suas inteligências predominantes.</li>
+                </ul>
+              </div>
             </div>
           </div>
           
@@ -272,7 +314,7 @@ const CompleteTestResults = () => {
                 try {
                   navigator.share({
                     title: 'Meus Resultados Completos',
-                    text: `Meu temperamento dominante é ${dominantPeHockTemperament.name} e minha inteligência predominante é ${dominantIntelligence.name}!`,
+                    text: `Meu temperamento dominante é ${getTemperamentName(dominantPeHockTemperament.type)} e minha inteligência predominante é ${dominantIntelligence.name.replace('Inteligência ', '')}!`,
                     url: window.location.href,
                   });
                 } catch (error) {

@@ -4,15 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useCompleteTest } from '@/contexts/CompleteTestContext';
-import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 
 const CompleteTest = () => {
   const navigate = useNavigate();
-  const { currentTestStep, setCurrentTestStep } = useCompleteTest();
+  const { setCurrentTestStep } = useCompleteTest();
   
   useEffect(() => {
-    // Start directly with Pe. Hock test instead of quick test
+    // Start directly with Pe. Hock test
     setCurrentTestStep('peHock');
     navigate('/pe-hock-teste');
   }, [navigate, setCurrentTestStep]);
