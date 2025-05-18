@@ -50,6 +50,11 @@ const Intelligences = () => {
     navigate('/testes');
   };
 
+  // Get the current stage ID and look up any existing answer for this question
+  const stageId = currentQuestion ? currentQuestion.id : '';
+  const currentAnswerValue = stageId && answers[stageId] ? 
+    Object.values(answers[stageId])[0] : null;
+
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
@@ -104,7 +109,7 @@ const Intelligences = () => {
           <div className="flex flex-col items-center">
             <IntelligenceQuestion
               question={currentQuestion}
-              selectedValue={answers[currentQuestion.id] || null}
+              selectedValue={currentAnswerValue}
               onSelectOption={handleSelectOption}
             />
             

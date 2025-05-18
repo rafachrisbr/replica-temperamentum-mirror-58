@@ -8,6 +8,7 @@ import IntelligenceCard from '@/components/IntelligenceCard';
 import IntelligenceChart from '@/components/IntelligenceChart';
 import { useIntelligences } from '@/contexts/IntelligencesContext';
 import { RefreshCcw, Home, Share2, BookOpen } from 'lucide-react';
+import { IntelligenceResult as MultipleIntelligencesResult } from '@/utils/multipleIntelligencesQuiz';
 
 const IntelligencesResults = () => {
   const navigate = useNavigate();
@@ -30,6 +31,22 @@ const IntelligencesResults = () => {
   
   const dominantIntelligence = results[0];
   const secondIntelligence = results[1];
+  
+  // Function to adapt MultipleIntelligencesResult to work with IntelligenceCard component
+  const adaptIntelligenceResult = (result: MultipleIntelligencesResult) => {
+    return {
+      ...result,
+      percentage: result.percentage || Math.round((result.score / 70) * 100),
+      strengths: [],
+      careers: [],
+      icon: result.type === 'kinesthetic' ? 'square-pen' : 
+             result.type === 'spatial' ? 'compass' :
+             result.type === 'interpersonal' ? 'users' :
+             result.type === 'intrapersonal' ? 'square-x' :
+             result.type === 'linguistic' ? 'book' :
+             result.type === 'logical' ? 'brain' : 'lightbulb'
+    };
+  };
   
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
@@ -56,19 +73,19 @@ const IntelligencesResults = () => {
           
           <div className="grid gap-6 md:gap-8 mt-4 md:mt-8">
             <IntelligenceCard 
-              intelligence={dominantIntelligence}
+              intelligence={adaptIntelligenceResult(dominantIntelligence)}
               isDominant={true}
             />
             
             <div className="mt-6 animate-fadeIn" style={{animationDelay: "0.3s"}}>
-              <IntelligenceChart results={results} />
+              <IntelligenceChart results={results.map(adaptIntelligenceResult)} />
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
               {results.slice(1, 3).map((intelligence) => (
                 <IntelligenceCard 
                   key={intelligence.type}
-                  intelligence={intelligence}
+                  intelligence={adaptIntelligenceResult(intelligence)}
                 />
               ))}
             </div>

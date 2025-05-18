@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { IntelligenceResult } from '@/utils/intelligences';
 import { 
   ResponsiveContainer, 
   RadarChart, 
@@ -11,13 +10,23 @@ import {
   Tooltip 
 } from 'recharts';
 
+interface ChartData {
+  subject: string;
+  value: number;
+  fullMark: number;
+}
+
 interface IntelligenceChartProps {
-  results: IntelligenceResult[];
+  results: Array<{
+    name: string;
+    percentage: number;
+    type: string;
+  }>;
 }
 
 const IntelligenceChart: React.FC<IntelligenceChartProps> = ({ results }) => {
   // Prepare data for chart
-  const chartData = results.map(result => ({
+  const chartData: ChartData[] = results.map(result => ({
     subject: result.name.replace("Inteligência ", ""),
     value: result.percentage,
     fullMark: 100
