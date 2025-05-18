@@ -19,6 +19,9 @@ import Intelligences from "./pages/Intelligences";
 import IntelligencesResults from "./pages/IntelligencesResults";
 import CombinedTest from "./pages/CombinedTest";
 import CombinedResults from "./pages/CombinedResults";
+import PeHockIntro from "./pages/PeHockIntro";
+import PeHockTest from "./pages/PeHockTest";
+import PeHockResults from "./pages/PeHockResults";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -45,6 +48,9 @@ const App = () => (
                 <Route path="/inteligencias-resultados" element={<IntelligencesResults />} />
                 <Route path="/teste-completo" element={<CombinedTest />} />
                 <Route path="/resultados-combinados" element={<CombinedResults />} />
+                <Route path="/pe-hock-intro" element={<PeHockIntro />} />
+                <Route path="/pe-hock-teste" element={<PeHockTest />} />
+                <Route path="/pe-hock-results" element={<PeHockResults />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </BrowserRouter>

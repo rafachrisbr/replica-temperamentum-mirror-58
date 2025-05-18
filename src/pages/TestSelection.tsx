@@ -44,6 +44,25 @@ const TestSelection = () => {
               </Button>
             </div>
             
+            {/* Teste de Pe. Hock */}
+            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full">
+              <div className="mb-4 text-center">
+                <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste Pe. Hock</h2>
+              </div>
+              <p className="text-gray-300 font-text flex-grow mb-6">
+                Descubra seu temperamento com o método do Pe. Hock. Este teste mais detalhado analisa 
+                suas tendências naturais com base em 50 questões elaboradas especificamente para 
+                identificar seu temperamento predominante.
+              </p>
+              <Button 
+                onClick={() => navigate('/pe-hock-intro')}
+                className="w-full bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] 
+                  transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
+              >
+                Teste Pe. Hock
+              </Button>
+            </div>
+            
             {/* Teste de Inteligências Múltiplas */}
             <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full">
               <div className="mb-4 text-center">
@@ -63,7 +82,7 @@ const TestSelection = () => {
             </div>
             
             {/* Teste Completo */}
-            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-[#D4AF37]/30 flex flex-col h-full">
+            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-[#D4AF37]/30 flex flex-col h-full md:col-span-3">
               <div className="mb-4 text-center">
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste Completo</h2>
               </div>
@@ -89,6 +108,10 @@ const TestSelection = () => {
                 Nossos testes são baseados em teorias consolidadas sobre temperamento e inteligências múltiplas.
                 O teste de temperamento identifica a predominância de quatro tipos clássicos: Sanguíneo (extrovertido e sociável), 
                 Colérico (determinado e líder), Melancólico (analítico e perfeccionista) e Fleumático (calmo e equilibrado).
+              </p>
+              <p>
+                O teste de Pe. Hock é uma análise mais detalhada dos temperamentos, baseada no Questionário dos Temperamentos 
+                do Pe. Hock (edição brasileira), que utiliza 50 perguntas para determinar com maior precisão seu perfil predominante.
               </p>
               <p>
                 O teste de inteligências múltiplas fundamenta-se na teoria do psicólogo Howard Gardner, que 
