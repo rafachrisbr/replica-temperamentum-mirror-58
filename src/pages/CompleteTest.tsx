@@ -5,13 +5,18 @@ import { useCompleteTest } from '@/contexts/CompleteTestContext';
 
 const CompleteTest = () => {
   const navigate = useNavigate();
-  const { setCurrentTestStep } = useCompleteTest();
+  const { setCurrentTestStep, resetAllTests } = useCompleteTest();
   
   useEffect(() => {
+    // Reset all test data when starting a new complete test
+    resetAllTests();
+    
     // Start with Pe. Hock test
     setCurrentTestStep('peHock');
+    
+    // Navigate to the introduction page
     navigate('/complete-test-intro');
-  }, [navigate, setCurrentTestStep]);
+  }, [navigate, setCurrentTestStep, resetAllTests]);
 
   return null;
 };
