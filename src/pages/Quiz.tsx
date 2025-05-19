@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -77,6 +76,14 @@ const Quiz = () => {
             <p className="text-sm text-gray-400">
               Este é um teste rápido, com apenas 13 perguntas. Ele é mais prático, porém menos preciso do que os testes completos.
             </p>
+
+            <div className="mt-4 p-4 bg-[#0a0a0a] rounded-lg">
+              <h2 className="text-lg font-medium text-amber-400 mb-2">Instruções</h2>
+              <p className="text-gray-300 text-sm">
+                Responda rapidamente às perguntas, escolhendo a alternativa que mais se aproxima do seu perfil. 
+                O teste é breve e serve para uma avaliação inicial do seu temperamento.
+              </p>
+            </div>
           </div>
           
           <div className="mb-6">

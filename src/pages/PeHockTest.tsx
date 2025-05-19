@@ -252,7 +252,7 @@ const PeHockTest = () => {
                 Teste Completo
               </h2>
               <p className="text-sm md:text-base text-gray-300">
-                Etapa 2: Teste de Temperamento Pe. Hock
+                Etapa 1: Teste de Temperamento Pe. Hock
               </p>
             </div>
           )}
