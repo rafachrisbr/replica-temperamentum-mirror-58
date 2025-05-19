@@ -8,6 +8,7 @@ import { useCompleteTest } from '@/contexts/CompleteTestContext';
 import { RefreshCcw, Home, Share2 } from 'lucide-react';
 import TemperamentIntelligenceRelation from '@/components/TemperamentIntelligenceRelation';
 import { IntelligenceResult } from '@/utils/multipleIntelligencesQuiz';
+import ResultsHeader from '@/components/ResultsHeader';
 
 // Make sure to cast the values properly to avoid TypeScript errors
 const CompleteTestResults = () => {
@@ -63,14 +64,16 @@ const CompleteTestResults = () => {
     }
   };
 
+  // Fix: Ensure all values in temperamentTotalPoints are numbers
   const temperamentTotalPoints = Object.values(peHockResults).reduce(
-    (sum, score) => sum + (score as number), 0
+    (sum, score) => sum + Number(score), 0
   );
 
+  // Fix: Convert all values to numbers in the map function
   const temperamentChartData = Object.entries(peHockResults).map(([key, value]) => ({
     name: getTemperamentName(key),
-    value: value as number,
-    percentage: Math.round(((value as number) / temperamentTotalPoints) * 100)
+    value: Number(value),
+    percentage: Math.round((Number(value) / temperamentTotalPoints) * 100)
   })).sort((a, b) => b.value - a.value);
 
   // Top two intelligences
@@ -82,18 +85,10 @@ const CompleteTestResults = () => {
       
       <main className="flex-1 flex flex-col items-center p-4 md:p-6">
         <div className="max-w-4xl w-full space-y-8">
-          <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 mb-8 text-center">
-            <h1 className="text-3xl md:text-4xl font-serif uppercase tracking-wider mb-4">
-              <span className="bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent">
-                Resultados Completos
-              </span>
-            </h1>
-            
-            <p className="text-gray-300 mt-2 mb-4">
-              Abaixo você encontrará os resultados dos testes de temperamento e inteligências múltiplas,
-              bem como a relação entre eles.
-            </p>
-          </div>
+          <ResultsHeader
+            title="Resultados Completos"
+            subtitle="Análise de Temperamento e Inteligências"
+          />
 
           {/* Pe. Hock Results Summary */}
           <div className="bg-[#121212] p-6 rounded-lg border border-gray-800 mb-8">
@@ -174,7 +169,35 @@ const CompleteTestResults = () => {
               Relação Entre Seu Temperamento e Inteligências
             </h2>
             
-            <TemperamentIntelligenceRelation temperamentType={dominantTemperament} />
+            {/* Fix: Add the missing intelligenceType prop to each instance */}
+            <TemperamentIntelligenceRelation 
+              temperamentType={dominantTemperament} 
+              intelligenceType="logical" 
+            />
+            <TemperamentIntelligenceRelation 
+              temperamentType={dominantTemperament} 
+              intelligenceType="linguistic" 
+            />
+            <TemperamentIntelligenceRelation 
+              temperamentType={dominantTemperament} 
+              intelligenceType="spatial" 
+            />
+            <TemperamentIntelligenceRelation 
+              temperamentType={dominantTemperament} 
+              intelligenceType="musical" 
+            />
+            <TemperamentIntelligenceRelation 
+              temperamentType={dominantTemperament} 
+              intelligenceType="bodily" 
+            />
+            <TemperamentIntelligenceRelation 
+              temperamentType={dominantTemperament} 
+              intelligenceType="interpersonal" 
+            />
+            <TemperamentIntelligenceRelation 
+              temperamentType={dominantTemperament} 
+              intelligenceType="intrapersonal" 
+            />
           </div>
           
           {/* Action Buttons */}
