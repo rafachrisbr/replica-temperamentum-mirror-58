@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -27,6 +26,7 @@ import MultipleIntelligences from "./pages/MultipleIntelligences";
 import MultipleIntelligencesResults from "./pages/MultipleIntelligencesResults";
 import CompleteTest from "./pages/CompleteTest";
 import CompleteTestResults from "./pages/CompleteTestResults";
+import CompleteTestIntro from './pages/CompleteTestIntro';
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -61,6 +61,7 @@ const App = () => (
                   <Route path="/pe-hock-results" element={<PeHockResults />} />
                   <Route path="/inteligencias-multiplas" element={<MultipleIntelligences />} />
                   <Route path="/inteligencias-multiplas-resultados" element={<MultipleIntelligencesResults />} />
+                  <Route path="/complete-test-intro" element={<CompleteTestIntro />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </BrowserRouter>

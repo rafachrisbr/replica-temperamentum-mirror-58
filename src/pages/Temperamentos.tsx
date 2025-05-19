@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Home, ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -76,16 +76,7 @@ const Temperamentos = () => {
             </Button>
             
             <Button
-              onClick={() => navigate('/')}
-              variant="outline"
-              className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
-            >
-              <Home className="mr-2 h-4 w-4" />
-              início
-            </Button>
-            
-            <Button
-              onClick={() => navigate('/quiz')}
+              onClick={() => navigate('/testes')}
               className="bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] transition-all uppercase font-semibold tracking-wide rounded-md"
             >
               Testes

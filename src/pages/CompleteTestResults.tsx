@@ -89,7 +89,7 @@ const CompleteTestResults = () => {
   };
 
   const totalPeHockPoints = Object.values(peHockResults).reduce(
-    (sum, score) => sum + (typeof score === 'number' ? score : 0), 
+    (sum, score) => sum + Number(score), 
     0
   );
 
