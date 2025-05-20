@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
@@ -12,6 +11,7 @@ const Navbar: React.FC = () => {
     { name: 'Temperamentos', path: '/temperamentos' },
     { name: 'Testes', path: '/testes' },
     { name: 'Meditações', path: '/meditacoes' },
+    { name: 'Educação Familiar', path: '/educacao-familiar' },
   ];
 
   return (

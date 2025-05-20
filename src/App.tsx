@@ -27,6 +27,7 @@ import MultipleIntelligencesResults from "./pages/MultipleIntelligencesResults";
 import CompleteTest from "./pages/CompleteTest";
 import CompleteTestResults from "./pages/CompleteTestResults";
 import CompleteTestIntro from './pages/CompleteTestIntro';
+import EducacaoFamiliar from './pages/EducacaoFamiliar';
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -62,6 +63,7 @@ const App = () => (
                   <Route path="/inteligencias-multiplas" element={<MultipleIntelligences />} />
                   <Route path="/inteligencias-multiplas-resultados" element={<MultipleIntelligencesResults />} />
                   <Route path="/complete-test-intro" element={<CompleteTestIntro />} />
+                  <Route path="/educacao-familiar" element={<EducacaoFamiliar />} />
                   <Route path="*" element={<NotFound />} />
                 </Routes>
               </BrowserRouter>
