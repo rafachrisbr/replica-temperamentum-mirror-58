@@ -1,3 +1,10 @@
-// Update the routes in App.tsx to include the new article page
-// Add this route alongside the existing routes:
-<Route path="/educacao-familiar/artigo" element={<EducacaoFamiliarArtigo />} />
+import React from 'react';
+import { Route } from 'react-router-dom';
+
+function App() {
+  return (
+    <Route path="/educacao-familiar/artigo" element={<EducacaoFamiliarArtigo />} />
+  );
+}
+
+export default App;
