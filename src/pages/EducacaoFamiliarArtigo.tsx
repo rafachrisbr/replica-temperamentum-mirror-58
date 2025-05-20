@@ -78,6 +78,14 @@ const EducacaoFamiliarArtigo = () => {
               />
             </div>
 
+            <div className="my-8 flex flex-col items-center">
+              <img 
+                src="/lovable-uploads/ARenaissance-style.jpg" 
+                alt="Arte renascentista sobre educação" 
+                className="rounded-lg max-h-[400px] object-contain shadow-md"
+              />
+            </div>
+
             <h3 className="text-xl font-serif text-[#D4AF37] mb-3">Temperamento Colérico</h3>
             <p className="text-gray-300 mb-4">
               Crianças coléricas são geralmente determinadas, enérgicas e líderes naturais, mas podem ter dificuldades com raiva, orgulho e tendência a dominar os outros. São Pio X, que "mantinha um absoluto senhorio de si e dominava os impulsos de seu ardente temperamento", demonstra como é possível transformar a energia natural em virtude através do autodomínio.
@@ -85,7 +93,7 @@ const EducacaoFamiliarArtigo = () => {
 
             <div className="my-8 flex flex-col items-center">
               <img 
-                src="/lovable-uploads/criancaColerica.jpg" 
+                src="/lovable-uploads/criançaColérica.jpg" 
                 alt="Criança com temperamento colérico" 
                 className="rounded-lg max-h-[400px] object-contain shadow-md"
               />
