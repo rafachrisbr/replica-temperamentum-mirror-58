@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -12,9 +11,9 @@ const TestSelection = () => {
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
       
-      <main className="flex-1 flex flex-col items-center p-6">
+      <main className="flex-1 flex flex-col items-center p-6 animate-fadeIn">
         <div className="max-w-4xl w-full">
-          <div className="mb-8 text-center">
+          <div className="mb-8 text-center animate-[fadeIn_0.5s_ease-in-out_0.2s] opacity-0 fill-mode-forwards">
             <h1 className="text-3xl md:text-4xl font-serif mb-4 uppercase tracking-wider title-gold">
               Descubra Quem Você É
             </h1>
@@ -27,7 +26,7 @@ const TestSelection = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {/* Teste Rápido de Temperamento */}
-            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full">
+            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full animate-[fadeIn_0.5s_ease-in-out_0.3s] opacity-0 fill-mode-forwards">
               <div className="mb-4 text-center">
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste Rápido</h2>
               </div>
@@ -45,7 +44,7 @@ const TestSelection = () => {
             </div>
             
             {/* Teste de Pe. Hock */}
-            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full">
+            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full animate-[fadeIn_0.5s_ease-in-out_0.4s] opacity-0 fill-mode-forwards">
               <div className="mb-4 text-center">
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste Pe. Hock</h2>
               </div>
@@ -64,7 +63,7 @@ const TestSelection = () => {
             </div>
             
             {/* Teste de Inteligências Múltiplas */}
-            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full">
+            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-gray-800 flex flex-col h-full animate-[fadeIn_0.5s_ease-in-out_0.5s] opacity-0 fill-mode-forwards">
               <div className="mb-4 text-center">
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Inteligências Múltiplas</h2>
               </div>
@@ -82,7 +81,7 @@ const TestSelection = () => {
             </div>
             
             {/* Teste Completo */}
-            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-[#D4AF37]/30 flex flex-col h-full md:col-span-3">
+            <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-6 rounded-lg shadow-lg border border-[#D4AF37]/30 flex flex-col h-full md:col-span-3 animate-[fadeIn_0.5s_ease-in-out_0.6s] opacity-0 fill-mode-forwards">
               <div className="mb-4 text-center">
                 <h2 className="text-xl font-serif uppercase mb-2 text-amber-400">Teste Completo</h2>
               </div>
@@ -102,7 +101,7 @@ const TestSelection = () => {
             </div>
           </div>
           
-          <div className="bg-[#121212] p-6 rounded-lg border border-gray-800 mb-8">
+          <div className="bg-[#121212] p-6 rounded-lg border border-gray-800 mb-8 animate-[fadeIn_0.5s_ease-in-out_0.7s] opacity-0 fill-mode-forwards">
             <h2 className="text-xl font-serif uppercase mb-4 text-amber-400 text-center">Sobre Nossos Testes</h2>
             <div className="font-text text-gray-300 space-y-4">
               <p>

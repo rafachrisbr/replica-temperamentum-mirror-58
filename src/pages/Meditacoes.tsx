@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -9,17 +8,13 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, FileText, ChevronLeft } from 'lucide-react';
 
 const Meditacoes = () => {
-  const openPdf = () => {
-    window.open('/meditacoes/tres-amores.pdf', '_blank');
-  };
-
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
       
-      <main className="flex-1 flex flex-col items-center p-6 pt-12">
+      <main className="flex-1 flex flex-col items-center p-6 pt-12 animate-fadeIn">
         <div className="max-w-5xl w-full space-y-8">
-          <div className="text-center mb-10">
+          <div className="text-center mb-10 animate-[fadeIn_0.5s_ease-in-out_0.2s] opacity-0 fill-mode-forwards">
             <h1 className="text-3xl md:text-4xl font-serif text-[#D4AF37] mb-6">
               Meditações
             </h1>
@@ -31,7 +26,7 @@ const Meditacoes = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Card para Meditação sobre São João Evangelista */}
-            <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col">
+            <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.3s] opacity-0 fill-mode-forwards">
               <CardHeader className="pb-3">
                 <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
                   São João Evangelista
@@ -65,7 +60,7 @@ const Meditacoes = () => {
             </Card>
 
             {/* Card para Meditação sobre os Três Amores */}
-            <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col">
+            <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.4s] opacity-0 fill-mode-forwards">
               <CardHeader className="pb-3">
                 <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
                   Os Três Amores
