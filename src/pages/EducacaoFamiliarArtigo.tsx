@@ -204,5 +204,3 @@ const EducacaoFamiliarArtigo = () => {
 };
 
 export default EducacaoFamiliarArtigo;
-
-export default EducacaoFamiliarArtigo
