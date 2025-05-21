@@ -159,6 +159,18 @@ const MeditacaoAmizade = () => {
               </blockquote>
 
               <p className="mb-4">
+                Essa frase, uma das mais marcantes do livro, revela a profundidade e a seriedade da verdadeira amizade. Cativar alguém significa ir além da convivência superficial; é criar laços, envolver-se com a vida do outro, partilhar alegrias e dores. Quando cativamos alguém, assumimos uma responsabilidade: a de cuidar, zelar, estar presente, não abandonar.
+              </p>
+
+              <p className="mb-4">
+                A responsabilidade não é um peso, mas uma expressão do amor maduro e fiel. O verdadeiro amigo não desaparece nas dificuldades, não é apenas companhia nos bons momentos. Ele permanece, mesmo quando o tempo e as circunstâncias mudam, porque compreende que a amizade é um compromisso de alma para alma.
+              </p>
+
+              <p className="mb-4">
+                Essa responsabilidade é também uma via de mão dupla: ao cativar, também nos deixamos cativar. O coração do amigo passa a fazer parte do nosso, e sua felicidade, suas dores e esperanças tornam-se, de algum modo, nossas também. Por isso, a amizade exige maturidade, paciência e entrega, pois é um vínculo que atravessa o tempo e não se desfaz facilmente.
+              </p>
+
+              <p className="mb-4">
                 Outros ensinamentos marcantes do livro:
               </p>
 
@@ -168,6 +180,57 @@ const MeditacaoAmizade = () => {
                 <li>"Se tu vens, por exemplo, às quatro da tarde, desde as três eu começarei a ser feliz."</li>
                 <li>"Fiz dele meu amigo e agora ele é único no mundo."</li>
               </ul>
+
+              <p className="mb-4">
+                Essas reflexões nos convidam a valorizar o tempo e a entrega nas relações, lembrando que a amizade é um dom a ser cultivado com paciência e amor.
+              </p>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Amizade Verdadeira: Rara e Preciosa</h2>
+              <p className="mb-4">
+                Ao longo da vida, é comum termos muitos colegas, conhecidos e companheiros de jornada. São pessoas com quem partilhamos momentos, projetos ou interesses. No entanto, amigos verdadeiros — aqueles com quem partilhamos a alma, os sonhos mais profundos, os medos e as esperanças — são raros. Muitas vezes, teremos apenas um ou dois amigos assim durante toda a vida.
+              </p>
+
+              <p className="mb-4">
+                Os colegas passam; os amigos permanecem. Colegas partilham a mesa, o trabalho, a escola. Amigos partilham o coração. A amizade verdadeira não depende da frequência dos encontros, mas da profundidade do vínculo. Ela resiste ao tempo, à distância e às mudanças da vida.
+              </p>
+
+              <p className="mb-4">
+                Por isso, quando Deus nos concede um amigo verdadeiro, devemos acolhê-lo como um tesouro, cuidar desse laço com carinho e responsabilidade, conscientes de que, como ensina O Pequeno Príncipe, somos eternamente responsáveis por aquilo que cativamos.
+              </p>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Amizade com os Santos, o Anjo da Guarda, Maria e Jesus</h2>
+              <p className="mb-4">
+                A comunhão dos santos é, por excelência, uma amizade espiritual. Os santos não são apenas exemplos distantes, mas verdadeiros amigos que intercedem por nós e caminham conosco. Ter um santo como amigo é buscar inspiração em sua vida e pedir sua ajuda nas lutas do dia a dia. São João Bosco e São Domingos Sávio, São Francisco e Santa Clara, São Basílio e São Gregório — todos viveram amizades santas, ajudando-se mutuamente a buscar a Deus.
+              </p>
+
+              <p className="mb-4">
+                Além dos santos, nosso anjo da guarda é um amigo fiel, sempre ao nosso lado, pronto a nos aconselhar, proteger e conduzir ao Céu. Podemos e devemos conversar com ele, pedir sua intercessão e aprender a ser, também nós, anjos para os outros, ajudando-os no caminho da santidade.
+              </p>
+
+              <p className="mb-4">
+                Jesus é o Amigo por excelência. Ele mesmo nos chama de amigos e deseja essa intimidade conosco. Conversar com Jesus, abrir-lhe o coração, partilhar alegrias e dores, é viver uma amizade que transforma e salva. Maria, Mãe de Jesus, também é nossa amiga e intercessora, sempre pronta a nos acolher e conduzir ao Filho.
+              </p>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Ensinamentos dos Papas sobre a Amizade</h2>
+              <p className="mb-4">
+                Entre os papas, Leão XIII destacou a importância da amizade social e da caridade como fundamentos da convivência cristã, promovendo a dignidade e o respeito entre as pessoas. Pio XI, em sua atuação histórica, demonstrou como a amizade, quando vivida com verdade e justiça, pode ser instrumento de reconciliação e resistência ao mal, mesmo em tempos difíceis.
+              </p>
+
+              <p className="mb-4">
+                Esses papas recordam que a amizade cristã não se limita ao círculo íntimo, mas se expande para a sociedade, promovendo a paz, a solidariedade e o bem comum.
+              </p>
             </section>
 
             <Separator className="my-8 bg-gray-800" />
