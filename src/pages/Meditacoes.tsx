@@ -95,6 +95,43 @@ const Meditacoes = () => {
                 </Button>
               </CardFooter>
             </Card>
+
+            {/* Card para Meditação sobre a Amizade */}
+            <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.5s] opacity-0 fill-mode-forwards">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
+                  A Amizade
+                </CardTitle>
+                <CardDescription className="text-gray-300">
+                  Comunhão de Almas em Cristo
+                </CardDescription>
+              </CardHeader>
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/amigos.jpg" 
+                  alt="Amizade em Cristo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="py-4 flex-grow">
+                <p className="text-gray-300 line-clamp-4">
+                  Esta meditação explora a amizade como dom precioso e expressão do amor divino, 
+                  contemplando a amizade de Jesus com seus apóstolos e as lições de obras como 
+                  O Pequeno Príncipe e a Imitação de Cristo.
+                </p>
+              </CardContent>
+              <CardFooter className="pt-0">
+                <Button 
+                  variant="outline" 
+                  className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
+                >
+                  <Link to="/meditacao-amizade" className="flex items-center justify-center gap-2 w-full">
+                    Ler meditação completa
+                    <ArrowRight size={16} />
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
           </div>
         </div>
       </main>
