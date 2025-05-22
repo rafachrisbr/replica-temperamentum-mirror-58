@@ -49,7 +49,7 @@ const EducacaoFamiliarFamilia = () => {
 
               <div className="my-8 flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/paisFilhos.jpg" 
+                  src="/lovable-uploads/familia1.jpg" 
                   alt="Família Católica" 
                   className="rounded-lg max-h-[400px] object-contain shadow-md"
                 />
@@ -86,7 +86,7 @@ const EducacaoFamiliarFamilia = () => {
 
               <div className="my-8 flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/jesusAmigos.jpg" 
+                  src="/lovable-uploads/familiaCatolica.jpg" 
                   alt="Família Unida" 
                   className="rounded-lg max-h-[400px] object-contain shadow-md"
                 />
@@ -145,7 +145,7 @@ const EducacaoFamiliarFamilia = () => {
 
               <div className="my-8 flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/padreEducando.png" 
+                  src="/lovable-uploads/familia2.jpg" 
                   alt="Educação Familiar" 
                   className="rounded-lg max-h-[400px] object-contain shadow-md"
                 />
