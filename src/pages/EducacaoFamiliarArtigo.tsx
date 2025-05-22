@@ -26,7 +26,7 @@ const EducacaoFamiliarArtigo = () => {
             </h1>
 
             <p className="text-lg mb-8 text-gray-200">
-              A educação dos filhos representa um dos maiores desafios e responsabilidades dos pais. Compreender o temperamento único de cada criança é fundamental para uma educação eficaz que respeite sua individualidade enquanto a guia no caminho das virtudes.
+              A educação dos filhos representa um dos maiores desafios e responsabilidades dos pais. Compreender o temperamento único de cada criança é fundamental para uma educação eficaz que respeite sua individualidade enquanto a guia no caminho das virtudes. O temperamento, sendo algo inato no indivíduo, uma "índole natural" que a natureza nos impõe, nunca desaparece inteiramente. No entanto, uma educação oportuna e, sobretudo, a força sobrenatural da graça podem reduzir suas estridências e moldar o caráter da criança.
             </p>
 
             <Separator className="my-8 bg-gray-800" />
@@ -189,48 +189,18 @@ const EducacaoFamiliarArtigo = () => {
             <Separator className="my-8 bg-gray-800" />
 
             <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Exercício Prático de Meditação</h2>
-              
-              <p className="mb-4">Silencie seu coração e coloque-se na presença de Jesus, o Amigo fiel.</p>
-
-              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
-                "Vós sois meus amigos, se fizerdes o que eu vos mando."
-                <br />
-                <span className="text-sm">
-                  "Vos amici mei estis, si feceritis quae ego praecipio vobis." (João 15,14)
-                </span>
-              </blockquote>
-
-              <div className="bg-[#121212] p-6 rounded-lg border border-gray-800">
-                <h3 className="text-lg font-medium text-amber-400 mb-4">Pontos para Reflexão:</h3>
-                <ul className="space-y-4 text-gray-300">
-                  <li>• Tenho vivido a amizade como Cristo ensinou?</li>
-                  <li>• Tenho sido paciente, leal, compassivo com meus amigos?</li>
-                  <li>• Tenho buscado amar sem esperar retribuição?</li>
-                  <li>• Minha amizade com Deus se reflete nas minhas amizades humanas?</li>
-                  <li>• Busco comunhão de almas, ou meus relacionamentos são superficiais?</li>
-                </ul>
-              </div>
-            </section>
-
-            <Separator className="my-8 bg-gray-800" />
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Oração Final</h2>
-              <div className="bg-[#121212] p-6 rounded-lg border border-gray-800">
-                <p className="text-gray-300 italic">
-                  Senhor Jesus, Amigo fiel, ensina-me a viver a amizade como comunhão de almas, unidas em Ti. Que eu saiba cativar e ser cativado, cuidar e ser cuidado, amando com generosidade e paciência. Que os santos e meu anjo da guarda me inspirem e acompanhem, e que eu nunca deixe de buscar Tua amizade e a de Maria, nossa Mãe. Amém.
-                </p>
-              </div>
-            </section>
-
-            <Separator className="my-8 bg-gray-800" />
-
-            <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Conclusão</h2>
               <p className="mb-4">
-                A amizade é comunhão de almas, dom de Deus, caminho de santidade. Inspirados em Cristo, nos santos, em Maria e nos nossos anjos da guarda, sejamos amigos verdadeiros, responsáveis uns pelos outros, construindo laços que nos conduzam juntos ao Céu.
+                Educar os filhos conforme seu temperamento não significa apenas adaptar-se às suas inclinações naturais, mas ajudá-los a crescer em virtude, superando as fraquezas próprias de cada temperamento. Como demonstram os exemplos dos santos, é possível, através da graça e de uma educação adequada, transformar as características naturais em instrumentos de santidade.
               </p>
+
+              <p className="mb-4">
+                São Pio X nos inspira com seu exemplo de equilíbrio entre bondade e firmeza, demonstrando que a educação cristã deve ser ao mesmo tempo amorosa e exigente. Seu legado de "restaurar a pureza da fé e revitalizar a vida litúrgica da Igreja" nos convida a fazer o mesmo na educação de nossos filhos: restaurar neles a imagem de Cristo, ajudando-os a desenvolver as virtudes que os conduzirão à santidade.
+              </p>
+
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                Como nos ensina o Código de Direito Canônico, a verdadeira educação "deve promover a formação integral da pessoa humana, em vista de seu fim último e, ao mesmo tempo, do bem comum da sociedade, as crianças e jovens sejam educados de tal modo que possam desenvolver harmonicamente seus dotes físicos, morais e intelectuais, adquirir senso de responsabilidade mais perfeito e correto uso da liberdade, e sejam formados para uma participação ativa na vida social".
+              </blockquote>
 
               <div className="my-8 text-center">
                 <p className="text-[#D4AF37] italic">Vulnerasti cor meum verbo tuo</p>
