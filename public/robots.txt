@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://temperamentum.lovable.dev/sitemap.xml
+Sitemap: https://www.temperamentum.com.br/sitemap.xml
