@@ -24,10 +24,6 @@ const EducacaoFamiliarFamilia = () => {
             <h1 className="text-3xl md:text-4xl font-serif text-[#D4AF37] text-center mb-6">
               A Importância da Família na Sociedade e no Plano de Deus
             </h1>
-
-            {/* Content from the previous message goes here */}
-            {/* The content is the same as what was in EducacaoFamiliarArtigo.tsx */}
-            {/* I'm not repeating it here to save space, but it would be identical */}
           </article>
         </div>
       </main>

@@ -22,59 +22,33 @@ const EducacaoFamiliarArtigo = () => {
 
           <article className="prose prose-invert max-w-none">
             <h1 className="text-3xl md:text-4xl font-serif text-[#D4AF37] text-center mb-6">
-              A Importância da Família na Sociedade e no Plano de Deus
+              A Importância da Educação das Crianças Conforme seu Temperamento
             </h1>
 
-            <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Família: Primeira Instituição e Base da Sociedade</h2>
-              <p className="mb-4">
-                A família é a instituição social mais antiga da humanidade, fundamento de toda sociedade. Desde as origens, 
-                a família foi pensada por Deus como o primeiro ambiente de comunhão, proteção, educação e transmissão de valores.
-              </p>
-
-              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
-                "Não é bom que o homem esteja só. Vou fazer para ele uma auxiliar que lhe seja semelhante."
-                <br />
-                <span className="text-sm">
-                  "Non est bonum esse hominem solum; faciamus ei adiutricem similem sibi." (Genesis 2,18)
-                </span>
-              </blockquote>
-
-              <p className="mb-4">
-                No plano divino, a família nasce da união entre homem e mulher, tornando-se "uma só carne" (Gênesis 2,24). 
-                Essa união é querida por Deus, sendo a célula vital da vida social e o primeiro lugar onde o ser humano 
-                aprende o que é bom, justo e verdadeiro.
-              </p>
-
-              <p className="mb-4">
-                Importante lembrar que os pais não são escolhidos por nós — nascemos deles. Por isso, a família é uma 
-                instituição divina, um dom e uma missão que nos precede e nos forma. Já amigos, colegas, esposos e esposas 
-                são relações que escolhemos, construídas na liberdade e na reciprocidade.
-              </p>
-            </section>
+            <p className="text-lg mb-8 text-gray-200">
+              A educação dos filhos representa um dos maiores desafios e responsabilidades dos pais. Compreender o temperamento único de cada criança é fundamental para uma educação eficaz que respeite sua individualidade enquanto a guia no caminho das virtudes.
+            </p>
 
             <Separator className="my-8 bg-gray-800" />
 
             <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Família: O Primeiro Sacramento de Deus</h2>
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Compreendendo os Temperamentos</h2>
               <p className="mb-4">
-                Antes mesmo dos sacramentos da Igreja, a família já era sinal visível do amor de Deus. O matrimônio, 
-                elevado por Cristo à dignidade de sacramento, faz da família um reflexo do amor de Cristo por sua Igreja 
-                (Efésios 5,31-32).
+                O estudo dos quatro temperamentos desempenha um papel significativo na educação dos filhos, permitindo que os pais compreendam melhor as características individuais de cada criança. Ao reconhecer o temperamento predominante, os pais podem ajustar sua abordagem educacional para atender às necessidades específicas, proporcionando um ambiente mais favorável ao desenvolvimento saudável, promovendo a autoestima, a motivação e a felicidade.
               </p>
-              <p className="mb-4">
-                A família, portanto, é o "primeiro sacramento" no sentido de ser o sinal primordial do amor, da fidelidade 
-                e da aliança de Deus com a humanidade.
-              </p>
+
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                Como ensina o Papa Pio XII: "A arte da educação é, sob muitos aspectos, a arte de adaptar-se à idade, ao temperamento, ao caráter, à capacidade, às necessidades e às justas aspirações". Esta adaptação não significa ceder a todos os caprichos da criança, mas compreender sua natureza para melhor guiá-la.
+              </blockquote>
 
               <div className="my-8 flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/paisFilhos.jpg" 
-                  alt="Família unida" 
+                  src="/lovable-uploads/criancasTemperamento.jpeg" 
+                  alt="Crianças e seus temperamentos" 
                   className="rounded-lg max-h-[400px] object-contain shadow-md"
                 />
                 <p className="text-center text-sm mt-3 text-gray-400">
-                  A família como primeiro sacramento de Deus
+                  Crianças e seus temperamentos
                 </p>
               </div>
             </section>
@@ -82,108 +56,171 @@ const EducacaoFamiliarArtigo = () => {
             <Separator className="my-8 bg-gray-800" />
 
             <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Família: Instituição Divina</h2>
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Os Quatro Temperamentos e Estratégias Educativas</h2>
+              
+              <h3 className="text-xl font-serif text-[#D4AF37] mb-3">Temperamento Melancólico</h3>
               <p className="mb-4">
-                A família não é criação humana, mas divina. Deus a instituiu como lugar de vida, de bênção, de crescimento 
-                e de santidade.
+                As crianças melancólicas tendem à introspecção, solidão e profundidade de pensamentos. Muitas vezes possuem habilidades analíticas, criativas e uma profunda capacidade de empatia. Como Santa Teresinha, que demonstrava características melancólicas desde pequena, preferindo "sentar-se sozinha na relva florida" com "pensamentos muito profundos".
               </p>
 
-              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
-                "Ide e multiplicai-vos"
-                <br />
-                <span className="text-sm">
-                  "Crescite et multiplicamini" (Genesis 1,28)
-                </span>
-              </blockquote>
-
-              <p className="mb-4">
-                Deus confiou à família a missão de gerar, educar e formar novas gerações, transmitindo a fé, os valores 
-                e o compromisso com o bem.
-              </p>
-            </section>
-
-            <Separator className="my-8 bg-gray-800" />
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Função do Pai</h2>
-              <p className="mb-4">
-                O pai é chamado a ser imagem do próprio Deus Pai: protetor, provedor, educador e guia espiritual. 
-                Seu papel é insubstituível, transmitindo segurança, limites, ensinando a fé e dando exemplo de coragem, 
-                retidão e amor.
-              </p>
-
-              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
-                "O pai deve educar os filhos, não apenas gerá-los e alimentá-los. O pai deve ocupar o posto central 
-                no processo educativo." (Pe. José Kentenich)
-              </blockquote>
-
-              <p className="mb-4">
-                A presença amorosa do pai ajuda os filhos a compreenderem o amor do Pai Celestial.
-              </p>
-            </section>
-
-            <Separator className="my-8 bg-gray-800" />
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Função da Mãe e a Submissão Respeitosa</h2>
-              <p className="mb-4">
-                A mulher é chamada a ser submissa ao homem, assim como o homem é submisso a Deus. Essa submissão, porém, 
-                não é sinal de inferioridade, mas de respeito transcendente e complementaridade harmoniosa, baseada no 
-                amor e na ordem divina.
-              </p>
-
-              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
-                "Vós, mulheres, sujeitai-vos a vossos maridos, como convém no Senhor."
-                <br />
-                <span className="text-sm">
-                  "Mulieres, subditae estote viris vestris, sicut oportet in Domino." (Ephesios 5,22)
-                </span>
-              </blockquote>
-
-              <p className="mb-4">
-                A mãe é a grande defensora da vida, desde a concepção até a maturidade dos filhos. Ela é a primeira 
-                educadora, formando o coração e o caráter dos filhos para Deus e para a sociedade.
-              </p>
-
-              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
-                "Deus quis honrar os pais pelos filhos e, cuidadosamente, fortaleceu a autoridade da mãe sobre eles." 
-                (Eclesiástico 3,3)
-              </blockquote>
-
-              <p className="mb-4">
-                Com paciência e amor, a mãe molda as virtudes dos filhos e é exemplo de doação e ternura.
-              </p>
-            </section>
-
-            <Separator className="my-8 bg-gray-800" />
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Função dos Filhos</h2>
-              <p className="mb-4">
-                Os filhos são chamados a honrar, obedecer e amar seus pais (Efésios 6,1; Provérbios 13,1). Eles são 
-                fruto do amor dos pais e devem retribuir com respeito, cuidado e gratidão. A vida familiar é uma escola 
-                de virtudes, onde os filhos aprendem a ser trabalhadores, justos e generosos.
-              </p>
-            </section>
-
-            <Separator className="my-8 bg-gray-800" />
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Exemplos de Famílias Santas</h2>
-              <p className="mb-4">
-                A história da Igreja está repleta de famílias que viveram a santidade no cotidiano, tornando-se exemplos 
-                para todos:
-              </p>
-
-              <div className="bg-[#121212] p-4 rounded-lg border border-gray-800 space-y-4">
-                <ul className="list-disc pl-5 space-y-3">
-                  <li><strong>Sagrada Família (Jesus, Maria e José):</strong> Modelo perfeito de amor, oração, obediência e humildade.</li>
-                  <li><strong>Santa Ana e São Joaquim:</strong> Avós de Jesus, pais de Maria, exemplos de fé e perseverança.</li>
-                  <li><strong>Santa Mônica e Santo Agostinho:</strong> Mãe perseverante na oração e filho convertido, testemunho de esperança e fé.</li>
-                  <li><strong>São Luís e Santa Zélia Martin:</strong> Pais de Santa Teresinha do Menino Jesus, viveram o matrimônio como caminho de santidade, educando os filhos na fé.</li>
-                  <li><strong>São Gregório e Santa Nonna:</strong> Pais de três santos, exemplo de educação cristã e oração perseverante.</li>
-                  <li><strong>Santa Gianna Beretta Molla:</strong> Mãe e médica, deu a vida pelo filho, testemunho de amor sacrificial.</li>
+              <div className="bg-[#121212] p-4 rounded-lg border border-gray-800 mb-6">
+                <h4 className="text-[#D4AF37] mb-2">Como os pais podem ajudar:</h4>
+                <ul className="list-disc pl-5 text-gray-300 space-y-2">
+                  <li>Oferecer um ambiente acolhedor que respeite sua individualidade</li>
+                  <li>Estimular seu potencial criativo e intelectual</li>
+                  <li>Combater tendências ao pessimismo e perfeccionismo através das virtudes da esperança, confiança e contentamento</li>
+                  <li>Encorajar a busca por conhecimento em áreas que despertem seu interesse</li>
                 </ul>
+              </div>
+
+              <div className="my-8 flex flex-col items-center">
+                <img 
+                  src="/lovable-uploads/padreEducando.png" 
+                  alt="Educação e formação" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md" 
+                />
+                <p className="text-center text-sm mt-3 text-gray-400">
+                  Educação e formação
+                </p>
+              </div>
+
+              <div className="my-8 flex flex-col items-center">
+                <img 
+                  src="/lovable-uploads/ARenaissance-style.jpg" 
+                  alt="Arte renascentista sobre educação" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md" 
+                />
+                <p className="text-center text-sm mt-3 text-gray-400">
+                  Arte renascentista sobre educação
+                </p>
+              </div>
+
+              <h3 className="text-xl font-serif text-[#D4AF37] mb-3">Temperamento Colérico</h3>
+              <p className="mb-4">
+                Crianças coléricas são geralmente determinadas, enérgicas e líderes naturais, mas podem ter dificuldades com raiva, orgulho e tendência a dominar os outros. São Pio X, que "mantinha um absoluto senhorio de si e dominava os impulsos de seu ardente temperamento", demonstra como é possível transformar a energia natural em virtude através do autodomínio.
+              </p>
+
+              <div className="my-8 flex flex-col items-center">
+                <img 
+                  src="/lovable-uploads/criancaColerica.png" 
+                  alt="Criança com temperamento colérico" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md" 
+                />
+                <p className="text-center text-sm mt-3 text-gray-400">
+                  Criança com temperamento colérico - determinada e enérgica
+                </p>
+              </div>
+
+              <div className="bg-[#121212] p-4 rounded-lg border border-gray-800 mb-6">
+                <h4 className="text-[#D4AF37] mb-2">Como os pais podem ajudar:</h4>
+                <ul className="list-disc pl-5 text-gray-300 space-y-2">
+                  <li>Ensinar o autocontrole e canalizar sua energia para atividades construtivas</li>
+                  <li>Cultivar as virtudes da paciência, humildade e compaixão</li>
+                  <li>Estabelecer limites claros, mas sem sufocar sua iniciativa</li>
+                  <li>Valorizar sua liderança natural, direcionando-a para o serviço aos outros</li>
+                </ul>
+              </div>
+
+              <h3 className="text-xl font-serif text-[#D4AF37] mb-3">Temperamento Sanguíneo</h3>
+              <p className="mb-4">
+                As crianças sanguíneas são geralmente cheias de energia, espevitadas, centro das atenções - e por vezes das confusões. São sociáveis e adaptáveis, mas podem ter dificuldades com impulsividade e falta de autocontrole.
+              </p>
+
+              <div className="bg-[#121212] p-4 rounded-lg border border-gray-800 mb-6">
+                <h4 className="text-[#D4AF37] mb-2">Como os pais podem ajudar:</h4>
+                <ul className="list-disc pl-5 text-gray-300 space-y-2">
+                  <li>Desenvolver as virtudes do autocontrole e da moderação</li>
+                  <li>Oferecer estrutura e consistência sem reprimir seu entusiasmo natural</li>
+                  <li>Ensinar a perseverança em tarefas e compromissos</li>
+                  <li>Valorizar sua sociabilidade, direcionando-a para relações saudáveis</li>
+                </ul>
+              </div>
+
+              <h3 className="text-xl font-serif text-[#D4AF37] mb-3">Temperamento Fleumático</h3>
+              <p className="mb-4">
+                As crianças fleumáticas tendem a ser pacíficas, dóceis e calmas, mas podem apresentar falta de ambição e tendência à complacência. São geralmente quietas, aplicadas, mas lentas para se enturmar.
+              </p>
+
+              <div className="bg-[#121212] p-4 rounded-lg border border-gray-800 mb-6">
+                <h4 className="text-[#D4AF37] mb-2">Como os pais podem ajudar:</h4>
+                <ul className="list-disc pl-5 text-gray-300 space-y-2">
+                  <li>Cultivar as virtudes da diligência e da perseverança</li>
+                  <li>Incentivar a iniciativa e a expressão de opiniões e sentimentos</li>
+                  <li>Respeitar seu ritmo mais lento, sem pressioná-las excessivamente</li>
+                  <li>Valorizar sua capacidade de reflexão e estabilidade emocional</li>
+                </ul>
+              </div>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Graça e a Educação dos Temperamentos</h2>
+              <p className="mb-4">
+                O Papa Pio XII nos ensina que "a educação cristã da consciência está bem longe de negar a personalidade, mesmo a do jovem e da criança, e de reprimir sua iniciativa. Porque toda sã educação tende pouco a pouco a tornar obsoleto o educador e mais independente o educando, dentro de justos limites". Esta visão equilibrada reconhece tanto a autoridade dos pais quanto a necessidade de desenvolver a autonomia da criança.
+              </p>
+
+              <p className="mb-4">
+                A educação deve considerar que "a criança em estado de graça, desde que não peque pessoalmente, está em contato direto com a Santíssima Trindade que nela habita; sua alma é como um diamante, que ainda precisa ser lapidado, mas que praticamente não tem escórias". Esta visão espiritual da infância nos convida a respeitar a dignidade da criança e seu potencial para a virtude.
+              </p>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Virtudes Cristãs e Temperamento</h2>
+              <p className="mb-4">
+                A Igreja Católica ensina que todos são chamados a crescer em virtude e a lutar pela santidade, independentemente do temperamento. As virtudes são hábitos que permitem aos fiéis agirem de forma que agrade a Deus e de acordo com Seus ensinamentos.
+              </p>
+
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                São Pio X, em seu programa de pontificado, declarou ser seu único propósito "instaurare omnia in Christo, ou seja, de recapitular, reconduzir tudo à unidade em Cristo". Este princípio aplica-se perfeitamente à educação das crianças, que deve ter como objetivo final conduzi-las a Cristo.
+              </blockquote>
+
+              <p className="mb-4">
+                Como lembra a tradição católica, "Se pois a Lei de Deus manda aos filhos honrar, obedecer e acatar os pais, é também dever e encargo dos pais educar os filhos por princípios e costumes bem". Esta reciprocidade de deveres forma a base da educação cristã.
+              </p>
+
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                O Cardeal Ratzinger (futuro Papa Bento XVI) advertiu que "a fé não é um sentimento vago das realidades transcendentes e inexprimíveis; ela forma sem dúvida o coração do homem, mas da raiz do coração forma também o intelecto e a vontade. A fé exige uma contínua pedagogia da personalidade inteira, a disponibilidade de aprender toda a vida, de permanecer discípulo na escola de Cristo".
+              </blockquote>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Exercício Prático de Meditação</h2>
+              
+              <p className="mb-4">Silencie seu coração e coloque-se na presença de Jesus, o Amigo fiel.</p>
+
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                "Vós sois meus amigos, se fizerdes o que eu vos mando."
+                <br />
+                <span className="text-sm">
+                  "Vos amici mei estis, si feceritis quae ego praecipio vobis." (João 15,14)
+                </span>
+              </blockquote>
+
+              <div className="bg-[#121212] p-6 rounded-lg border border-gray-800">
+                <h3 className="text-lg font-medium text-amber-400 mb-4">Pontos para Reflexão:</h3>
+                <ul className="space-y-4 text-gray-300">
+                  <li>• Tenho vivido a amizade como Cristo ensinou?</li>
+                  <li>• Tenho sido paciente, leal, compassivo com meus amigos?</li>
+                  <li>• Tenho buscado amar sem esperar retribuição?</li>
+                  <li>• Minha amizade com Deus se reflete nas minhas amizades humanas?</li>
+                  <li>• Busco comunhão de almas, ou meus relacionamentos são superficiais?</li>
+                </ul>
+              </div>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Oração Final</h2>
+              <div className="bg-[#121212] p-6 rounded-lg border border-gray-800">
+                <p className="text-gray-300 italic">
+                  Senhor Jesus, Amigo fiel, ensina-me a viver a amizade como comunhão de almas, unidas em Ti. Que eu saiba cativar e ser cativado, cuidar e ser cuidado, amando com generosidade e paciência. Que os santos e meu anjo da guarda me inspirem e acompanhem, e que eu nunca deixe de buscar Tua amizade e a de Maria, nossa Mãe. Amém.
+                </p>
               </div>
             </section>
 
@@ -192,19 +229,13 @@ const EducacaoFamiliarArtigo = () => {
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Conclusão</h2>
               <p className="mb-4">
-                A família é o primeiro lugar onde se aprende a amar, a servir, a rezar e a ser feliz. É escola de virtudes, 
-                porto seguro e base da sociedade. Cuidar da família é cuidar do futuro da humanidade.
+                A amizade é comunhão de almas, dom de Deus, caminho de santidade. Inspirados em Cristo, nos santos, em Maria e nos nossos anjos da guarda, sejamos amigos verdadeiros, responsáveis uns pelos outros, construindo laços que nos conduzam juntos ao Céu.
               </p>
 
-              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
-                "Sem famílias fortes na comunhão e estáveis no compromisso, os povos se enfraquecem." 
-                (Catecismo da Igreja Católica, n. 2224)
-              </blockquote>
-
-              <p className="mb-4">
-                Que as famílias cristãs sejam fiéis ao seu chamado divino, inspiradas pelo exemplo dos santos, e sejam 
-                luz para o mundo!
-              </p>
+              <div className="my-8 text-center">
+                <p className="text-[#D4AF37] italic">Vulnerasti cor meum verbo tuo</p>
+                <p className="text-gray-300">Feriste o meu coração com a Tua palavra</p>
+              </div>
             </section>
 
             <div className="flex justify-center mt-12">
