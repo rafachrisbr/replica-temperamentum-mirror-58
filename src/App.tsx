@@ -32,6 +32,7 @@ import CompleteTestResults from "./pages/CompleteTestResults";
 import CompleteTestIntro from './pages/CompleteTestIntro';
 import EducacaoFamiliar from './pages/EducacaoFamiliar';
 import EducacaoFamiliarArtigo from './pages/EducacaoFamiliarArtigo';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -71,6 +72,7 @@ const App = () => (
                     <Route path="/complete-test-intro" element={<CompleteTestIntro />} />
                     <Route path="/educacao-familiar" element={<EducacaoFamiliar />} />
                     <Route path="/educacao-familiar/artigo" element={<EducacaoFamiliarArtigo />} />
+                    <Route path="/privacidade" element={<PrivacyPolicy />} />
                     <Route path="*" element={<NotFound />} />
                   </Routes>
                 </BrowserRouter>

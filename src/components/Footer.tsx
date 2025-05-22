@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -9,7 +10,12 @@ const Footer: React.FC = () => {
         <p className="text-xs md:text-sm my-2">Este teste é uma ferramenta de autoconhecimento e não substitui o acompanhamento espiritual.</p>
         <p className="text-xs my-2">Fontes principais: ensinamentos do Pe. Paulo Ricardo (curso "os quatro temperamentos") e canção nova (artigo "qual é o seu temperamento?").</p>
         <p className="text-xs my-2">As meditações são baseadas em reflexões teológicas e espirituais sobre os temperamentos e aspectos da vida cristã.</p>
-        <p className="text-xs md:text-sm my-2 text-center">© 2025 Rafael Christiano</p>
+        <div className="flex justify-center space-x-4 text-xs my-2">
+          <p>© 2025 Rafael Christiano</p>
+          <Link to="/privacidade" className="text-[#D4AF37] hover:text-[#FFD700] transition-colors">
+            Política de Privacidade
+          </Link>
+        </div>
       </div>
     </footer>
   );
