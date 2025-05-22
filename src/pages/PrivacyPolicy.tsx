@@ -39,9 +39,6 @@ const PrivacyPolicy = () => {
                 Se, no futuro, houver qualquer alteração nesta política, ela será informada nesta página.
               </p>
 
-              <p>
-                Para dúvidas ou sugestões, entre em contato pelo formulário disponível no site.
-              </p>
             </div>
           </article>
         </div>
