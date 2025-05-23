@@ -1,13 +1,9 @@
 import { z } from 'zod';
 
-export const temperamentFormSchema = z.object({
-  answers: z.record(z.string(), z.string()),
+export const simpleTemperamentFormSchema = z.object({
+  stressHandling: z.enum(['calm', 'anxious', 'aggressive']),
+  energyLevel: z.enum(['high', 'medium', 'low']),
+  socialPreference: z.enum(['extrovert', 'introvert', 'ambivert'])
 });
 
-export type TemperamentFormData = z.infer<typeof temperamentFormSchema>;
-
-export const intelligenceFormSchema = z.object({
-  answers: z.record(z.string(), z.number()),
-});
-
-export type IntelligenceFormData = z.infer<typeof intelligenceFormSchema>;
+export type SimpleTemperamentFormData = z.infer<typeof simpleTemperamentFormSchema>;
