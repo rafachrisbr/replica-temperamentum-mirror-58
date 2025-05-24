@@ -31,6 +31,14 @@ const EducacaoFamiliarFamilia = () => {
                 A família é a instituição social mais antiga da humanidade, fundamento de toda sociedade. Desde as origens, a família foi pensada por Deus como o primeiro ambiente de comunhão, proteção, educação e transmissão de valores:
               </p>
 
+              <div className="my-8 flex flex-col items-center">
+                <img 
+                  src="/lovable-uploads/familia1.png" 
+                  alt="Família unida" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md"
+                />
+              </div>
+
               <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
                 "Não é bom que o homem esteja só. Vou fazer para ele uma auxiliar que lhe seja semelhante." (Gênesis 2,18)
                 <br />
@@ -46,14 +54,6 @@ const EducacaoFamiliarFamilia = () => {
               <p className="mb-4">
                 Importante lembrar que os pais não são escolhidos por nós — nascemos deles. Por isso, a família é uma instituição divina, um dom e uma missão que nos precede e nos forma. Já amigos, colegas, esposos e esposas são relações que escolhemos, construídas na liberdade e na reciprocidade.
               </p>
-
-              <div className="my-8 flex flex-col items-center">
-                <img 
-                  src="/lovable-uploads/familia1.jpg" 
-                  alt="Família Católica" 
-                  className="rounded-lg max-h-[400px] object-contain shadow-md"
-                />
-              </div>
             </section>
 
             <Separator className="my-8 bg-gray-800" />
@@ -66,6 +66,14 @@ const EducacaoFamiliarFamilia = () => {
               <p className="mb-4">
                 A família, portanto, é o "primeiro sacramento" no sentido de ser o sinal primordial do amor, da fidelidade e da aliança de Deus com a humanidade.
               </p>
+
+              <div className="my-8 flex flex-col items-center">
+                <img 
+                  src="/lovable-uploads/familia2.png" 
+                  alt="Família em oração" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md"
+                />
+              </div>
 
               <h3 className="text-xl font-serif text-[#D4AF37] mb-4">Família: Instituição Divina</h3>
               <p className="mb-4">
@@ -83,14 +91,6 @@ const EducacaoFamiliarFamilia = () => {
               <p className="mb-4">
                 Deus confiou à família a missão de gerar, educar e formar novas gerações, transmitindo a fé, os valores e o compromisso com o bem.
               </p>
-
-              <div className="my-8 flex flex-col items-center">
-                <img 
-                  src="/lovable-uploads/familiaCatolica.jpg" 
-                  alt="Família Unida" 
-                  className="rounded-lg max-h-[400px] object-contain shadow-md"
-                />
-              </div>
             </section>
 
             <Separator className="my-8 bg-gray-800" />
@@ -124,6 +124,14 @@ const EducacaoFamiliarFamilia = () => {
                 </span>
               </blockquote>
 
+              <div className="my-8 flex flex-col items-center">
+                <img 
+                  src="/lovable-uploads/familia3.png" 
+                  alt="Família em harmonia" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md"
+                />
+              </div>
+
               <p className="mb-4">
                 A mãe é a grande defensora da vida, desde a concepção até a maturidade dos filhos. Ela é a primeira educadora, formando o coração e o caráter dos filhos para Deus e para a sociedade.
               </p>
@@ -142,14 +150,6 @@ const EducacaoFamiliarFamilia = () => {
               <p className="mb-4">
                 Os filhos são chamados a honrar, obedecer e amar seus pais (Efésios 6,1; Provérbios 13,1). Eles são fruto do amor dos pais e devem retribuir com respeito, cuidado e gratidão. A vida familiar é uma escola de virtudes, onde os filhos aprendem a ser trabalhadores, justos e generosos.
               </p>
-
-              <div className="my-8 flex flex-col items-center">
-                <img 
-                  src="/lovable-uploads/familia2.jpg" 
-                  alt="Educação Familiar" 
-                  className="rounded-lg max-h-[400px] object-contain shadow-md"
-                />
-              </div>
             </section>
 
             <section className="mb-12">
@@ -166,6 +166,14 @@ const EducacaoFamiliarFamilia = () => {
                 <li><strong>São Gregório e Santa Nonna:</strong> Pais de três santos, exemplo de educação cristã e oração perseverante.</li>
                 <li><strong>Santa Gianna Beretta Molla:</strong> Mãe e médica, deu a vida pelo filho, testemunho de amor sacrificial.</li>
               </ul>
+
+              <div className="my-8 flex flex-col items-center">
+                <img 
+                  src="/lovable-uploads/familia4.png" 
+                  alt="Família santa" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md"
+                />
+              </div>
             </section>
 
             <Separator className="my-8 bg-gray-800" />
