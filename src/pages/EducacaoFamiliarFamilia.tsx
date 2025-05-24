@@ -33,7 +33,7 @@ const EducacaoFamiliarFamilia = () => {
 
               <div className="my-8 flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/familia1.png" 
+                  src="/lovable-uploads/família1.png" 
                   alt="Família unida" 
                   className="rounded-lg max-h-[400px] object-contain shadow-md"
                 />
