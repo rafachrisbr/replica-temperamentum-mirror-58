@@ -132,6 +132,43 @@ const Meditacoes = () => {
                 </Button>
               </CardFooter>
             </Card>
+
+            {/* Card para A Vocação à Santidade */}
+            <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.6s] opacity-0 fill-mode-forwards">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
+                  A Vocação à Santidade
+                </CardTitle>
+                <CardDescription className="text-gray-300">
+                  O chamado universal à perfeição cristã
+                </CardDescription>
+              </CardHeader>
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/vocatio2.png" 
+                  alt="A Vocação à Santidade"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="py-4 flex-grow">
+                <p className="text-gray-300 line-clamp-4">
+                  Esta meditação explora o chamado universal à santidade, baseada nos ensinamentos de 
+                  Santo Afonso Maria de Ligório e na tradição da Igreja. Descubra como a busca pela 
+                  perfeição cristã se realiza no cotidiano através do amor a Jesus Cristo.
+                </p>
+              </CardContent>
+              <CardFooter className="pt-0">
+                <Button 
+                  variant="outline" 
+                  className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
+                >
+                  <Link to="/meditacao-vocacao" className="flex items-center justify-center gap-2 w-full">
+                    Ler meditação completa
+                    <ArrowRight size={16} />
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
           </div>
         </div>
       </main>

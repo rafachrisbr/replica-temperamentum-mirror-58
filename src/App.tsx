@@ -17,6 +17,7 @@ import Meditacoes from "./pages/Meditacoes";
 import MeditacaoJoao from "./pages/MeditacaoJoao";
 import MeditacaoTresAmores from "./pages/MeditacaoTresAmores";
 import MeditacaoAmizade from "./pages/MeditacaoAmizade";
+import MeditacaoVocacao from "./pages/MeditacaoVocacao";
 import TestSelection from "./pages/TestSelection";
 import Intelligences from "./pages/Intelligences";
 import IntelligencesResults from "./pages/IntelligencesResults";
@@ -58,6 +59,7 @@ const App = () => (
                     <Route path="/meditacao-joao" element={<MeditacaoJoao />} />
                     <Route path="/meditacao-tres-amores" element={<MeditacaoTresAmores />} />
                     <Route path="/meditacao-amizade" element={<MeditacaoAmizade />} />
+                    <Route path="/meditacao-vocacao" element={<MeditacaoVocacao />} />
                     <Route path="/testes" element={<TestSelection />} />
                     <Route path="/inteligencias" element={<Intelligences />} />
                     <Route path="/inteligencias-resultados" element={<IntelligencesResults />} />
@@ -86,5 +88,3 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
 );
-
-export default App;
