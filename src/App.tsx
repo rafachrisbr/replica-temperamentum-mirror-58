@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { QuizProvider } from "@/contexts/QuizContext";
 import { IntelligencesProvider } from "@/contexts/IntelligencesContext";
 import { CombinedTestProvider } from "@/contexts/CombinedTestContext";
@@ -39,6 +39,17 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Animated page wrapper component
+const AnimatedPage: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const location = useLocation();
+  
+  return (
+    <div key={location.pathname} className="animate-fadeIn">
+      {children}
+    </div>
+  );
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
@@ -51,33 +62,33 @@ const App = () => (
               <CompleteTestProvider>
                 <BrowserRouter>
                   <Routes>
-                    <Route path="/" element={<Index />} />
-                    <Route path="/quiz" element={<Quiz />} />
-                    <Route path="/results" element={<Results />} />
-                    <Route path="/temperamentos" element={<Temperamentos />} />
-                    <Route path="/meditacoes" element={<Meditacoes />} />
-                    <Route path="/meditacao-joao" element={<MeditacaoJoao />} />
-                    <Route path="/meditacao-tres-amores" element={<MeditacaoTresAmores />} />
-                    <Route path="/meditacao-amizade" element={<MeditacaoAmizade />} />
-                    <Route path="/meditacao-vocacao" element={<MeditacaoVocacao />} />
-                    <Route path="/testes" element={<TestSelection />} />
-                    <Route path="/inteligencias" element={<Intelligences />} />
-                    <Route path="/inteligencias-resultados" element={<IntelligencesResults />} />
-                    <Route path="/teste-completo" element={<CompleteTest />} />
-                    <Route path="/complete-test-results" element={<CompleteTestResults />} />
-                    <Route path="/teste-combinado" element={<CombinedTest />} />
-                    <Route path="/resultados-combinados" element={<CombinedResults />} />
-                    <Route path="/pe-hock-intro" element={<PeHockIntro />} />
-                    <Route path="/pe-hock-teste" element={<PeHockTest />} />
-                    <Route path="/pe-hock-results" element={<PeHockResults />} />
-                    <Route path="/inteligencias-multiplas" element={<MultipleIntelligences />} />
-                    <Route path="/inteligencias-multiplas-resultados" element={<MultipleIntelligencesResults />} />
-                    <Route path="/complete-test-intro" element={<CompleteTestIntro />} />
-                    <Route path="/educacao-familiar" element={<EducacaoFamiliar />} />
-                    <Route path="/educacao-familiar/artigo" element={<EducacaoFamiliarArtigo />} />
-                    <Route path="/educacao-familiar/familia" element={<EducacaoFamiliarFamilia />} />
-                    <Route path="/privacidade" element={<PrivacyPolicy />} />
-                    <Route path="*" element={<NotFound />} />
+                    <Route path="/" element={<AnimatedPage><Index /></AnimatedPage>} />
+                    <Route path="/quiz" element={<AnimatedPage><Quiz /></AnimatedPage>} />
+                    <Route path="/results" element={<AnimatedPage><Results /></AnimatedPage>} />
+                    <Route path="/temperamentos" element={<AnimatedPage><Temperamentos /></AnimatedPage>} />
+                    <Route path="/meditacoes" element={<AnimatedPage><Meditacoes /></AnimatedPage>} />
+                    <Route path="/meditacao-joao" element={<AnimatedPage><MeditacaoJoao /></AnimatedPage>} />
+                    <Route path="/meditacao-tres-amores" element={<AnimatedPage><MeditacaoTresAmores /></AnimatedPage>} />
+                    <Route path="/meditacao-amizade" element={<AnimatedPage><MeditacaoAmizade /></AnimatedPage>} />
+                    <Route path="/meditacao-vocacao" element={<AnimatedPage><MeditacaoVocacao /></AnimatedPage>} />
+                    <Route path="/testes" element={<AnimatedPage><TestSelection /></AnimatedPage>} />
+                    <Route path="/inteligencias" element={<AnimatedPage><Intelligences /></AnimatedPage>} />
+                    <Route path="/inteligencias-resultados" element={<AnimatedPage><IntelligencesResults /></AnimatedPage>} />
+                    <Route path="/teste-completo" element={<AnimatedPage><CompleteTest /></AnimatedPage>} />
+                    <Route path="/complete-test-results" element={<AnimatedPage><CompleteTestResults /></AnimatedPage>} />
+                    <Route path="/teste-combinado" element={<AnimatedPage><CombinedTest /></AnimatedPage>} />
+                    <Route path="/resultados-combinados" element={<AnimatedPage><CombinedResults /></AnimatedPage>} />
+                    <Route path="/pe-hock-intro" element={<AnimatedPage><PeHockIntro /></AnimatedPage>} />
+                    <Route path="/pe-hock-teste" element={<AnimatedPage><PeHockTest /></AnimatedPage>} />
+                    <Route path="/pe-hock-results" element={<AnimatedPage><PeHockResults /></AnimatedPage>} />
+                    <Route path="/inteligencias-multiplas" element={<AnimatedPage><MultipleIntelligences /></AnimatedPage>} />
+                    <Route path="/inteligencias-multiplas-resultados" element={<AnimatedPage><MultipleIntelligencesResults /></AnimatedPage>} />
+                    <Route path="/complete-test-intro" element={<AnimatedPage><CompleteTestIntro /></AnimatedPage>} />
+                    <Route path="/educacao-familiar" element={<AnimatedPage><EducacaoFamiliar /></AnimatedPage>} />
+                    <Route path="/educacao-familiar/artigo" element={<AnimatedPage><EducacaoFamiliarArtigo /></AnimatedPage>} />
+                    <Route path="/educacao-familiar/familia" element={<AnimatedPage><EducacaoFamiliarFamilia /></AnimatedPage>} />
+                    <Route path="/privacidade" element={<AnimatedPage><PrivacyPolicy /></AnimatedPage>} />
+                    <Route path="*" element={<AnimatedPage><NotFound /></AnimatedPage>} />
                   </Routes>
                 </BrowserRouter>
               </CompleteTestProvider>
