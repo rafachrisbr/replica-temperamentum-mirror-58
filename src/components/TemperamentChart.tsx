@@ -1,13 +1,28 @@
+/**
+ * @file TemperamentChart.tsx
+ * @description Componente para exibir um gráfico visual dos resultados de temperamento
+ * @author Temperamentum
+ */
 
 import React, { useState, useEffect } from 'react';
 import { TemperamentResult } from '@/utils/quiz';
 import { Card, CardContent } from '@/components/ui/card';
 import { useIsMobile } from '@/hooks/use-mobile';
 
+/**
+ * @typedef {Object} TemperamentChartProps
+ * @property {TemperamentResult[]} results - Resultados do teste de temperamento
+ */
 interface TemperamentChartProps {
   results: TemperamentResult[];
 }
 
+/**
+ * @component TemperamentChart
+ * @description Exibe um gráfico visual dos resultados de temperamento
+ * @param {TemperamentChartProps} props - Propriedades do componente
+ * @returns {JSX.Element} Gráfico de temperamentos
+ */
 const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
   const [animatedValues, setAnimatedValues] = useState<number[]>([0, 0]);
   const isMobile = useIsMobile();
@@ -15,6 +30,10 @@ const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
   const dominantTemperament = results[0];
   const secondTemperament = results[1];
   
+  /**
+   * @effect
+   * @description Efeito para animar os valores dos gráficos
+   */
   useEffect(() => {
     // Animar os valores dos gráficos
     const timer = setTimeout(() => {
@@ -24,6 +43,12 @@ const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
     return () => clearTimeout(timer);
   }, [dominantTemperament.percentage, secondTemperament.percentage]);
   
+  /**
+   * @function getTemperamentColor
+   * @description Obtém a cor associada ao tipo de temperamento
+   * @param {string} type - Tipo de temperamento
+   * @returns {string} Código de cor hexadecimal
+   */
   const getTemperamentColor = (type: string) => {
     switch (type) {
       case 'sanguine':
@@ -39,6 +64,12 @@ const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
     }
   };
   
+  /**
+   * @function getGradient
+   * @description Cria um gradiente linear baseado na cor do temperamento
+   * @param {string} color - Cor base para o gradiente
+   * @returns {string} String CSS de gradiente linear
+   */
   const getGradient = (color: string) => {
     return `linear-gradient(90deg, ${color}, ${color}80)`;
   };
@@ -67,6 +98,10 @@ const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
                   width: `${animatedValues[0]}%`,
                   background: getGradient(getTemperamentColor(dominantTemperament.type))
                 }}
+                role="progressbar"
+                aria-valuenow={animatedValues[0]}
+                aria-valuemin={0}
+                aria-valuemax={100}
               ></div>
             </div>
             {!isMobile && (
@@ -94,6 +129,10 @@ const TemperamentChart: React.FC<TemperamentChartProps> = ({ results }) => {
                   width: `${animatedValues[1]}%`,
                   background: getGradient(getTemperamentColor(secondTemperament.type))
                 }}
+                role="progressbar"
+                aria-valuenow={animatedValues[1]}
+                aria-valuemin={0}
+                aria-valuemax={100}
               ></div>
             </div>
             {!isMobile && (

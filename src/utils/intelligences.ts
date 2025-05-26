@@ -1,10 +1,30 @@
+/**
+ * @file intelligences.ts
+ * @description Implementação da lógica do teste de inteligências múltiplas
+ * @author Temperamentum
+ */
 
+/**
+ * @typedef {Object} IntelligenceOption
+ * @description Opção de resposta para uma pergunta do teste de inteligências
+ * @property {string} id - Identificador único da opção
+ * @property {string} text - Texto da opção
+ * @property {'linguistic'|'logical'|'spatial'|'musical'|'bodily'|'interpersonal'|'intrapersonal'|'naturalist'} type - Tipo de inteligência associada
+ */
 export interface IntelligenceOption {
   id: string;
   text: string;
   type: 'linguistic' | 'logical' | 'spatial' | 'musical' | 'bodily' | 'interpersonal' | 'intrapersonal' | 'naturalist';
 }
 
+/**
+ * @typedef {Object} IntelligenceQuestion
+ * @description Pergunta do teste de inteligências múltiplas
+ * @property {string} id - Identificador único da pergunta
+ * @property {string} text - Texto da pergunta
+ * @property {Array<{value: number, text: string}>} options - Opções de resposta com valores numéricos
+ * @property {'linguistic'|'logical'|'spatial'|'musical'|'bodily'|'interpersonal'|'intrapersonal'|'naturalist'} type - Tipo de inteligência avaliada
+ */
 export interface IntelligenceQuestion {
   id: string;
   text: string;
@@ -15,6 +35,18 @@ export interface IntelligenceQuestion {
   type: 'linguistic' | 'logical' | 'spatial' | 'musical' | 'bodily' | 'interpersonal' | 'intrapersonal' | 'naturalist';
 }
 
+/**
+ * @typedef {Object} IntelligenceResult
+ * @description Resultado do teste de inteligências múltiplas
+ * @property {'linguistic'|'logical'|'spatial'|'musical'|'bodily'|'interpersonal'|'intrapersonal'|'naturalist'} type - Tipo de inteligência
+ * @property {string} name - Nome da inteligência
+ * @property {number} percentage - Porcentagem da inteligência no resultado
+ * @property {string} description - Descrição da inteligência
+ * @property {string[]} strengths - Pontos fortes associados à inteligência
+ * @property {string[]} careers - Carreiras compatíveis com a inteligência
+ * @property {string[]} activities - Atividades recomendadas para desenvolver a inteligência
+ * @property {string} icon - Ícone associado à inteligência
+ */
 export interface IntelligenceResult {
   type: 'linguistic' | 'logical' | 'spatial' | 'musical' | 'bodily' | 'interpersonal' | 'intrapersonal' | 'naturalist';
   name: string;
@@ -26,6 +58,10 @@ export interface IntelligenceResult {
   icon: string;
 }
 
+/**
+ * @constant {IntelligenceQuestion[]} intelligenceQuestions
+ * @description Array de perguntas do teste de inteligências múltiplas
+ */
 export const intelligenceQuestions: IntelligenceQuestion[] = [
   {
     id: 'i1',
@@ -221,6 +257,10 @@ export const intelligenceQuestions: IntelligenceQuestion[] = [
   }
 ];
 
+/**
+ * @constant {Object} intelligenceInfo
+ * @description Informações detalhadas sobre cada tipo de inteligência
+ */
 export const intelligenceInfo = {
   linguistic: {
     name: 'Inteligência Linguística',
@@ -288,6 +328,12 @@ export const intelligenceInfo = {
   }
 };
 
+/**
+ * @function calculateIntelligenceResults
+ * @description Calcula os resultados do teste de inteligências múltiplas
+ * @param {Record<string, number>} answers - Objeto com as respostas do usuário (id da pergunta -> valor numérico)
+ * @returns {IntelligenceResult[]} Array de resultados ordenados por porcentagem (maior para menor)
+ */
 export const calculateIntelligenceResults = (answers: Record<string, number>): IntelligenceResult[] => {
   const scores = {
     linguistic: 0,
@@ -329,6 +375,13 @@ export const calculateIntelligenceResults = (answers: Record<string, number>): I
   return results.sort((a, b) => b.percentage - a.percentage);
 };
 
+/**
+ * @function getIntelligenceCorrelations
+ * @description Obtém correlações entre temperamento e inteligências
+ * @param {string} temperamentType - Tipo de temperamento
+ * @param {string[]} topIntelligences - Array com os tipos de inteligências principais
+ * @returns {string} Texto descritivo da correlação
+ */
 export const getIntelligenceCorrelations = (temperamentType: string, topIntelligences: string[]): string => {
   const correlations: Record<string, Record<string, string>> = {
     sanguine: {

@@ -1,6 +1,22 @@
+/**
+ * @file Footer.tsx
+ * @description Componente de rodapé do site
+ * @author Temperamentum
+ */
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/**
+ * @component Footer
+ * @description Componente de rodapé que exibe informações de copyright, fontes e política de privacidade
+ * @features
+ * - Exibição de informações de copyright
+ * - Exibição de fontes e referências
+ * - Link para a política de privacidade
+ * - Separador visual
+ * @returns {JSX.Element} Componente de rodapé renderizado
+ */
 const Footer: React.FC = () => {
   return (
     <footer className="p-4 md:p-6 text-center text-[#A9A9A9] bg-[#121212]">

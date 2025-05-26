@@ -1,21 +1,50 @@
+/**
+ * @file quiz.ts
+ * @description Implementação da lógica do teste de temperamento rápido
+ * @author Temperamentum
+ */
 
+/**
+ * @typedef {Object} Option
+ * @description Representa uma opção de resposta em uma pergunta do teste
+ * @property {string} id - Identificador único da opção
+ * @property {string} text - Texto da opção apresentado ao usuário
+ * @property {'sanguine' | 'choleric' | 'melancholic' | 'phlegmatic'} temperament - Temperamento associado à opção
+ */
 export interface Option {
   id: string;
   text: string;
   temperament: 'sanguine' | 'choleric' | 'melancholic' | 'phlegmatic';
 }
 
+/**
+ * @typedef {Object} Question
+ * @description Representa uma pergunta do teste de temperamento
+ * @property {string} id - Identificador único da pergunta
+ * @property {string} text - Texto da pergunta apresentado ao usuário
+ * @property {Option[]} options - Array de opções de resposta
+ */
 export interface Question {
   id: string;
   text: string;
   options: Option[];
 }
 
+/**
+ * @typedef {Object} SaintWithQuote
+ * @description Representa um santo com uma citação associada
+ * @property {string} name - Nome do santo
+ * @property {string} quote - Citação do santo
+ */
 export interface SaintWithQuote {
   name: string;
   quote: string;
 }
 
+/**
+ * @constant {Question[]} questions
+ * @description Array de perguntas do teste rápido de temperamento
+ */
 export const questions: Question[] = [
   {
     id: 'q1',
@@ -357,6 +386,20 @@ export const questions: Question[] = [
   }
 ];
 
+/**
+ * @typedef {Object} TemperamentResult
+ * @description Resultado do teste de temperamento
+ * @property {'sanguine' | 'choleric' | 'melancholic' | 'phlegmatic'} type - Tipo de temperamento
+ * @property {string} name - Nome do temperamento
+ * @property {number} percentage - Porcentagem do temperamento no resultado
+ * @property {string} description - Descrição do temperamento
+ * @property {string[]} virtues - Virtudes associadas ao temperamento
+ * @property {string[]} weaknesses - Fraquezas associadas ao temperamento
+ * @property {string} careerProfile - Perfil de carreira associado ao temperamento
+ * @property {string[]} suggestedProfessions - Profissões sugeridas para o temperamento
+ * @property {SaintWithQuote[]} saintsWithQuotes - Santos associados ao temperamento com citações
+ * @property {string} spiritualTips - Dicas espirituais para o temperamento
+ */
 export interface TemperamentResult {
   type: 'sanguine' | 'choleric' | 'melancholic' | 'phlegmatic';
   name: string;
@@ -370,6 +413,10 @@ export interface TemperamentResult {
   spiritualTips: string;
 }
 
+/**
+ * @constant {Object} temperamentInfo
+ * @description Informações detalhadas sobre cada temperamento
+ */
 export const temperamentInfo = {
   sanguine: {
     name: 'Sanguíneo',
@@ -449,6 +496,12 @@ export const temperamentInfo = {
   }
 };
 
+/**
+ * @function calculateResults
+ * @description Calcula os resultados do teste de temperamento com base nas respostas do usuário
+ * @param {Record<string, string>} answers - Objeto com as respostas do usuário (id da pergunta -> id da opção)
+ * @returns {TemperamentResult[]} Array de resultados ordenados por porcentagem (maior para menor)
+ */
 export const calculateResults = (answers: Record<string, string>): TemperamentResult[] => {
   const counts = {
     sanguine: 0,

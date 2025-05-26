@@ -1,3 +1,9 @@
+/**
+ * @file App.tsx
+ * @description Componente principal da aplicação que configura rotas e provedores globais
+ * @author Temperamentum
+ */
+
 import React from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -37,9 +43,19 @@ import EducacaoFamiliarFamilia from './pages/EducacaoFamiliarFamilia';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import NotFound from "./pages/NotFound";
 
+/**
+ * @constant {QueryClient} queryClient
+ * @description Cliente para React Query
+ */
 const queryClient = new QueryClient();
 
-// Animated page wrapper component
+/**
+ * @component AnimatedPage
+ * @description Componente wrapper que adiciona animações de transição de página
+ * @param {Object} props - Propriedades do componente
+ * @param {React.ReactNode} props.children - Componentes filhos a serem envolvidos
+ * @returns {JSX.Element} Wrapper de página animado
+ */
 const AnimatedPage: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
   
@@ -50,6 +66,18 @@ const AnimatedPage: React.FC<{ children: React.ReactNode }> = ({ children }) => 
   );
 };
 
+/**
+ * @component App
+ * @description Componente raiz da aplicação que configura a estrutura do app
+ * @features
+ * - Gerenciamento de estado global através de vários provedores
+ * - Roteamento client-side com React Router
+ * - Boundary de erro para tratamento elegante de erros
+ * - Notificações toast
+ * - Tooltips
+ * - Animações de transição de página
+ * @returns {JSX.Element} A estrutura completa da aplicação
+ */
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>

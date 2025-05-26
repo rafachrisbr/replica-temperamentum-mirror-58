@@ -1,3 +1,8 @@
+/**
+ * @file TemperamentCard.tsx
+ * @description Componente para exibir informações detalhadas sobre um temperamento
+ * @author Temperamentum
+ */
 
 import React from 'react';
 import { TemperamentResult } from '@/utils/quiz';
@@ -5,15 +10,31 @@ import { Table, TableBody, TableCell, TableHeader, TableRow } from '@/components
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Book, User, Briefcase, Quote } from 'lucide-react';
 
+/**
+ * @typedef {Object} TemperamentCardProps
+ * @property {TemperamentResult} temperament - Dados do temperamento a ser exibido
+ * @property {boolean} [isDominant=false] - Indica se este é o temperamento dominante
+ */
 interface TemperamentCardProps {
   temperament: TemperamentResult;
   isDominant?: boolean;
 }
 
+/**
+ * @component TemperamentCard
+ * @description Exibe um card com informações detalhadas sobre um temperamento
+ * @param {TemperamentCardProps} props - Propriedades do componente
+ * @returns {JSX.Element} Card de temperamento
+ */
 const TemperamentCard: React.FC<TemperamentCardProps> = ({ 
   temperament,
   isDominant = false
 }) => {
+  /**
+   * @function getTemperamentColor
+   * @description Obtém a cor associada ao temperamento
+   * @returns {string} Código de cor hexadecimal
+   */
   const getTemperamentColor = () => {
     switch (temperament.type) {
       case 'sanguine':
@@ -29,7 +50,12 @@ const TemperamentCard: React.FC<TemperamentCardProps> = ({
     }
   };
   
-  // Helper function to properly capitalize names
+  /**
+   * @function capitalizeNames
+   * @description Capitaliza corretamente nomes próprios
+   * @param {string} name - Nome a ser capitalizado
+   * @returns {string} Nome capitalizado
+   */
   const capitalizeNames = (name: string) => {
     return name.split(' ').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()

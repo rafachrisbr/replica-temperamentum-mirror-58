@@ -1,14 +1,35 @@
+/**
+ * @file Navbar.tsx
+ * @description Componente de navegação principal do site
+ * @author Temperamentum
+ */
+
 import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
 
+/**
+ * @component Navbar
+ * @description Barra de navegação responsiva com menu mobile
+ * @features
+ * - Menu de navegação fixo no topo
+ * - Versão responsiva para desktop e mobile
+ * - Indicação visual da página atual
+ * - Menu dropdown para dispositivos móveis
+ * - Navegação programática com useNavigate
+ * @returns {JSX.Element} Componente de navegação renderizado
+ */
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   
+  /**
+   * @constant {Array} navItems
+   * @description Itens de navegação principal
+   */
   const navItems = [
     { name: 'Início', path: '/' },
     { name: 'Temperamentos', path: '/temperamentos' },
@@ -32,6 +53,7 @@ const Navbar: React.FC = () => {
           <button
             className="md:hidden text-white p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
           >
             <Menu size={24} />
           </button>
@@ -48,6 +70,7 @@ const Navbar: React.FC = () => {
                     ? "text-[#D4AF37] border-b-2 border-[#D4AF37]"
                     : "text-gray-300 hover:text-white"
                 )}
+                aria-current={location.pathname === item.path ? "page" : undefined}
               >
                 {item.name}
               </button>
@@ -73,6 +96,7 @@ const Navbar: React.FC = () => {
                       ? "text-[#D4AF37] bg-[#D4AF37]/10"
                       : "text-gray-300 hover:text-white hover:bg-white/5"
                   )}
+                  aria-current={location.pathname === item.path ? "page" : undefined}
                 >
                   {item.name}
                 </button>

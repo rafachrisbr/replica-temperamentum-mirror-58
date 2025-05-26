@@ -1,12 +1,33 @@
+/**
+ * @file Button.tsx
+ * @description Componente de botão personalizado
+ * @author Temperamentum
+ */
 
 import React from 'react';
 import { cn } from '@/lib/utils';
 
+/**
+ * @typedef {Object} ButtonProps
+ * @extends React.ButtonHTMLAttributes<HTMLButtonElement>
+ * @property {'primary' | 'secondary'} [variant='primary'] - Variante visual do botão
+ * @property {React.ReactNode} children - Conteúdo do botão
+ */
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary';
   children: React.ReactNode;
 }
 
+/**
+ * @component Button
+ * @description Componente de botão personalizado com variantes visual
+ * @param {ButtonProps} props - Propriedades do componente
+ * @returns {JSX.Element} Componente de botão
+ * @example
+ * <Button variant="primary" onClick={handleClick}>
+ *   Clique aqui
+ * </Button>
+ */
 const Button: React.FC<ButtonProps> = ({ 
   variant = 'primary', 
   children, 

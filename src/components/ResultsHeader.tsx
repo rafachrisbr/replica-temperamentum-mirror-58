@@ -1,11 +1,27 @@
+/**
+ * @file ResultsHeader.tsx
+ * @description Componente de cabeçalho para páginas de resultado
+ * @author Temperamentum
+ */
 
 import React from 'react';
 
+/**
+ * @typedef {Object} ResultsHeaderProps
+ * @property {string} title - Título principal do cabeçalho
+ * @property {string} subtitle - Subtítulo do cabeçalho
+ */
 type ResultsHeaderProps = {
   title: string;
   subtitle: string;
 };
 
+/**
+ * @component ResultsHeader
+ * @description Exibe um cabeçalho estilizado para páginas de resultado
+ * @param {ResultsHeaderProps} props - Propriedades do componente
+ * @returns {JSX.Element} Componente de cabeçalho de resultados
+ */
 const ResultsHeader: React.FC<ResultsHeaderProps> = ({ title, subtitle }) => {
   return (
     <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-4 md:p-6 rounded-lg shadow-lg border border-gray-800 animate-scale-in">
