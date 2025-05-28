@@ -25,6 +25,7 @@ const MeditacaoOracao = () => {
               A Oração — União com Deus
             </h1>
 
+            {/* Introdução */}
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Introdução</h2>
               <p className="mb-4">
@@ -34,7 +35,6 @@ const MeditacaoOracao = () => {
                 frequentemente para estar a sós com o Pai. O Catecismo Romano (de Trento) recorda que a oração não é apenas recomendada, 
                 mas um dever, pois "Cristo Senhor declarou: Devemos orar sempre e nunca deixar de fazê-lo".
               </p>
-
               <div className="my-8 flex flex-col items-center">
                 <img 
                   src="/lovable-uploads/cardOração.png" 
@@ -46,10 +46,10 @@ const MeditacaoOracao = () => {
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* Oração na Vida de Jesus */}
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Oração na Vida de Jesus</h2>
               <p className="mb-4">Jesus nos deixou ensinamentos claros sobre a oração:</p>
-
               <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
                 "Quando orardes, não sejais como os hipócritas, que gostam de orar em pé nas sinagogas e nas esquinas das ruas para serem vistos pelos homens... 
                 Mas tu, quando orares, entra no teu quarto, fecha a porta e ora a teu Pai em segredo; e teu Pai, que vê no segredo, te recompensará."
@@ -59,7 +59,6 @@ const MeditacaoOracao = () => {
                   et Pater tuus, qui videt in abscondito, reddet tibi." (Mt 6,5-6)
                 </span>
               </blockquote>
-
               <div className="my-8 flex flex-col items-center">
                 <img 
                   src="/lovable-uploads/nossoSenhorOrando.png" 
@@ -67,12 +66,10 @@ const MeditacaoOracao = () => {
                   className="rounded-lg max-h-[400px] object-contain shadow-md"
                 />
               </div>
-
               <p className="mb-4">
                 Nos momentos decisivos, Jesus buscava o silêncio e a solidão para rezar. No Getsêmani, antes da Paixão, 
                 Ele se afastou dos discípulos e prostrou-se em oração, mostrando a necessidade de buscar força e conformidade com a vontade do Pai:
               </p>
-
               <div className="my-8 flex flex-col items-center">
                 <img 
                   src="/lovable-uploads/Le_Christ_au_Jardin_des_Oliviers_1840.jpg" 
@@ -80,7 +77,6 @@ const MeditacaoOracao = () => {
                   className="rounded-lg max-h-[400px] object-contain shadow-md"
                 />
               </div>
-
               <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
                 "Meu Pai, se é possível, passe de mim este cálice; contudo, não seja como eu quero, mas como tu queres."
                 <br />
@@ -88,9 +84,7 @@ const MeditacaoOracao = () => {
                   "Pater mi, si possibile est, transeat a me calix iste; verumtamen non sicut ego volo, sed sicut tu." (Mt 26,39)
                 </span>
               </blockquote>
-
               <p className="mb-4">E ainda exortou:</p>
-
               <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
                 "Vigiai e orai, para que não entreis em tentação. O espírito está pronto, mas a carne é fraca."
                 <br />
@@ -98,7 +92,6 @@ const MeditacaoOracao = () => {
                   "Vigilate et orate, ut non intretis in tentationem; spiritus quidem promptus est, caro autem infirma." (Mt 26,41)
                 </span>
               </blockquote>
-
               <div className="my-8 flex flex-col items-center">
                 <img 
                   src="/lovable-uploads/nossoSenhorOrandoApostolos.png" 
@@ -110,22 +103,19 @@ const MeditacaoOracao = () => {
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* O Dever da Oração */}
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">O Dever da Oração</h2>
               <p className="mb-4">O Catecismo de Trento ensina que a oração é um dever para todos os cristãos:</p>
-
               <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
                 "A oração é um dever não apenas recomendado como conselho, mas também ordenado como preceito obrigatório. 
                 Cristo, o Senhor, declarou: Devemos orar sempre e nunca deixar de fazê-lo."
               </blockquote>
-
               <p className="mb-4">
                 A oração é o caminho pelo qual pedimos a Deus a graça da santidade, o perdão dos pecados, a força para resistir 
                 às tentações e todas as graças necessárias para a nossa salvação.
               </p>
-
               <p className="mb-4">Jesus também nos ensina a pedir:</p>
-
               <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
                 "Pedi, e dar-se-vos-á; buscai, e achareis; batei, e abrir-se-vos-á."
                 <br />
@@ -137,12 +127,12 @@ const MeditacaoOracao = () => {
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* Tipos e Formas de Oração */}
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Os Tipos e Formas de Oração</h2>
               <p className="mb-4">
                 A tradição católica, fundamentada na Sagrada Escritura e nos santos, reconhece diversos tipos e formas de oração:
               </p>
-
               <h3 className="text-xl font-serif text-[#D4AF37] mb-4">1. Oração Vocal</h3>
               <div className="my-8 flex flex-col items-center">
                 <img 
@@ -155,11 +145,10 @@ const MeditacaoOracao = () => {
                 É a oração feita com palavras, seja em voz alta ou mentalmente. Inclui as orações tradicionais (Pai-Nosso, Ave-Maria, Glória, etc.), 
                 rezadas individualmente ou em comunidade, como no Rosário e na Santa Missa.
               </p>
-
               <h3 className="text-xl font-serif text-[#D4AF37] mb-4">2. Meditação</h3>
               <div className="my-8 flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/Santo Inácio De Loyola.jfif" 
+                  src="/lovable-uploads/SantoInácioDeLoyola.jfif" 
                   alt="Santo Inácio de Loyola" 
                   className="rounded-lg max-h-[400px] object-contain shadow-md"
                 />
@@ -168,20 +157,16 @@ const MeditacaoOracao = () => {
                 É a oração mental, em que refletimos sobre as verdades da fé, a vida de Cristo, os mistérios do Evangelho, 
                 buscando aplicar à nossa vida aquilo que meditamos. Santa Teresa de Ávila define:
               </p>
-
               <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
                 "A oração mental é, a meu ver, nada mais do que um íntimo relacionamento de amizade, estando muitas vezes a sós com quem sabemos que nos ama".
               </blockquote>
-
               <h3 className="text-xl font-serif text-[#D4AF37] mb-4">3. Contemplação</h3>
               <p className="mb-4">
                 É o grau mais elevado de oração, uma simples e amorosa atenção a Deus, um "olhar de fé" que se fixa n'Ele, 
                 sem necessidade de muitas palavras. É estar com Deus, em silêncio, adorando-O e amando-O.
               </p>
-
               <h3 className="text-xl font-serif text-[#D4AF37] mb-4">4. Formas Tradicionais de Oração</h3>
               <p className="mb-4">Além das três formas acima, a Igreja reconhece quatro finalidades principais da oração (ACTS):</p>
-
               <ul className="list-disc pl-5 space-y-2 text-gray-300">
                 <li><strong>Adoração:</strong> Louvar e reconhecer a grandeza de Deus.</li>
                 <li><strong>Contrição:</strong> Pedir perdão pelos pecados.</li>
@@ -192,13 +177,70 @@ const MeditacaoOracao = () => {
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* O Pai Nosso */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Oração Mais Sublime: O Pai Nosso</h2>
+              <p className="mb-4">
+                Entre todas as formas de oração, a mais perfeita é aquela que o próprio Jesus nos ensinou: o Pai Nosso (<em>Pater Noster</em>). O Catecismo de Trento ensina que “a oração dominical é o modelo de toda oração cristã, pois foi composta pelo próprio Senhor”.
+              </p>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                “Quando orardes, dizei: Pai nosso...” (cf. Mt 6,9; Lc 11,2)
+              </blockquote>
+              <div className="overflow-x-auto my-6">
+                <table className="min-w-full bg-transparent border border-gray-700">
+                  <thead>
+                    <tr>
+                      <th className="px-4 py-2 border-b border-gray-700 text-[#D4AF37]">Latim</th>
+                      <th className="px-4 py-2 border-b border-gray-700 text-[#D4AF37]">Português</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="px-4 py-2 align-top">
+                        <p><b>Pater noster, qui es in caelis,</b></p>
+                        <p>sanctificetur nomen tuum;</p>
+                        <p>adveniat regnum tuum;</p>
+                        <p>fiat voluntas tua, sicut in caelo et in terra.</p>
+                        <p>Panem nostrum quotidianum da nobis hodie;</p>
+                        <p>et dimitte nobis debita nostra,</p>
+                        <p>sicut et nos dimittimus debitoribus nostris;</p>
+                        <p>et ne nos inducas in tentationem;</p>
+                        <p>sed libera nos a malo. Amen.</p>
+                      </td>
+                      <td className="px-4 py-2 align-top">
+                        <p><b>Pai nosso, que estais nos céus,</b></p>
+                        <p>santificado seja o vosso nome;</p>
+                        <p>venha o vosso reino;</p>
+                        <p>seja feita a vossa vontade, assim na terra como no céu.</p>
+                        <p>O pão nosso de cada dia nos dai hoje;</p>
+                        <p>perdoai-nos as nossas ofensas,</p>
+                        <p>assim como nós perdoamos a quem nos tem ofendido;</p>
+                        <p>e não nos deixeis cair em tentação;</p>
+                        <p>mas livrai-nos do mal. Amém.</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h3 className="text-xl font-serif text-[#D4AF37] mb-2 mt-6">Pai Nosso em Grego</h3>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 text-gray-300">
+                Πάτερ ἡμῶν ὁ ἐν τοῖς οὐρανοῖς, ἁγιασθήτω τὸ ὄνομά σου· ἐλθέτω ἡ βασιλεία σου· γενηθήτω τὸ θέλημά σου, ὡς ἐν οὐρανῷ καὶ ἐπὶ τῆς γῆς· τὸν ἄρτον ἡμῶν τὸν ἐπιούσιον δὸς ἡμῖν σήμερον· καὶ ἄφες ἡμῖν τὰ ὀφειλήματα ἡμῶν, ὡς καὶ ἡμεῖς ἀφίεμεν τοῖς ὀφειλέταις ἡμῶν· καὶ μὴ εἰσενέγκῃς ἡμᾶς εἰς πειρασμόν, ἀλλὰ ῥῦσαι ἡμᾶς ἀπὸ τοῦ πονηροῦ· ἀμήν.
+              </blockquote>
+              <h3 className="text-xl font-serif text-[#D4AF37] mb-2 mt-6">Pai Nosso em Aramaico</h3>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 text-gray-300">
+                Abun d'bashmayo, nethqadash shmokh; tethe malkuthakh; nehwe sebyonakh, aykanna d'bashmayo aph b'ar'a; haw lan lakhma d'sunqanan yaomana; washboqlan khaubayn, aykana daph khnan shbaqan l'khayyabayn; wela tahlan l'nesyuna, ela patzan min bisha. Amen.
+              </blockquote>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            {/* Oração e a Santidade */}
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Oração e a Santidade</h2>
               <p className="mb-4">
                 A oração é o caminho seguro para a santidade. Sem oração, não há perseverança, nem crescimento espiritual. 
                 São Pio de Pietrelcina (Padre Pio) dizia:
               </p>
-
               <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
                 "Quem reza se salva; quem não reza se condena. Quem reza pouco, põe-se em perigo. Quem não reza, se perde. 
                 Quem reza muito, se salva e salva os outros."
@@ -210,6 +252,7 @@ const MeditacaoOracao = () => {
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* Conclusão */}
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Conclusão</h2>
               <p className="mb-4">
@@ -221,6 +264,7 @@ const MeditacaoOracao = () => {
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* Oração Final */}
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Oração Final (de São Pio de Pietrelcina)</h2>
               <div className="bg-[#121212] p-6 rounded-lg border border-gray-800">
@@ -239,6 +283,7 @@ const MeditacaoOracao = () => {
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* Referências */}
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Referências</h2>
               <ul className="list-disc pl-5 space-y-1 text-gray-300">
