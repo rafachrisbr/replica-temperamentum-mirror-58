@@ -50,7 +50,10 @@ const Meditacoes = () => {
                 </p>
               </CardContent>
               <CardFooter className="pt-0">
-                <Button variant="outline" className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10">
+                <Button 
+                  variant="outline" 
+                  className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
+                >
                   <Link to="/meditacao-joao" className="flex items-center justify-center gap-2 w-full">
                     Ler meditação completa
                     <ArrowRight size={16} />
@@ -163,6 +166,43 @@ const Meditacoes = () => {
                   className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
                 >
                   <Link to="/meditacao-vocacao" className="flex items-center justify-center gap-2 w-full">
+                    Ler meditação completa
+                    <ArrowRight size={16} />
+                  </Link>
+                </Button>
+              </CardFooter>
+            </Card>
+
+            {/* Card para A Oração: União com Deus */}
+            <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.7s] opacity-0 fill-mode-forwards">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
+                  A Oração
+                </CardTitle>
+                <CardDescription className="text-gray-300">
+                  União com Deus
+                </CardDescription>
+              </CardHeader>
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src="/lovable-uploads/cardOração.png" 
+                  alt="A Oração - União com Deus"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <CardContent className="py-4 flex-grow">
+                <p className="text-gray-300 line-clamp-4">
+                  Esta meditação explora a oração como o respiro da alma e o vínculo mais profundo entre a criatura e o Criador. 
+                  Descubra como a oração nos une a Deus, nos ajuda a buscar Sua vontade e nos conduz à santidade através dos 
+                  diferentes tipos e formas de oração.
+                </p>
+              </CardContent>
+              <CardFooter className="pt-0">
+                <Button 
+                  variant="outline" 
+                  className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
+                >
+                  <Link to="/meditacao-oracao" className="flex items-center justify-center gap-2 w-full">
                     Ler meditação completa
                     <ArrowRight size={16} />
                   </Link>

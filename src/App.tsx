@@ -24,6 +24,7 @@ import MeditacaoJoao from "./pages/MeditacaoJoao";
 import MeditacaoTresAmores from "./pages/MeditacaoTresAmores";
 import MeditacaoAmizade from "./pages/MeditacaoAmizade";
 import MeditacaoVocacao from "./pages/MeditacaoVocacao";
+import MeditacaoOracao from "./pages/MeditacaoOracao";
 import TestSelection from "./pages/TestSelection";
 import Intelligences from "./pages/Intelligences";
 import IntelligencesResults from "./pages/IntelligencesResults";
@@ -99,6 +100,7 @@ const App = () => (
                     <Route path="/meditacao-tres-amores" element={<AnimatedPage><MeditacaoTresAmores /></AnimatedPage>} />
                     <Route path="/meditacao-amizade" element={<AnimatedPage><MeditacaoAmizade /></AnimatedPage>} />
                     <Route path="/meditacao-vocacao" element={<AnimatedPage><MeditacaoVocacao /></AnimatedPage>} />
+                    <Route path="/meditacao-oracao" element={<AnimatedPage><MeditacaoOracao /></AnimatedPage>} />
                     <Route path="/testes" element={<AnimatedPage><TestSelection /></AnimatedPage>} />
                     <Route path="/inteligencias" element={<AnimatedPage><Intelligences /></AnimatedPage>} />
                     <Route path="/inteligencias-resultados" element={<AnimatedPage><IntelligencesResults /></AnimatedPage>} />
