@@ -27,7 +27,7 @@ const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   /**
    * @constant {Array} navItems
@@ -40,6 +40,27 @@ const Navbar: React.FC = () => {
     { name: t('nav.meditations'), path: '/meditacoes' },
     { name: t('nav.family_education'), path: '/educacao-familiar' },
   ];
+
+  /**
+   * @constant {Array} languages
+   * @description Idiomas disponíveis com seus códigos e caminhos para as bandeiras
+   */
+  const languages = [
+    { code: 'pt', name: 'Português', flag: '/lovable-uploads/brasil.png' },
+    { code: 'fr', name: 'Français', flag: '/lovable-uploads/franca.png' },
+    { code: 'it', name: 'Italiano', flag: '/lovable-uploads/italia.png' },
+    { code: 'de', name: 'Deutsch', flag: '/lovable-uploads/alemanha.png' },
+    { code: 'ca', name: 'Català', flag: '/lovable-uploads/andorra.png' }
+  ];
+
+  /**
+   * @function changeLanguage
+   * @description Altera o idioma da aplicação
+   * @param {string} lng - Código do idioma
+   */
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
@@ -62,22 +83,45 @@ const Navbar: React.FC = () => {
           </button>
           
           {/* Desktop menu */}
-          <div className="hidden md:flex space-x-4">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => navigate(item.path)}
-                className={cn(
-                  "px-3 py-2 text-sm font-medium transition-colors",
-                  location.pathname === item.path
-                    ? "text-[#D4AF37] border-b-2 border-[#D4AF37]"
-                    : "text-gray-300 hover:text-white"
-                )}
-                aria-current={location.pathname === item.path ? "page" : undefined}
-              >
-                {item.name}
-              </button>
-            ))}
+          <div className="hidden md:flex items-center">
+            <div className="flex space-x-4 mr-6">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => navigate(item.path)}
+                  className={cn(
+                    "px-3 py-2 text-sm font-medium transition-colors",
+                    location.pathname === item.path
+                      ? "text-[#D4AF37] border-b-2 border-[#D4AF37]"
+                      : "text-gray-300 hover:text-white"
+                  )}
+                  aria-current={location.pathname === item.path ? "page" : undefined}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+            
+            {/* Language flags for desktop */}
+            <div className="flex space-x-2">
+              {languages.map((lang) => (
+                <button
+                  key={lang.code}
+                  onClick={() => changeLanguage(lang.code)}
+                  className={cn(
+                    "w-6 h-6 rounded-full overflow-hidden transition-all",
+                    i18n.language === lang.code ? "ring-2 ring-[#D4AF37] scale-110" : "opacity-70 hover:opacity-100"
+                  )}
+                  title={lang.name}
+                >
+                  <img 
+                    src={lang.flag} 
+                    alt={lang.name} 
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              ))}
+            </div>
           </div>
           
           {/* Mobile menu dropdown */}
@@ -104,6 +148,32 @@ const Navbar: React.FC = () => {
                   {item.name}
                 </button>
               ))}
+              
+              {/* Language flags for mobile */}
+              <div className="flex flex-wrap gap-3 mt-2 pt-2 border-t border-gray-800">
+                {languages.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      changeLanguage(lang.code);
+                      setIsMenuOpen(false);
+                    }}
+                    className={cn(
+                      "flex items-center space-x-2 px-3 py-2 rounded-md transition-colors",
+                      i18n.language === lang.code 
+                        ? "bg-[#D4AF37]/10 text-[#D4AF37]" 
+                        : "text-gray-300 hover:bg-white/5"
+                    )}
+                  >
+                    <img 
+                      src={lang.flag} 
+                      alt={lang.name} 
+                      className="w-5 h-5 rounded-full"
+                    />
+                    <span>{lang.name}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
