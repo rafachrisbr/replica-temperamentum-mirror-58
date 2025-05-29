@@ -1,0 +1,13 @@
+{
+  "welcome": "Benvenuto a Temperamentum",
+  "description": "Scopri il tuo temperamento e le tue intelligenze multiple",
+  "start_test": "Inizia il Test",
+  "learn_more": "Scopri di più",
+  "nav": {
+    "home": "Home",
+    "temperaments": "Temperamenti",
+    "tests": "Test",
+    "meditations": "Meditazioni",
+    "family_education": "Educazione Familiare"
+  }
+}

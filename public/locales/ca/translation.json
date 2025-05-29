@@ -1,0 +1,13 @@
+{
+  "welcome": "Benvingut a Temperamentum",
+  "description": "Descobreix el teu temperament i les teves intel·ligències múltiples",
+  "start_test": "Començar Test",
+  "learn_more": "Saber-ne més",
+  "nav": {
+    "home": "Inici",
+    "temperaments": "Temperaments",
+    "tests": "Tests",
+    "meditations": "Meditacions",
+    "family_education": "Educació Familiar"
+  }
+}
