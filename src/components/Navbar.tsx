@@ -9,6 +9,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Menu } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 /**
  * @component Navbar
@@ -19,23 +20,25 @@ import { useState } from 'react';
  * - Indicação visual da página atual
  * - Menu dropdown para dispositivos móveis
  * - Navegação programática com useNavigate
+ * - Internacionalização com i18next
  * @returns {JSX.Element} Componente de navegação renderizado
  */
 const Navbar: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useTranslation();
   
   /**
    * @constant {Array} navItems
    * @description Itens de navegação principal
    */
   const navItems = [
-    { name: 'Início', path: '/' },
-    { name: 'Temperamentos', path: '/temperamentos' },
-    { name: 'Testes', path: '/testes' },
-    { name: 'Meditações', path: '/meditacoes' },
-    { name: 'Educação Familiar', path: '/educacao-familiar' },
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.temperaments'), path: '/temperamentos' },
+    { name: t('nav.tests'), path: '/testes' },
+    { name: t('nav.meditations'), path: '/meditacoes' },
+    { name: t('nav.family_education'), path: '/educacao-familiar' },
   ];
 
   return (
