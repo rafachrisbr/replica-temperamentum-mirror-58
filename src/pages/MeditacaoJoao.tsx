@@ -6,11 +6,11 @@ import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
 import { ChevronLeft } from 'lucide-react';
 
-const MeditacaoJoao = () => {
+const MeditacaoAmizade = () => {
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
-
+      
       <main className="flex-1 flex flex-col items-center p-6 pt-12">
         <div className="max-w-3xl w-full space-y-8">
           <Link to="/meditacoes">
@@ -22,222 +22,241 @@ const MeditacaoJoao = () => {
 
           <article className="prose prose-invert max-w-none">
             <h1 className="text-3xl md:text-4xl font-serif text-[#D4AF37] text-center mb-6">
-              Meditação sobre São João Evangelista: O Discípulo Amado e a Profundidade do Temperamento Melancólico
+              A Amizade — Comunhão de Almas em Cristo
             </h1>
 
             <p className="text-lg mb-8 text-gray-200">
-              Esta meditação busca explorar a figura singular de São João Evangelista, o discípulo a quem Jesus amava, sob a perspectiva de seu temperamento melancólico. 
-              Através da análise de passagens bíblicas e da reflexão sobre suas características – sensibilidade, intensidade e profundidade – 
-              procuraremos compreender como essa natureza particular moldou sua relação única com o Mestre e influenciou sua jornada espiritual.
-              A identificação com João, especialmente para aqueles que compartilham traços melancólicos, pode oferecer um caminho de autoconhecimento e uma apreciação mais profunda do chamado ao amor e à caridade, tão centrais em seus escritos e em sua vida.
+              A amizade é um dom precioso, desejado por todos, mas nem sempre compreendido em sua profundidade. Em Cristo, a amizade atinge sua expressão mais sublime: Ele não apenas nos chama amigos, mas entrega a vida por nós, revelando o verdadeiro sentido desse vínculo. Nesta meditação, vamos contemplar a amizade de Jesus com seus apóstolos, refletir com a sabedoria do livro Imitação de Cristo, buscar a luz dos ensinamentos de papas da Igreja, mergulhar nas lições de O Pequeno Príncipe e entender a amizade como comunhão de almas, incluindo nossa relação com os santos, nosso anjo da guarda, Maria e o próprio Jesus.
             </p>
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* A Amizade de Cristo com Seus Apóstolos */}
             <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">
-                O Temperamento Melancólico de João: Sensibilidade, Intensidade e Profundidade
-              </h2>
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Amizade de Cristo com Seus Apóstolos</h2>
               <p className="mb-4">
-                O temperamento melancólico, frequentemente associado a uma rica vida interior, uma percepção aguçada das realidades espirituais e uma capacidade de sentir e amar com grande intensidade, parece encontrar um eco profundo na figura de São João Evangelista.
+                Jesus, o Mestre das relações humanas, viveu intensamente a amizade. Escolheu doze apóstolos para estarem próximos, partilhando com eles a intimidade da missão, das alegrias e das dores. Entre eles, Pedro, Tiago e João desfrutaram de momentos ainda mais próximos, como na Transfiguração e na agonia do Getsêmani.
               </p>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                "Já não vos chamo servos, pois o servo não sabe o que faz o seu senhor. Eu vos chamo amigos, porque vos dei a conhecer tudo o que ouvi de meu Pai."
+                <br />
+                <span className="text-sm">
+                  "Jam non dicam vos servos, quia servus nescit quid faciat dominus eius; vos autem dixi amicos, quia omnia quaecumque audivi a Patre meo, nota feci vobis." (João 15,15)
+                </span>
+              </blockquote>
               <p className="mb-4">
-                Sua sensibilidade é palpável nos momentos de intimidade com Jesus, como na Última Ceia, onde, reclinado sobre o peito do Senhor, demonstra uma necessidade de proximidade e um carinho que transcendem a simples camaradagem.
-                Essa mesma sensibilidade o torna receptivo aos mistérios divinos, permitindo-lhe captar nuances da mensagem de Cristo que talvez passassem despercebidas a outros.
+                Jesus abriu seu coração aos amigos, confiou-lhes seus sentimentos mais profundos e, sobretudo, deu a vida por eles:
               </p>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                "Ninguém tem amor maior do que aquele que dá a vida pelos amigos."
+                <br />
+                <span className="text-sm">
+                  "Maiorem hac dilectionem nemo habet, ut animam suam ponat quis pro amicis suis." (João 15,13)
+                </span>
+              </blockquote>
+              <div className="my-8 flex flex-col items-center">
+                <img 
+                  src="/lovable-uploads/jesusAmigos.jpg" 
+                  alt="Jesus e seus amigos" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md"
+                />
+                <p className="text-center text-sm mt-3 text-gray-400">
+                  Jesus com seus amigos
+                </p>
+              </div>
               <p className="mb-4">
-                A intensidade de suas emoções se manifesta não apenas no amor devotado a Jesus, mas também na sua fidelidade inabalável, permanecendo ao pé da cruz em um momento de desolação e abandono quase universal.
+                Além dos apóstolos, Jesus cultivou amizades especiais, como com Lázaro, Marta e Maria, em Betânia, onde encontrava repouso e acolhida. Sua amizade era aberta, compassiva, sensível às necessidades de todos, sem excluir ninguém.
               </p>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            {/* A Amizade Segundo a Imitação de Cristo */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Amizade Segundo a Imitação de Cristo</h2>
               <p className="mb-4">
-                A profundidade de seu ser se reflete em seus escritos, especialmente no Evangelho que leva seu nome e no livro do Apocalipse, obras que mergulham nos mistérios da Palavra Encarnada e na consumação dos tempos com uma visão teológica e espiritual de rara penetração.
+                O clássico espiritual Imitação de Cristo ensina que a verdadeira amizade se fundamenta em Deus. Sem Ele, nenhuma amizade é duradoura ou pura:
               </p>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                "Sem mim não vale nada, nem durará a amizade; nem é puro e verdadeiro o amor que não tem a mim por princípio".
+              </blockquote>
               <p className="mb-4">
-                Jesus, conhecendo intimamente a alma de cada um de seus discípulos, certamente percebia essa riqueza interior em João, o que pode ter contribuído para o laço especial que os unia, um laço que o próprio João descreve ao se referir a si mesmo como "o discípulo a quem Jesus amava" (Jo 13:23, <em className="italic">discipulus ille, quem diligebat Iesus</em>).
+                O livro também adverte sobre a necessidade de suportar os defeitos dos outros com paciência, reconhecendo que todos temos limitações e que Deus permite essas diferenças para que aprendamos a carregar os fardos uns dos outros:
               </p>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                "Deus assim o dispôs para que aprendamos a carregar uns o fardo dos outros; porque ninguém há sem defeito... mas cumpre que uns aos outros nos suportemos, consolemos, auxiliemos, instruamos e aconselhemos".
+              </blockquote>
               <p className="mb-4">
-                Este amor não era exclusivo, mas certamente reconhecia e valorizava a singularidade da alma melancólica de João, capaz de um amor profundo, leal e contemplativo.
+                A amizade, segundo a Imitação de Cristo, não é utilitarista ou interesseira, mas gratuita, paciente e voltada à edificação mútua. O verdadeiro amigo é aquele que, mesmo conhecendo nossas fraquezas, permanece ao nosso lado e nos ajuda a crescer na virtude.
+              </p>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            {/* A Amizade como Comunhão de Almas */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Amizade como Comunhão de Almas</h2>
+              <p className="mb-4">
+                A amizade, para além de um sentimento, é uma verdadeira comunhão de almas. Santo Agostinho expressou de forma belíssima:
+              </p>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                "Disse muito bem quem definiu o amigo como metade da própria alma. Eu tinha de fato a sensação de que nossas duas almas fossem uma em dois corpos."
+              </blockquote>
+              <p className="mb-4">
+                Santa Teresa d'Ávila também nos recorda:
+              </p>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                "A amizade com Deus e a amizade com os outros é uma mesma coisa, não podemos separar uma da outra."
+              </blockquote>
+              <p className="mb-4">
+                Assim, a amizade cristã é uma extensão do nosso relacionamento com Deus, um reflexo do amor divino que se manifesta entre nós.
               </p>
               <div className="my-8 flex flex-col items-center">
                 <img 
-                  src="/lovable-uploads/db06a5d2-ea79-4aa8-9b42-3ec6df3a8830.png" 
-                  alt="João Evangelista contemplando" 
-                  className="rounded-lg max-h-[400px] object-contain shadow-md" 
+                  src="/lovable-uploads/amigos.jpg" 
+                  alt="Amizade verdadeira" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md"
                 />
                 <p className="text-center text-sm mt-3 text-gray-400">
-                  João Evangelista contemplando
+                  A verdadeira amizade
                 </p>
               </div>
             </section>
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* Lições de O Pequeno Príncipe sobre Amizade */}
             <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">
-                A Intimidade na Última Ceia: Confidência e Fidelidade
-              </h2>
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Lições de O Pequeno Príncipe sobre Amizade</h2>
+              <div className="my-8 flex flex-col items-center">
+                <img 
+                  src="/lovable-uploads/raposaPrincipe.jpg" 
+                  alt="O Pequeno Príncipe e a Raposa" 
+                  className="rounded-lg max-h-[400px] object-contain shadow-md"
+                />
+                <p className="text-center text-sm mt-3 text-gray-400">
+                  O Pequeno Príncipe e a Raposa - Uma lição sobre amizade
+                </p>
+              </div>
               <p className="mb-4">
-                A Última Ceia, um dos momentos mais sagrados e carregados de significado nos Evangelhos, revela de forma tocante a profundidade da relação entre Jesus e João.
-                É neste cenário de despedida e instituição da Eucaristia que a sensibilidade de João se manifesta de maneira singular.
+                O clássico O Pequeno Príncipe traz lições profundas sobre amizade, mostrando que ela exige dedicação, tempo e entrega. A raposa ensina ao Pequeno Príncipe:
+              </p>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                "Tu te tornas eternamente responsável por aquilo que cativas."
+              </blockquote>
+              <p className="mb-4">
+                Essa frase, uma das mais marcantes do livro, revela a profundidade e a seriedade da verdadeira amizade. Cativar alguém significa ir além da convivência superficial; é criar laços, envolver-se com a vida do outro, partilhar alegrias e dores. Quando cativamos alguém, assumimos uma responsabilidade: a de cuidar, zelar, estar presente, não abandonar.
               </p>
               <p className="mb-4">
-                O Evangelho narra que "um de seus discípulos, a quem Jesus amava, estava reclinado no seio de Jesus" (Jo 13:23, <em className="italic">unus ex discipulis eius, quem diligebat Iesus, recumbens in sinu Iesu</em>).
-                Esta postura não é apenas de proximidade física, mas simboliza uma união de corações, uma confiança mútua que permitia a João um acesso privilegiado aos sentimentos mais íntimos do Mestre.
+                A responsabilidade não é um peso, mas uma expressão do amor maduro e fiel. O verdadeiro amigo não desaparece nas dificuldades, não é apenas companhia nos bons momentos. Ele permanece, mesmo quando o tempo e as circunstâncias mudam, porque compreende que a amizade é um compromisso de alma para alma.
               </p>
               <p className="mb-4">
-                Foi a Pedro que, desejando saber quem era o traidor, fez sinal a João para que o perguntasse a Jesus. E João, "reclinando-se ele sobre o peito de Jesus, disse-lhe: Senhor, quem é?" (Jo 13:25, <em className="italic">Cum ergo recubuisset ille supra pectus Iesu, dicit ei: Domine, quis est?</em>).
-                Jesus confia-lhe, ainda que de forma velada, a identidade daquele que o entregaria.
+                Essa responsabilidade é também uma via de mão dupla: ao cativar, também nos deixamos cativar. O coração do amigo passa a fazer parte do nosso, e sua felicidade, suas dores e esperanças tornam-se, de algum modo, nossas também. Por isso, a amizade exige maturidade, paciência e entrega, pois é um vínculo que atravessa o tempo e não se desfaz facilmente.
               </p>
               <p className="mb-4">
-                Esta confidência, feita em um momento de angústia e solenidade, sublinha a fidelidade e a capacidade de João para guardar os segredos do coração de Cristo, características que podem ser vistas como manifestações de um temperamento melancólico, inclinado à lealdade profunda e à compreensão intuitiva das dores alheias.
+                Outros ensinamentos marcantes do livro:
               </p>
+              <ul className="list-disc pl-5 space-y-2 text-gray-300">
+                <li>"Foi o tempo que dedicaste à tua rosa que a fez tão importante."</li>
+                <li>"A gente só conhece bem as coisas que cativou."</li>
+                <li>"Se tu vens, por exemplo, às quatro da tarde, desde as três eu começarei a ser feliz."</li>
+                <li>"Fiz dele meu amigo e agora ele é único no mundo."</li>
+              </ul>
               <p className="mb-4">
-                A sua capacidade de estar presente, de sentir com o outro, de partilhar da tristeza do Mestre, revela uma alma compassiva e profundamente conectada.
+                Essas reflexões nos convidam a valorizar o tempo e a entrega nas relações, lembrando que a amizade é um dom a ser cultivado com paciência e amor.
               </p>
             </section>
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* Amizade Verdadeira: Rara e Preciosa */}
             <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">
-                Ao Pé da Cruz: A Força da Lealdade e o Dom de Maria
-              </h2>
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Amizade Verdadeira: Rara e Preciosa</h2>
               <p className="mb-4">
-                A cena da crucificação é, talvez, o testemunho mais eloquente da fidelidade e da força interior de São João Evangelista.
-                Enquanto muitos discípulos, tomados pelo medo e pela desilusão, se dispersaram, João permaneceu firme ao pé da cruz, junto a Maria, a Mãe de Jesus, e outras poucas mulheres.
+                Ao longo da vida, é comum termos muitos colegas, conhecidos e companheiros de jornada. São pessoas com quem partilhamos momentos, projetos ou interesses. No entanto, amigos verdadeiros — aqueles com quem partilhamos a alma, os sonhos mais profundos, os medos e as esperanças — são raros. Muitas vezes, teremos apenas um ou dois amigos assim durante toda a vida.
               </p>
               <p className="mb-4">
-                Sua presença ali não era um ato de bravura impulsiva, mas de uma lealdade nascida do amor profundo e da compaixão que caracterizam sua alma sensível.
-                Ele não foi indiferente à agonia de Jesus; ao contrário, compadeceu-se de sua angústia, partilhando do sofrimento do Mestre com uma constância que revela a profundidade de seu vínculo.
+                Os colegas passam; os amigos permanecem. Colegas partilham a mesa, o trabalho, a escola. Amigos partilham o coração. A amizade verdadeira não depende da frequência dos encontros, mas da profundidade do vínculo. Ela resiste ao tempo, à distância e às mudanças da vida.
               </p>
               <p className="mb-4">
-                Foi nesse momento de dor extrema que Jesus, vendo sua mãe e, ao lado dela, o discípulo a quem amava, pronunciou palavras de significado eterno: "Mulher, eis aí o teu filho" (Jo 19:26, <em className="italic">Mulier, ecce filius tuus</em>).
-                E, dirigindo-se a João, disse: "Eis aí a tua mãe" (Jo 19:27, <em className="italic">Ecce mater tua</em>).
+                Por isso, quando Deus nos concede um amigo verdadeiro, devemos acolhê-lo como um tesouro, cuidar desse laço com carinho e responsabilidade, conscientes de que, como ensina O Pequeno Príncipe, somos eternamente responsáveis por aquilo que cativamos.
+              </p>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            {/* A Amizade com os Santos, o Anjo da Guarda, Maria e Jesus */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">A Amizade com os Santos, o Anjo da Guarda, Maria e Jesus</h2>
+              <p className="mb-4">
+                A comunhão dos santos é, por excelência, uma amizade espiritual. Os santos não são apenas exemplos distantes, mas verdadeiros amigos que intercedem por nós e caminham conosco. Ter um santo como amigo é buscar inspiração em sua vida e pedir sua ajuda nas lutas do dia a dia. São João Bosco e São Domingos Sávio, São Francisco e Santa Clara, São Basílio e São Gregório — todos viveram amizades santas, ajudando-se mutuamente a buscar a Deus.
               </p>
               <p className="mb-4">
-                Com estas palavras, Jesus não apenas confiava Maria aos cuidados de João, mas estabelecia uma nova relação de maternidade e filiação espiritual, um dom precioso que João, com sua sensibilidade e capacidade de cuidado, estava singularmente preparado para acolher.
+                Além dos santos, nosso anjo da guarda é um amigo fiel, sempre ao nosso lado, pronto a nos aconselhar, proteger e conduzir ao Céu. Podemos e devemos conversar com ele, pedir sua intercessão e aprender a ser, também nós, anjos para os outros, ajudando-os no caminho da santidade.
               </p>
               <p className="mb-4">
-                A partir daquela hora, o discípulo a acolheu em sua casa (cf. Jo 19:27, <em className="italic">Et ex illa hora accepit eam discipulus in sua</em>).
-                Esta responsabilidade, assumida em meio à desolação do Calvário, demonstra a maturidade e a solidez de seu caráter, qualidades que, embora por vezes ocultas sob a aparência introspectiva do melancólico, revelam uma imensa capacidade de amar e servir.
+                Jesus é o Amigo por excelência. Ele mesmo nos chama de amigos e deseja essa intimidade conosco. Conversar com Jesus, abrir-lhe o coração, partilhar alegrias e dores, é viver uma amizade que transforma e salva. Maria, Mãe de Jesus, também é nossa amiga e intercessora, sempre pronta a nos acolher e conduzir ao Filho.
               </p>
-              <div className="my-8 flex flex-col items-center">
-                <img 
-                  src="/lovable-uploads/f205e06a-e3ab-4fcb-af7b-e3b38cb851f6.png" 
-                  alt="São João Evangelista escrevendo" 
-                  className="rounded-lg max-h-[400px] object-contain shadow-md" 
-                />
-                <p className="text-center text-sm mt-3 text-gray-400">
-                  São João Evangelista escrevendo
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            {/* Ensinamentos dos Papas sobre a Amizade */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Ensinamentos dos Papas sobre a Amizade</h2>
+              <p className="mb-4">
+                Entre os papas, Leão XIII destacou a importância da amizade social e da caridade como fundamentos da convivência cristã, promovendo a dignidade e o respeito entre as pessoas. Pio XI, em sua atuação histórica, demonstrou como a amizade, quando vivida com verdade e justiça, pode ser instrumento de reconciliação e resistência ao mal, mesmo em tempos difíceis.
+              </p>
+              <p className="mb-4">
+                Esses papas recordam que a amizade cristã não se limita ao círculo íntimo, mas se expande para a sociedade, promovendo a paz, a solidariedade e o bem comum.
+              </p>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            {/* Exercício Prático de Meditação */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Exercício Prático de Meditação</h2>
+              <p className="mb-4">Silencie seu coração e coloque-se na presença de Jesus, o Amigo fiel.</p>
+              <blockquote className="border-l-4 border-[#D4AF37] pl-4 my-6 italic text-gray-300">
+                "Vós sois meus amigos, se fizerdes o que eu vos mando."
+                <br />
+                <span className="text-sm">
+                  "Vos amici mei estis, si feceritis quae ego praecipio vobis." (João 15,14)
+                </span>
+              </blockquote>
+              <div className="bg-[#121212] p-6 rounded-lg border border-gray-800">
+                <h3 className="text-lg font-medium text-amber-400 mb-4">Pontos para Reflexão:</h3>
+                <ul className="space-y-4 text-gray-300">
+                  <li>• Tenho vivido a amizade como Cristo ensinou?</li>
+                  <li>• Tenho sido paciente, leal, compassivo com meus amigos?</li>
+                  <li>• Tenho buscado amar sem esperar retribuição?</li>
+                  <li>• Minha amizade com Deus se reflete nas minhas amizades humanas?</li>
+                  <li>• Busco comunhão de almas, ou meus relacionamentos são superficiais?</li>
+                </ul>
+              </div>
+            </section>
+
+            <Separator className="my-8 bg-gray-800" />
+
+            {/* Oração Final */}
+            <section className="mb-12">
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Oração Final</h2>
+              <div className="bg-[#121212] p-6 rounded-lg border border-gray-800">
+                <p className="text-gray-300 italic">
+                  Senhor Jesus, Amigo fiel, ensina-me a viver a amizade como comunhão de almas, unidas em Ti. Que eu saiba cativar e ser cativado, cuidar e ser cuidado, amando com generosidade e paciência. Que os santos e meu anjo da guarda me inspirem e acompanhem, e que eu nunca deixe de buscar Tua amizade e a de Maria, nossa Mãe. Amém.
                 </p>
               </div>
             </section>
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* Conclusão */}
             <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">
-                A Corrida ao Túmulo e a Fé que Vê
-              </h2>
+              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Conclusão</h2>
               <p className="mb-4">
-                A manhã da Ressurreição traz outro episódio revelador da personalidade de João e de sua sintonia com os acontecimentos divinos.
-                Ao receberem de Maria Madalena a notícia de que a pedra do sepulcro havia sido removida e o corpo do Senhor não estava lá, Pedro e João correram juntos para o túmulo.
+                A amizade é comunhão de almas, dom de Deus, caminho de santidade. Inspirados em Cristo, nos santos, em Maria e nos nossos anjos da guarda, sejamos amigos verdadeiros, responsáveis uns pelos outros, construindo laços que nos conduzam juntos ao Céu.
               </p>
-              <p className="mb-4">
-                O Evangelho de João relata que "o outro discípulo correu mais depressa do que Pedro e chegou primeiro ao túmulo" (Jo 20:4, <em className="italic">cucurrit citius Petro et venit primus ad monumentum</em>).
-                Embora tenha chegado primeiro, João, talvez por um misto de reverência e daquela ponderação característica do melancólico, não entrou imediatamente.
-                Ele se inclinou e viu os panos de linho no chão, mas esperou por Pedro.
-              </p>
-              <p className="mb-4">
-                Quando Pedro entrou e viu os lençóis e o sudário que estivera sobre a cabeça de Jesus, não dobrado com os lençóis, mas enrolado à parte, "então, entrou também o outro discípulo, que chegara primeiro ao sepulcro. Ele viu e creu" (Jo 20:8, <em className="italic">Tunc ergo introivit et ille discipulus, qui venerat primus ad monumentum, et vidit, et credidit</em>).
-              </p>
-              <p className="mb-4">
-                Esta afirmação – "viu e creu" – é de particular importância. Enquanto outros ainda hesitavam ou precisavam de mais provas, a fé de João, alimentada por sua profunda intimidade com Jesus e sua natureza contemplativa, permitiu-lhe perceber, para além das aparências, o significado transcendente do túmulo vazio.
-              </p>
-              <p className="mb-4">
-                Sua sensibilidade espiritual, aguçada pelo amor, o capacitou a ser um dos primeiros a acolher o mistério da Ressurreição, não apenas como um fato, mas como a verdade central da fé.
-                Essa prontidão em crer, essa capacidade de "ver" com os olhos da alma, é um dom precioso, muitas vezes presente naqueles que, como João, cultivam uma rica vida interior.
-              </p>
-            </section>
-
-            <Separator className="my-8 bg-gray-800" />
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">
-                A Mansidão do Discípulo Amado e a Herança da Terra
-              </h2>
-              <p className="mb-4">
-                O temperamento de João, com sua inclinação ao amor, à caridade, à benevolência e à mansidão, encontra um eco profundo nas palavras de Jesus no Sermão da Montanha: "Bem-aventurados os mansos, porque eles herdarão a terra" (Mt 5:5, <em className="italic">Beati mites, quoniam ipsi possidebunt terram</em>).
-              </p>
-              <p className="mb-4">
-                A mansidão, no contexto bíblico, não é sinônimo de fraqueza ou passividade, mas de uma força interior que se manifesta na gentileza, na paciência e na capacidade de suportar as adversidades sem perder a doçura de espírito.
-                João, apesar de ter sido apelidado por Jesus, junto com seu irmão Tiago, de "Boanerges", que significa "Filhos do Trovão" (Mc 3:17), numa possível alusão a um zelo inicial mais impetuoso, demonstrou ao longo de sua vida uma progressiva transformação em direção a essa mansidão evangélica.
-              </p>
-              <p className="mb-4">
-                Seu relacionamento com Jesus o moldou, e o amor que ele tanto pregou em seus escritos tornou-se a marca distintiva de sua vida.
-                A "terra" que os mansos herdarão pode ser entendida não apenas em um sentido escatológico, mas também como a paz interior, a fecundidade espiritual e a capacidade de influenciar o mundo através do amor e da bondade.
-              </p>
-              <p className="mb-4">
-                João, com sua vida dedicada ao anúncio do Evangelho do Amor, certamente experimentou essa herança.
-                Sua sensibilidade melancólica, quando purificada e elevada pela graça, tornou-se um terreno fértil para o cultivo das virtudes do Espírito Santo, entre as quais a mansidão ocupa um lugar de destaque.
-              </p>
-              <div className="my-8 flex flex-col items-center">
-                <img 
-                  src="/lovable-uploads/a32b1f44-0f1a-4ddc-b72d-7b427820a4ac.png" 
-                  alt="São João Evangelista com pena" 
-                  className="rounded-lg max-h-[400px] object-contain shadow-md" 
-                />
-                <p className="text-center text-sm mt-3 text-gray-400">
-                  São João Evangelista com pena
-                </p>
-              </div>
-            </section>
-
-            <Separator className="my-8 bg-gray-800" />
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">
-                O Legado do Amor e uma Morte Serena
-              </h2>
-              <p className="mb-4">
-                Diferentemente de muitos outros apóstolos, que selaram seu testemunho com o martírio, a tradição nos conta que São João Evangelista teve uma morte natural, em idade avançada.
-                Este fato, por si só, pode ser visto como um sinal da singularidade de sua missão e da forma particular como Deus conduziu sua vida.
-              </p>
-              <p className="mb-4">
-                Seu "martírio" foi, talvez, o de uma vida inteira dedicada ao amor, à contemplação e ao serviço da Palavra.
-                Os seus escritos, especialmente suas cartas, são um hino ao amor fraterno como essência da vida cristã: "Caríssimos, amemo-nos uns aos outros, porque o amor vem de Deus, e todo aquele que ama nasceu de Deus e conhece a Deus" (1 Jo 4:7, <em className="italic">Carissimi, diligamus invicem, quia caritas ex Deo est; et omnis, qui diligit, ex Deo natus est et cognoscit Deum</em>).
-              </p>
-              <p className="mb-4">
-                Este mandamento do amor, que ele aprendeu reclinado sobre o peito de Jesus e testemunhou ao pé da cruz, tornou-se o centro de sua pregação e o legado que deixou à Igreja.
-                Sua sensibilidade, intensidade e profundidade melancólicas, longe de serem um obstáculo, foram o canal através do qual o amor divino fluiu abundantemente, transformando-o no "Discípulo Amado" e em uma testemunha perene da ternura e da misericórdia de Cristo.
-                Sua morte serena pode ser interpretada como o coroamento de uma vida vivida em profunda união com Aquele que é o Amor.
-              </p>
-            </section>
-
-            <Separator className="my-8 bg-gray-800" />
-
-            <section className="mb-12">
-              <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">
-                Conclusão: A Beleza de um Coração Melancólico Consagrado
-              </h2>
-              <p className="mb-4">
-                A meditação sobre a vida de São João Evangelista, à luz de seu temperamento melancólico, nos convida a uma profunda reflexão sobre a riqueza e a complexidade da alma humana e sobre as múltiplas formas como Deus nos chama à santidade.
-              </p>
-              <p className="mb-4">
-                A sensibilidade, a intensidade, a profundidade e a inclinação à contemplação, características frequentemente associadas à melancolia, quando vividas em Cristo, podem se tornar instrumentos poderosos de amor, fidelidade e serviço.
-                João nos ensina que o carinho singular de Jesus não é reservado a um tipo específico de temperamento, mas se derrama sobre todos aqueles que, com sinceridade de coração, buscam conhecê-Lo e amá-Lo.
-              </p>
-              <p className="mb-4">
-                Para aqueles que se identificam com as nuances da alma joanina, sua vida é um farol de esperança e um convite a abraçar a própria singularidade como um dom a ser consagrado.
-                Que, a exemplo de São João, possamos reclinar nossa cabeça sobre o peito do Senhor, ouvir os segredos de Seu coração, permanecer fiéis ao pé da cruz, correr ao encontro do Ressuscitado com fé ardente e, acima de tudo, viver e proclamar o mandamento do Amor, para que um dia possamos herdar a terra prometida aos mansos de coração.
-                Que a sua intercessão nos ajude a transformar nossas próprias sensibilidades e profundezas interiores em canais da graça e do amor divino no mundo.
-              </p>
-              <div className="my-8 flex flex-col items-center">
-                <img 
-                  src="/lovable-uploads/a1a116ba-8451-4500-a0ee-9655d929d636.png" 
-                  alt="São João Evangelista" 
-                  className="rounded-lg max-h-[400px] object-contain shadow-md" 
-                />
-              </div>
               <div className="my-8 text-center">
                 <p className="text-[#D4AF37] italic">Vulnerasti cor meum verbo tuo</p>
                 <p className="text-gray-300">Feriste o meu coração com a Tua palavra</p>
@@ -246,17 +265,19 @@ const MeditacaoJoao = () => {
 
             <Separator className="my-8 bg-gray-800" />
 
+            {/* Referências */}
             <section className="mb-12">
               <h2 className="text-2xl font-serif text-[#D4AF37] mb-4">Referências</h2>
               <ul className="list-disc pl-5 space-y-1 text-gray-300">
-                <li>Bíblia Sagrada: Evangelho de João, Cartas de João, Apocalipse</li>
-                <li>Santo Agostinho, <em>Tractatus in Ioannem</em></li>
-                <li>São Tomás de Aquino, <em>Catena Aurea</em> e <em>Suma Teológica</em></li>
-                <li>Papa Bento XVI, <em>Jesus de Nazaré</em></li>
-                <li>Aliança de Misericórdia: “São João Evangelista, amigo do Senhor”</li>
-                <li>O Evangelho de São João – Scribd</li>
-                <li>Encíclica Dilexit Nos, Papa Francisco</li>
-                <li>Introdução a Santo Tomás de Aquino – Revista Discipulus/PUC-SP</li>
+                <li>Bíblia Sagrada: João 15,13-15; João 15,14-15; Eclesiástico 6,14-17</li>
+                <li>Tomas de Kempis, <em>Imitação de Cristo</em></li>
+                <li>Santo Agostinho, <em>Confissões</em></li>
+                <li>Santa Teresa d’Ávila, <em>Caminho de Perfeição</em></li>
+                <li>Antoine de Saint-Exupéry, <em>O Pequeno Príncipe</em></li>
+                <li>Papa Leão XIII, <em>Rerum Novarum</em></li>
+                <li>Papa Pio XI, <em>Quadragesimo Anno</em></li>
+                <li>Como Fazer Amigos e Influenciar Pessoas, Dale Carnegie</li>
+                <li>Artigos e comentários sobre amizade cristã (EOH, Impulsa Profissional, etc.)</li>
               </ul>
             </section>
 
@@ -271,10 +292,10 @@ const MeditacaoJoao = () => {
           </article>
         </div>
       </main>
-
+      
       <Footer />
     </div>
   );
 };
 
-export default MeditacaoJoao;
+export default MeditacaoAmizade;
