@@ -34,37 +34,5 @@
   "index_source_pereira": "Pereira Ito, Patrícia do Carmo; Guzzo, Raquel Souza Lobo. \"Individuelle Unterschiede: Temperament und Persönlichkeit; Bedeutung der Theorie.\" Revista Estudos de Psicologia, PUC-Campinas, v. 19, n. 1, 2002.",
   "index_app_description": "Willkommen bei der Anwendung, um Ihr Temperament und Ihre multiplen Intelligenzen zu entdecken. Unsere Tests basieren auf den Lehren der vier Temperamente und der Theorie der multiplen Intelligenzen von Howard Gardner. Beantworten Sie die Fragen aufrichtig für eine genauere Analyse.",
   "index_start_test_button": "Test starten",
-  "index_learn_temperaments_button": "Die vier Temperamente kennenlernen",
-  "temperaments": {
-    "title": "Die Vier Temperamente",
-    "description": "Verstehen Sie die grundlegenden Eigenschaften jedes Temperaments und wie sie Verhalten, Entscheidungen und zwischenmenschliche Beziehungen beeinflussen.",
-
-    "sanguine": {
-      "name": "Sanguinisch",
-      "description": "Menschen mit sanguinischem Temperament sind extrovertiert, enthusiastisch und gesellig. Sie suchen ständig nach neuen Erfahrungen und können sich leicht an Veränderungen anpassen.",
-      "strengths": ["Kommunikativ", "Optimistisch", "Kreativ", "Energisch"],
-      "weaknesses": ["Impulsiv", "Unkonzentriert", "Oberflächlich", "Unbeständig"]
-    },
-
-    "choleric": {
-      "name": "Cholerisch",
-      "description": "Cholerische Individuen sind entschlossen, ehrgeizig und geborene Führungspersönlichkeiten. Sie haben eine hohe Entscheidungsfähigkeit und Ergebnisorientierung.",
-      "strengths": ["Führungsstärke", "Entschlossenheit", "Effizienz", "Mut"],
-      "weaknesses": ["Autoritarismus", "Ungeduld", "Intoleranz", "Starrheit"]
-    },
-
-    "melancholic": {
-      "name": "Melancholisch",
-      "description": "Melancholische Menschen sind analytisch, detailorientiert und introspektiv. Sie schätzen emotionale Tiefe und streben nach Perfektion in ihren Handlungen.",
-      "strengths": ["Organisiert", "Loyal", "Sorgfältig", "Nachdenklich"],
-      "weaknesses": ["Perfektionismus", "Pessimismus", "Unentschlossenheit", "Isolation"]
-    },
-
-    "phlegmatic": {
-      "name": "Phlegmatisch",
-      "description": "Phlegmatische Individuen sind ruhig, geduldig und ausgeglichen. Sie priorisieren Harmonie und vermeiden Konflikte, indem sie diplomatisch handeln.",
-      "strengths": ["Geduldig", "Diplomatisch", "Zuverlässig", "Stabil"],
-      "weaknesses": ["Passivität", "Gleichgültigkeit", "Langsamkeit", "Nachgiebigkeit"]
-    }
-  }
+  "index_learn_temperaments_button": "Die vier Temperamente kennenlernen"
 }

@@ -34,37 +34,5 @@
   "index_source_pereira": "Pereira Ito, Patrícia do Carmo; Guzzo, Raquel Souza Lobo. \"Diferències individuals: temperament i personalitat; importància de la teoria.\" Revista Estudos de Psicologia, PUC-Campinas, v. 19, n. 1, 2002.",
   "index_app_description": "Benvingut a l'aplicació per descobrir el teu temperament i les teves intel·ligències múltiples. Els nostres tests es basen en els ensenyaments sobre els quatre temperaments i en la teoria de les intel·ligències múltiples de Howard Gardner. Respon les preguntes amb sinceritat per a una anàlisi més precisa.",
   "index_start_test_button": "Començar Test",
-  "index_learn_temperaments_button": "Conèixer els quatre temperaments",
-  "temperaments": {
-    "title": "Els Quatre Temperaments",
-    "description": "Comprèn les característiques fonamentals de cada temperament i com influeixen en els comportaments, les decisions i les relacions interpersonals.",
-
-    "sanguine": {
-      "name": "Sanguini",
-      "description": "Les persones amb temperament sanguini són extravertides, entusiastes i sociables. Busquen constantment noves experiències i tenen facilitat per adaptar-se als canvis.",
-      "strengths": ["Comunicatiu", "Optimista", "Creatiu", "Energètic"],
-      "weaknesses": ["Impulsiu", "Distret", "Superficial", "Inconstant"]
-    },
-
-    "choleric": {
-      "name": "Colèric",
-      "description": "Els individus colèrics són determinats, ambiciosos i líders nats. Tenen alta capacitat de presa de decisions i focus en resultats.",
-      "strengths": ["Lideratge", "Determinació", "Eficiència", "Coratge"],
-      "weaknesses": ["Autoritarisme", "Impaciència", "Intolerància", "Rigidesa"]
-    },
-
-    "melancholic": {
-      "name": "Melancòlic",
-      "description": "Les persones melancòliques són analítiques, detallistes i introspectives. Valoren la profunditat emocional i busquen la perfecció en les seves accions.",
-      "strengths": ["Organitzat", "Lleial", "Curós", "Reflexiu"],
-      "weaknesses": ["Perfeccionisme", "Pessimisme", "Indecisió", "Aïllament"]
-    },
-
-    "phlegmatic": {
-      "name": "Flegmàtic",
-      "description": "Els individus flegmàtics són tranquils, pacients i equilibrats. Prioritzen l'harmonia i eviten els conflictes, actuant amb diplomàcia.",
-      "strengths": ["Pacient", "Diplomàtic", "Confiable", "Estable"],
-      "weaknesses": ["Passivitat", "Indiferència", "Lentitud", "Complaença"]
-    }
-  }
+  "index_learn_temperaments_button": "Conèixer els quatre temperaments"
 }
