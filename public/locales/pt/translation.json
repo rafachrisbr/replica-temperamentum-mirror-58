@@ -68,3 +68,17 @@
     }
   }
 }
+{
+  "temperamentos_titulo": "Temperamentos",
+  "temperamentos_intro": "Os temperamentos são padrões de comportamento e personalidade estudados desde a antiguidade. Cada pessoa pode se identificar mais com um ou outro, ou até com uma combinação deles.",
+  "temperamentos_lista_titulo": "Tipos de temperamentos",
+  "temperamentos_sanguineo_titulo": "Sanguíneo",
+  "temperamentos_sanguineo_desc": "O sanguíneo é comunicativo, entusiasmado e espontâneo. Gosta de estar entre pessoas e é facilmente influenciado pelo ambiente.",
+  "temperamentos_colerico_titulo": "Colérico",
+  "temperamentos_colerico_desc": "O colérico é determinado, prático e orientado para resultados. Tem facilidade em liderar e tomar decisões rápidas.",
+  "temperamentos_melancolico_titulo": "Melancólico",
+  "temperamentos_melancolico_desc": "O melancólico é analítico, sensível e detalhista. Valoriza a organização e tende a ser perfeccionista.",
+  "temperamentos_fleumatico_titulo": "Fleumático",
+  "temperamentos_fleumatico_desc": "O fleumático é calmo, equilibrado e diplomático. Prefere ambientes tranquilos e evita conflitos.",
+  "temperamentos_conclusao": "Conhecer seu temperamento pode ajudar no autoconhecimento e nas relações interpessoais."
+}
