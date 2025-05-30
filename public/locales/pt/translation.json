@@ -34,5 +34,37 @@
   "index_source_pereira": "Pereira Ito, Patrícia do Carmo; Guzzo, Raquel Souza Lobo. \"Diferenças individuais: temperamento e personalidade; importância da teoria.\" Revista Estudos de Psicologia, PUC-Campinas, v. 19, n. 1, 2002.",
   "index_app_description": "Bem-vindo à aplicação para descobrir o seu temperamento e suas inteligências múltiplas. Nossos testes são baseados nos ensinamentos sobre os quatro temperamentos e na teoria das inteligências múltiplas de Howard Gardner. Responda às perguntas com sinceridade para uma análise mais precisa.",
   "index_start_test_button": "Iniciar Teste",
-  "index_learn_temperaments_button": "Conhecer os quatro temperamentos"
+  "index_learn_temperaments_button": "Conhecer os quatro temperamentos",
+  "temperaments": {
+    "title": "Os Quatro Temperamentos",
+    "description": "Compreenda as características fundamentais de cada temperamento e como elas influenciam comportamentos, decisões e relações interpessoais.",
+
+    "sanguine": {
+      "name": "Sanguíneo",
+      "description": "Pessoas com temperamento sanguíneo são extrovertidas, entusiásticas e sociáveis. Buscam constantemente novas experiências e têm facilidade para se adaptar a mudanças.",
+      "strengths": ["Comunicativo", "Otimista", "Criativo", "Energético"],
+      "weaknesses": ["Impulsivo", "Distraído", "Superficial", "Inconstante"]
+    },
+
+    "choleric": {
+      "name": "Colérico",
+      "description": "Indivíduos coléricos são determinados, ambiciosos e líderes natos. Têm alta capacidade de tomada de decisão e foco em resultados.",
+      "strengths": ["Liderança", "Determinação", "Eficiência", "Coragem"],
+      "weaknesses": ["Autoritarismo", "Impaciência", "Intolerância", "Rigidez"]
+    },
+
+    "melancholic": {
+      "name": "Melancólico",
+      "description": "Pessoas melancólicas são analíticas, detalhistas e introspectivas. Valorizam profundidade emocional e buscam perfeição em suas ações.",
+      "strengths": ["Organizado", "Leal", "Cuidadoso", "Reflexivo"],
+      "weaknesses": ["Perfeccionismo", "Pessimismo", "Indecisão", "Isolamento"]
+    },
+
+    "phlegmatic": {
+      "name": "Fleumático",
+      "description": "Indivíduos fleumáticos são calmos, pacientes e equilibrados. Priorizam harmonia e evitam conflitos, agindo com diplomacia.",
+      "strengths": ["Paciente", "Diplomata", "Confiável", "Estável"],
+      "weaknesses": ["Passividade", "Indiferença", "Lentidão", "Complacência"]
+    }
+  }
 }

@@ -34,5 +34,37 @@
   "index_source_pereira": "Pereira Ito, Patrícia do Carmo; Guzzo, Raquel Souza Lobo. \"Diferenças individuais: tempérament et personnalité; importance de la théorie.\" Revista Estudos de Psicologia, PUC-Campinas, v. 19, n. 1, 2002.",
   "index_app_description": "Bienvenue dans l'application pour découvrir votre tempérament et vos intelligences multiples. Nos tests sont basés sur les enseignements des quatre tempéraments et sur la théorie des intelligences multiples de Howard Gardner. Répondez aux questions avec sincérité pour une analyse plus précise.",
   "index_start_test_button": "Commencer le Test",
-  "index_learn_temperaments_button": "Connaître les quatre tempéraments"
+  "index_learn_temperaments_button": "Connaître les quatre tempéraments",
+  "temperaments": {
+    "title": "Les Quatre Tempéraments",
+    "description": "Comprenez les caractéristiques fondamentales de chaque tempérament et comment elles influencent les comportements, les décisions et les relations interpersonnelles.",
+
+    "sanguine": {
+      "name": "Sanguin",
+      "description": "Les personnes au tempérament sanguin sont extraverties, enthousiastes et sociables. Elles recherchent constamment de nouvelles expériences et s'adaptent facilement aux changements.",
+      "strengths": ["Communicatif", "Optimiste", "Créatif", "Énergique"],
+      "weaknesses": ["Impulsif", "Distrait", "Superficiel", "Inconstant"]
+    },
+
+    "choleric": {
+      "name": "Colérique",
+      "description": "Les individus colériques sont déterminés, ambitieux et des leaders nés. Ils ont une grande capacité de prise de décision et se concentrent sur les résultats.",
+      "strengths": ["Leadership", "Détermination", "Efficacité", "Courage"],
+      "weaknesses": ["Autoritarisme", "Impatience", "Intolérance", "Rigidité"]
+    },
+
+    "melancholic": {
+      "name": "Mélancolique",
+      "description": "Les personnes mélancoliques sont analytiques, minutieuses et introspectives. Elles valorisent la profondeur émotionnelle et recherchent la perfection dans leurs actions.",
+      "strengths": ["Organisé", "Loyal", "Soigneux", "Réfléchi"],
+      "weaknesses": ["Perfectionnisme", "Pessimisme", "Indécision", "Isolement"]
+    },
+
+    "phlegmatic": {
+      "name": "Flegmatique",
+      "description": "Les individus flegmatiques sont calmes, patients et équilibrés. Ils privilégient l'harmonie et évitent les conflits, agissant avec diplomatie.",
+      "strengths": ["Patient", "Diplomate", "Fiable", "Stable"],
+      "weaknesses": ["Passivité", "Indifférence", "Lenteur", "Complaisance"]
+    }
+  }
 }
