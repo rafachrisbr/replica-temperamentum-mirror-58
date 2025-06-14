@@ -42,7 +42,7 @@ const CompleteTestResults = () => {
 
     const tempEntries = Object.entries(peHockResults);
     return tempEntries.reduce((max, current) => 
-      (current[1] as number) > (max[1] as number) ? current : max, tempEntries[0]
+      Number(current[1]) > Number(max[1]) ? current : max, tempEntries[0]
     )[0];
   };
 
