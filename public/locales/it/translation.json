@@ -2,7 +2,7 @@
 {
   "welcome": "Benvenuto a Temperamentum",
   "description": "Scopri il tuo temperamento e le tue intelligenze multiple",
-  "start_test": "Inizia il Test",
+  "start_test": "Inizia Test",
   "learn_more": "Scopri di più",
   "nav": {
     "home": "Home",
@@ -11,17 +11,17 @@
     "meditations": "Meditazioni",
     "family_education": "Educazione Familiare"
   },
-  "index_title": "Teoria dei Temperamenti e le Essenze dell'Essere Umano",
-  "index_intro_hipocrates": "La teoria dei temperamenti affonda le sue radici nell'antica Grecia, essendo stata inizialmente formulata da Ippocrate, conosciuto come il padre della medicina. Egli si basò sui quattro elementi primari dell'universo (terra, aria, fuoco e acqua) e sulle loro qualità (caldo, freddo, umido e secco) per dedurre quattro umori corporei: sangue, flegma, bile gialla e bile nera. Questi umori, secondo Ippocrate, influenzavano direttamente la salute e il comportamento delle persone.",
-  "index_intro_galeno": "Più tardi, Galeno, un altro influente medico greco, espanse questa teoria nella sua opera \"De Temperamentis\", descrivendo nove temperamenti, inclusi i quattro principali: sanguigno, collerico, malinconico e flemmatico. Galeno collegò questi temperamenti all'equilibrio degli umori nel corpo e alle caratteristiche comportamentali di ogni individuo. Nonostante le loro antiche origini, la classificazione dei quattro temperamenti rimane rilevante, essendo frequentemente citata in opere moderne di psicologia e sviluppo umano (Feist, Feist & Roberts; Schultz & Schultz).",
-  "index_intro_temperament_innate": "Il temperamento, pertanto, è inteso come la parte innata della nostra personalità, fortemente influenzata da fattori biologici e genetici. Esso determina come reagiamo emotivamente e comportamentalmente alle situazioni quotidiane e rimane relativamente stabile per tutta la vita. Ricercatori contemporanei, come Mary K. Rothbart e Stella Chess & Alexander Thomas, confermano che il temperamento appare già nei primi anni di vita, manifestandosi in schemi di reattività, autoregolazione e adattamento all'ambiente.",
-  "index_intro_temperament_innate_mobile": "Il temperamento è inteso come la parte innata della nostra personalità, influenzata da fattori biologici e genetici, che determina come reagiamo alle situazioni e rimane relativamente stabile per tutta la vita.",
-  "index_intro_three_essences": "Nel contesto della comprensione integrale dell'essere umano, è fondamentale considerare anche le tre essenze che ci compongono: carne, anima e temperamento.",
+  "index_title": "Teoria dei temperamenti e le essenze dell'essere umano",
+  "index_intro_hipocrates": "La teoria dei temperamenti ha le sue radici nell'antica Grecia, essendo stata inizialmente formulata da Ippocrate, conosciuto come il padre della medicina. Si basò sui quattro elementi primari dell'universo (terra, aria, fuoco e acqua) e sulle loro qualità (caldo, freddo, umido e secco) per dedurre quattro umori corporei: sangue, flemma, bile gialla e bile nera. Questi umori, secondo Ippocrate, influenzavano direttamente la salute e il comportamento delle persone.",
+  "index_intro_galeno": "Più tardi, Galeno, un altro influente medico greco, estese questa teoria nella sua opera \"De Temperamentis\", descrivendo nove temperamenti, inclusi i quattro principali: sanguigno, collerico, melanconico e flemmatico. Galeno collegò questi temperamenti all'equilibrio degli umori nel corpo e alle caratteristiche comportamentali di ogni individuo. Nonostante le loro origini antiche, la classificazione dei quattro temperamenti rimane rilevante, essendo frequentemente citata in opere moderne di psicologia e sviluppo umano (Feist, Feist & Roberts; Schultz & Schultz).",
+  "index_intro_temperament_innate": "Il temperamento, quindi, è inteso come la parte innata della nostra personalità, fortemente influenzata da fattori biologici e genetici. Determina come reagiamo emotivamente e comportamentalmente alle situazioni quotidiane e rimane relativamente stabile durante la vita. Ricercatori contemporanei, come Mary K. Rothbart e Stella Chess & Alexander Thomas, confermano che il temperamento appare già nei primi anni di vita, manifestandosi in modelli di reattività, autoregolazione e adattamento all'ambiente.",
+  "index_intro_temperament_innate_mobile": "Il temperamento è inteso come la parte innata della nostra personalità, influenzata da fattori biologici e genetici, che determina come reagiamo alle situazioni e rimane relativamente stabile durante la vita.",
+  "index_intro_three_essences": "Nel contesto della comprensione integrale dell'essere umano, è anche fondamentale considerare le tre essenze che ci compongono: carne, anima e temperamento.",
   "index_temperament_heading": "Temperamento",
   "index_temperament_desc_mobile": "Il temperamento è la parte della nostra personalità che è innata e influenzata da fattori biologici e genetici, che determina come reagiamo emotivamente e comportamentalmente alle situazioni.",
-  "index_temperament_desc_desktop": "Il temperamento agisce come ponte tra la carne e l'anima, influenzando come sentiamo, pensiamo e agiamo. È attraverso il temperamento che si esprimono sia le tendenze naturali del corpo sia le aspirazioni più profonde dello spirito.",
+  "index_temperament_desc_desktop": "Il temperamento agisce come ponte tra la carne e l'anima, influenzando come sentiamo, pensiamo e agiamo. È attraverso il temperamento che si esprimono sia le tendenze naturali del corpo che le aspirazioni più profonde dello spirito.",
   "index_flesh_heading": "Carne",
-  "index_flesh_desc": "La carne si riferisce al corpo fisico, la parte tangibile e materiale dell'essere umano. È attraverso di essa che sperimentiamo il mondo, compiamo azioni e affrontiamo i limiti dell'esistenza, come l'invecchiamento e la morte. In molti contesti spirituali, la carne è vista come la dimensione che deve essere disciplinata, poiché è associata agli impulsi e alle tentazioni naturali.",
+  "index_flesh_desc": "La carne si riferisce al corpo fisico, la parte tangibile e materiale dell'essere umano. È attraverso di essa che sperimentiamo il mondo, realizziamo azioni e affrontiamo i limiti dell'esistenza, come l'invecchiamento e la morte. In molti contesti spirituali, la carne è vista come la dimensione che deve essere disciplinata, poiché è associata agli impulsi e alle tentazioni naturali.",
   "index_soul_heading": "Anima",
   "index_soul_desc": "L'anima è l'essenza immateriale e immortale, responsabile della coscienza, della moralità e della connessione spirituale. Rappresenta il principio intelligente e trascendente che sopravvive all'esistenza fisica, essendo fonte di valori, scopo e significato.",
   "index_integration_mobile": "Conosci il tuo temperamento e comprendi meglio come influenza la tua personalità e le tue relazioni.",
@@ -32,95 +32,73 @@
   "index_source_schultz": "Schultz, D.P.; Schultz, S.E. Teorie della Personalità.",
   "index_source_rothbart": "Rothbart, M.K. (1981, 2004).",
   "index_source_thomas": "Thomas, A.; Chess, S. (1977).",
-  "index_source_pereira": "Pereira Ito, Patrícia do Carmo; Guzzo, Raquel Souza Lobo. \"Diferenças individuali: temperamento e personalità; importanza della teoria.\" Revista Estudos de Psicologia, PUC-Campinas, v. 19, n. 1, 2002.",
-  "index_app_description": "Benvenuto nell'applicazione per scoprire il tuo temperamento e le tue intelligenze multiple. I nostri test si basano sugli insegnamenti sui quattro temperamenti e sulla teoria delle intelligenze multiple di Howard Gardner. Rispondi alle domande con sincerità per un'analisi più precisa.",
-  "index_start_test_button": "Inizia il Test",
+  "index_source_pereira": "Pereira Ito, Patrícia do Carmo; Guzzo, Raquel Souza Lobo. \"Differenze individuali: temperamento e personalità; importanza della teoria.\" Revista Estudos de Psicologia, PUC-Campinas, v. 19, n. 1, 2002.",
+  "index_app_description": "Benvenuto nell'applicazione per scoprire il tuo temperamento e le tue intelligenze multiple. I nostri test si basano sugli insegnamenti sui quattro temperamenti e sulla teoria delle intelligenze multiple di Howard Gardner. Rispondi alle domande con sincerità per un'analisi più accurata.",
+  "index_start_test_button": "Inizia Test",
   "index_learn_temperaments_button": "Conoscere i quattro temperamenti",
   "temperaments": {
     "title": "I Quattro Temperamenti",
-    "description": "Comprendi le caratteristiche fondamentali di ciascun temperamento e come influenzano comportamenti, decisioni e relazioni interpersonali.",
+    "description": "Comprendi le caratteristiche fondamentali di ogni temperamento e come influenzano i comportamenti, le decisioni e le relazioni interpersonali.",
+
     "sanguine": {
       "name": "Sanguigno",
       "description": "Le persone con temperamento sanguigno sono estroverse, entusiaste e socievoli. Cercano costantemente nuove esperienze e si adattano facilmente ai cambiamenti.",
       "strengths": ["Comunicativo", "Ottimista", "Creativo", "Energico"],
       "weaknesses": ["Impulsivo", "Distratto", "Superficiale", "Incostante"]
     },
+
     "choleric": {
       "name": "Collerico",
-      "description": "Gli individui collerici sono determinati, ambiziosi e leader naturali. Hanno un'alta capacità decisionale e si concentrano sui risultati.",
+      "description": "Gli individui collerici sono determinati, ambiziosi e leader nati. Hanno un'alta capacità decisionale e focus sui risultati.",
       "strengths": ["Leadership", "Determinazione", "Efficienza", "Coraggio"],
       "weaknesses": ["Autoritarismo", "Impazienza", "Intolleranza", "Rigidità"]
     },
+
     "melancholic": {
-      "name": "Malinconico",
-      "description": "Le persone malinconiche sono analitiche, meticolose e introspettive. Valorizzano la profondità emotiva e cercano la perfezione nelle loro azioni.",
+      "name": "Melanconico",
+      "description": "Le persone melanconiche sono analitiche, dettagliate e introspettive. Valorizzano la profondità emotiva e cercano la perfezione nelle loro azioni.",
       "strengths": ["Organizzato", "Leale", "Attento", "Riflessivo"],
       "weaknesses": ["Perfezionismo", "Pessimismo", "Indecisione", "Isolamento"]
     },
+
     "phlegmatic": {
       "name": "Flemmatico",
-      "description": "Gli individui flemmatici sono calmi, pazienti ed equilibrati. Danno priorità all'armonia ed evitano i conflitti, agendo con diplomazia.",
+      "description": "Gli individui flemmatici sono calmi, pazienti ed equilibrati. Privilegiano l'armonia ed evitano i conflitti, agendo con diplomazia.",
       "strengths": ["Paziente", "Diplomatico", "Affidabile", "Stabile"],
       "weaknesses": ["Passività", "Indifferenza", "Lentezza", "Compiacenza"]
     }
   },
-  "tests": {
-    "title": "Scopri Chi Sei",
-    "subtitle": "Conosci le tue caratteristiche predominanti con i nostri test di autoconoscenza. Identifica il tuo temperamento e le tue intelligenze multiple per comprendere meglio le tue forze e il tuo potenziale.",
-    "quick_test": {
-      "title": "Test Rapido",
-      "description": "Scopri il tuo temperamento predominante attraverso 13 domande. Test rapido e pratico, ma meno preciso dei test completi.",
-      "button": "Test Rapido"
+  "meditations": {
+    "title": "Meditazioni",
+    "description": "Una collezione di riflessioni spirituali sui temperamenti, virtù e figure importanti della fede cristiana.",
+    "subtitle": "Queste meditazioni cercano di avvicinare la teoria dei temperamenti alla vita spirituale.",
+    "cards": {
+      "joao": {
+        "title": "San Giovanni Evangelista",
+        "subtitle": "Il Discepolo Amato e la Profondità del Temperamento Melanconico",
+        "description": "Questa meditazione esplora la figura singolare di San Giovanni Evangelista, il discepolo che Gesù amava, sotto la prospettiva del suo temperamento melanconico."
+      },
+      "tres_amores": {
+        "title": "I Tre Amori",
+        "subtitle": "Eros, Philia e Agape – Dalla Passione all'Unione Divina",
+        "description": "Questa meditazione esplora le tre dimensioni dell'amore nella tradizione cristiana: Eros (passione), Philia (amicizia) e Agape (amore incondizionato)."
+      },
+      "amizade": {
+        "title": "L'Amicizia",
+        "subtitle": "Comunione di Anime in Cristo",
+        "description": "Questa meditazione esplora l'amicizia come dono prezioso ed espressione dell'amore divino, contemplando l'amicizia di Gesù con i suoi apostoli."
+      },
+      "vocacao": {
+        "title": "La Vocazione alla Santità",
+        "subtitle": "La chiamata universale alla perfezione cristiana",
+        "description": "Questa meditazione esplora la chiamata universale alla santità, basata sugli insegnamenti di Sant'Alfonso Maria de' Liguori."
+      },
+      "oracao": {
+        "title": "La Preghiera",
+        "subtitle": "Unione con Dio",
+        "description": "Questa meditazione esplora la preghiera come respiro dell'anima e legame più profondo tra la creatura e il Creatore."
+      }
     },
-    "pe_hock_test": {
-      "title": "Test Pe. Hock",
-      "description": "Scopri il tuo temperamento con il metodo di Pe. Hock. Questo test più dettagliato analizza le tue tendenze naturali basandosi su 50 domande elaborate specificamente per identificare il tuo temperamento predominante.",
-      "button": "Test Pe. Hock"
-    },
-    "multiple_intelligences": {
-      "title": "Intelligenze Multiple",
-      "description": "Identifica le tue intelligenze predominanti tra le 7 intelligenze multiple di Howard Gardner. Scopri le tue abilità naturali in 10 fasi di valutazione.",
-      "button": "Test delle Intelligenze"
-    },
-    "complete_test": {
-      "title": "Test Completo",
-      "description": "Realizza il test completo che integra due test in sequenza: Test di Pe. Hock (50 domande) e Test delle Intelligenze Multiple (10 fasi). Ricevi un rapporto integrato che mostra come i tuoi tratti di personalità e le tue abilità si completano.",
-      "button": "Test Completo"
-    },
-    "about": {
-      "title": "Sui Nostri Test",
-      "description": "I nostri test si basano su teorie consolidate sui temperamenti e le intelligenze multiple. Il test rapido identifica la predominanza di quattro tipi classici: Sanguigno (estroverso e socievole), Collerico (determinato e leader), Malinconico (analitico e perfezionista) e Flemmatico (calmo ed equilibrato).",
-      "pe_hock_description": "Il test di Pe. Hock è un'analisi più dettagliata dei temperamenti, basata sul Questionario dei Temperamenti di Pe. Hock (edizione brasiliana), che utilizza 50 domande per determinare con maggiore precisione il tuo profilo predominante.",
-      "intelligences_description": "Il test delle intelligenze multiple si basa sulla teoria dello psicologo Howard Gardner, che ha identificato sette tipi distinti di intelligenza: Verbale-Linguistica, Logico-matematica, Spaziale, Musicale, Corporeo-cinestetica, Interpersonale e Intrapersonale.",
-      "complete_description": "Il test completo combina il test di Pe. Hock e il test delle intelligenze multiple in sequenza, fornendo un'analisi integrata di come il tuo temperamento e le tue intelligenze si completano, offrendo insight preziosi per la tua autoconoscenza, vita personale e sviluppo professionale."
-    }
-  },
-  "quiz": {
-    "title": "Test Rapido del Temperamento",
-    "description": "Questo è un test rapido, con solo 13 domande. È più pratico, ma meno preciso dei test completi.",
-    "instructions": {
-      "title": "Istruzioni",
-      "description": "Rispondi rapidamente alle domande, scegliendo l'alternativa che più si avvicina al tuo profilo. Il test è breve e serve per una valutazione iniziale del tuo temperamento."
-    },
-    "progress": "domanda {{current}} di {{total}}",
-    "navigation": {
-      "back": "indietro",
-      "restart": "ricomincia",
-      "tests": "test"
-    }
-  },
-  "results": {
-    "title": "il tuo temperamento predominante",
-    "buttons": {
-      "retake": "rifare il test",
-      "home": "pagina iniziale",
-      "share": "condividi",
-      "learn_more": "scopri di più"
-    },
-    "share": {
-      "title": "Il Mio Risultato - Test dei Temperamenti",
-      "text": "Il mio temperamento predominante è {{temperament}}!"
-    },
-    "share_error": "Il tuo browser non supporta la funzione di condivisione."
+    "read_complete": "Leggi meditazione completa"
   }
 }

@@ -1,3 +1,4 @@
+
 {
   "welcome": "Willkommen bei Temperamentum",
   "description": "Entdecken Sie Ihr Temperament und Ihre multiplen Intelligenzen",
@@ -66,5 +67,38 @@
       "strengths": ["Geduldig", "Diplomatisch", "Zuverlässig", "Stabil"],
       "weaknesses": ["Passivität", "Gleichgültigkeit", "Langsamkeit", "Nachgiebigkeit"]
     }
+  },
+  "meditations": {
+    "title": "Meditationen",
+    "description": "Eine Sammlung spiritueller Reflexionen über Temperamente, Tugenden und wichtige Gestalten des christlichen Glaubens.",
+    "subtitle": "Diese Meditationen versuchen, die Theorie der Temperamente dem spirituellen Leben näherzubringen.",
+    "cards": {
+      "joao": {
+        "title": "Der heilige Johannes der Evangelist",
+        "subtitle": "Der geliebte Jünger und die Tiefe des melancholischen Temperaments",
+        "description": "Diese Meditation erforscht die einzigartige Gestalt des heiligen Johannes des Evangelisten, den Jünger, den Jesus liebte, unter der Perspektive seines melancholischen Temperaments."
+      },
+      "tres_amores": {
+        "title": "Die Drei Arten der Liebe",
+        "subtitle": "Eros, Philia und Agape – Von der Leidenschaft zur göttlichen Vereinigung",
+        "description": "Diese Meditation erforscht die drei Dimensionen der Liebe in der christlichen Tradition: Eros (Leidenschaft), Philia (Freundschaft) und Agape (bedingungslose Liebe)."
+      },
+      "amizade": {
+        "title": "Die Freundschaft",
+        "subtitle": "Gemeinschaft der Seelen in Christus",
+        "description": "Diese Meditation erforscht die Freundschaft als kostbares Geschenk und Ausdruck der göttlichen Liebe, betrachtend Jesu Freundschaft mit seinen Aposteln."
+      },
+      "vocacao": {
+        "title": "Die Berufung zur Heiligkeit",
+        "subtitle": "Der universelle Ruf zur christlichen Vollkommenheit",
+        "description": "Diese Meditation erforscht den universellen Ruf zur Heiligkeit, basierend auf den Lehren des heiligen Alfons Maria von Liguori."
+      },
+      "oracao": {
+        "title": "Das Gebet",
+        "subtitle": "Vereinigung mit Gott",
+        "description": "Diese Meditation erforscht das Gebet als Atem der Seele und tiefste Verbindung zwischen Geschöpf und Schöpfer."
+      }
+    },
+    "read_complete": "Vollständige Meditation lesen"
   }
 }

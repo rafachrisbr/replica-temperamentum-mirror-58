@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Separator } from '@/components/ui/separator';
@@ -8,6 +10,8 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, FileText, ChevronLeft } from 'lucide-react';
 
 const Meditacoes = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen flex flex-col bg-black text-white">
       <Header />
@@ -16,11 +20,10 @@ const Meditacoes = () => {
         <div className="max-w-5xl w-full space-y-8">
           <div className="text-center mb-10 animate-[fadeIn_0.5s_ease-in-out_0.2s] opacity-0 fill-mode-forwards">
             <h1 className="text-3xl md:text-4xl font-serif text-[#D4AF37] mb-6">
-              Meditações
+              {t('meditations.title')}
             </h1>
             <p className="text-lg text-gray-200 max-w-2xl mx-auto">
-              Uma coleção de reflexões espirituais sobre os temperamentos, virtudes e figuras importantes da fé cristã. 
-              Estas meditações buscam aproximar a teoria dos temperamentos da vida espiritual.
+              {t('meditations.description')} {t('meditations.subtitle')}
             </p>
           </div>
 
@@ -29,24 +32,22 @@ const Meditacoes = () => {
             <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.3s] opacity-0 fill-mode-forwards">
               <CardHeader className="pb-3">
                 <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
-                  São João Evangelista
+                  {t('meditations.cards.joao.title')}
                 </CardTitle>
                 <CardDescription className="text-gray-300">
-                  O Discípulo Amado e a Profundidade do Temperamento Melancólico
+                  {t('meditations.cards.joao.subtitle')}
                 </CardDescription>
               </CardHeader>
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/a1a116ba-8451-4500-a0ee-9655d929d636.png" 
-                  alt="São João Evangelista"
+                  alt={t('meditations.cards.joao.title')}
                   className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="py-4 flex-grow">
                 <p className="text-gray-300 line-clamp-4">
-                  Esta meditação explora a figura singular de São João Evangelista, o discípulo a quem Jesus amava, 
-                  sob a perspectiva de seu temperamento melancólico. Através da análise de passagens bíblicas e da reflexão 
-                  sobre suas características – sensibilidade, intensidade e profundidade.
+                  {t('meditations.cards.joao.description')}
                 </p>
               </CardContent>
               <CardFooter className="pt-0">
@@ -55,7 +56,7 @@ const Meditacoes = () => {
                   className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
                 >
                   <Link to="/meditacao-joao" className="flex items-center justify-center gap-2 w-full">
-                    Ler meditação completa
+                    {t('meditations.read_complete')}
                     <ArrowRight size={16} />
                   </Link>
                 </Button>
@@ -66,24 +67,22 @@ const Meditacoes = () => {
             <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.4s] opacity-0 fill-mode-forwards">
               <CardHeader className="pb-3">
                 <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
-                  Os Três Amores
+                  {t('meditations.cards.tres_amores.title')}
                 </CardTitle>
                 <CardDescription className="text-gray-300">
-                  Eros, Philia e Ágape – Da Paixão à União Divina
+                  {t('meditations.cards.tres_amores.subtitle')}
                 </CardDescription>
               </CardHeader>
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/1633b334-1fa7-4520-b9c9-31d93e65a940.png" 
-                  alt="Os Três Amores - Sagrado Coração"
+                  alt={t('meditations.cards.tres_amores.title')}
                   className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="py-4 flex-grow">
                 <p className="text-gray-300 line-clamp-4">
-                  Esta meditação explora as três dimensões do amor na tradição cristã: Eros (paixão), 
-                  Philia (amizade) e Ágape (amor incondicional). Ao refletir sobre estes três aspectos, 
-                  compreendemos como cada forma de amor nos guia à união com o Divino.
+                  {t('meditations.cards.tres_amores.description')}
                 </p>
               </CardContent>
               <CardFooter className="pt-0">
@@ -92,7 +91,7 @@ const Meditacoes = () => {
                   className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
                 >
                   <Link to="/meditacao-tres-amores" className="flex items-center justify-center gap-2 w-full">
-                    Ler meditação completa
+                    {t('meditations.read_complete')}
                     <ArrowRight size={16} />
                   </Link>
                 </Button>
@@ -103,24 +102,22 @@ const Meditacoes = () => {
             <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.5s] opacity-0 fill-mode-forwards">
               <CardHeader className="pb-3">
                 <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
-                  A Amizade
+                  {t('meditations.cards.amizade.title')}
                 </CardTitle>
                 <CardDescription className="text-gray-300">
-                  Comunhão de Almas em Cristo
+                  {t('meditations.cards.amizade.subtitle')}
                 </CardDescription>
               </CardHeader>
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/amigos.jpg" 
-                  alt="Amizade em Cristo"
+                  alt={t('meditations.cards.amizade.title')}
                   className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="py-4 flex-grow">
                 <p className="text-gray-300 line-clamp-4">
-                  Esta meditação explora a amizade como dom precioso e expressão do amor divino, 
-                  contemplando a amizade de Jesus com seus apóstolos e as lições de obras como 
-                  O Pequeno Príncipe e a Imitação de Cristo.
+                  {t('meditations.cards.amizade.description')}
                 </p>
               </CardContent>
               <CardFooter className="pt-0">
@@ -129,7 +126,7 @@ const Meditacoes = () => {
                   className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
                 >
                   <Link to="/meditacao-amizade" className="flex items-center justify-center gap-2 w-full">
-                    Ler meditação completa
+                    {t('meditations.read_complete')}
                     <ArrowRight size={16} />
                   </Link>
                 </Button>
@@ -140,24 +137,22 @@ const Meditacoes = () => {
             <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.6s] opacity-0 fill-mode-forwards">
               <CardHeader className="pb-3">
                 <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
-                  A Vocação à Santidade
+                  {t('meditations.cards.vocacao.title')}
                 </CardTitle>
                 <CardDescription className="text-gray-300">
-                  O chamado universal à perfeição cristã
+                  {t('meditations.cards.vocacao.subtitle')}
                 </CardDescription>
               </CardHeader>
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/vocatio2.png" 
-                  alt="A Vocação à Santidade"
+                  alt={t('meditations.cards.vocacao.title')}
                   className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="py-4 flex-grow">
                 <p className="text-gray-300 line-clamp-4">
-                  Esta meditação explora o chamado universal à santidade, baseada nos ensinamentos de 
-                  Santo Afonso Maria de Ligório e na tradição da Igreja. Descubra como a busca pela 
-                  perfeição cristã se realiza no cotidiano através do amor a Jesus Cristo.
+                  {t('meditations.cards.vocacao.description')}
                 </p>
               </CardContent>
               <CardFooter className="pt-0">
@@ -166,7 +161,7 @@ const Meditacoes = () => {
                   className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
                 >
                   <Link to="/meditacao-vocacao" className="flex items-center justify-center gap-2 w-full">
-                    Ler meditação completa
+                    {t('meditations.read_complete')}
                     <ArrowRight size={16} />
                   </Link>
                 </Button>
@@ -177,24 +172,22 @@ const Meditacoes = () => {
             <Card className="bg-[#121212] border-gray-800 text-white overflow-hidden flex flex-col animate-[fadeIn_0.5s_ease-in-out_0.7s] opacity-0 fill-mode-forwards">
               <CardHeader className="pb-3">
                 <CardTitle className="text-xl md:text-2xl font-serif text-[#D4AF37]">
-                  A Oração
+                  {t('meditations.cards.oracao.title')}
                 </CardTitle>
                 <CardDescription className="text-gray-300">
-                  União com Deus
+                  {t('meditations.cards.oracao.subtitle')}
                 </CardDescription>
               </CardHeader>
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src="/lovable-uploads/cardOração.png" 
-                  alt="A Oração - União com Deus"
+                  alt={t('meditations.cards.oracao.title')}
                   className="w-full h-full object-cover"
                 />
               </div>
               <CardContent className="py-4 flex-grow">
                 <p className="text-gray-300 line-clamp-4">
-                  Esta meditação explora a oração como o respiro da alma e o vínculo mais profundo entre a criatura e o Criador. 
-                  Descubra como a oração nos une a Deus, nos ajuda a buscar Sua vontade e nos conduz à santidade através dos 
-                  diferentes tipos e formas de oração.
+                  {t('meditations.cards.oracao.description')}
                 </p>
               </CardContent>
               <CardFooter className="pt-0">
@@ -203,7 +196,7 @@ const Meditacoes = () => {
                   className="w-full flex items-center justify-center gap-2 border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37]/10"
                 >
                   <Link to="/meditacao-oracao" className="flex items-center justify-center gap-2 w-full">
-                    Ler meditação completa
+                    {t('meditations.read_complete')}
                     <ArrowRight size={16} />
                   </Link>
                 </Button>

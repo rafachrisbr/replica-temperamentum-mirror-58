@@ -1,3 +1,4 @@
+
 {
   "welcome": "Benvingut a Temperamentum",
   "description": "Descobreix el teu temperament i les teves intel·ligències múltiples",
@@ -66,5 +67,38 @@
       "strengths": ["Pacient", "Diplomàtic", "Confiable", "Estable"],
       "weaknesses": ["Passivitat", "Indiferència", "Lentitud", "Complaença"]
     }
+  },
+  "meditations": {
+    "title": "Meditacions",
+    "description": "Una col·lecció de reflexions espirituals sobre els temperaments, virtuts i figures importants de la fe cristiana.",
+    "subtitle": "Aquestes meditacions busquen apropar la teoria dels temperaments a la vida espiritual.",
+    "cards": {
+      "joao": {
+        "title": "Sant Joan Evangelista",
+        "subtitle": "El Deixeble Estimat i la Profunditat del Temperament Melancòlic",
+        "description": "Aquesta meditació explora la figura singular de Sant Joan Evangelista, el deixeble que Jesús estimava, sota la perspectiva del seu temperament melancòlic."
+      },
+      "tres_amores": {
+        "title": "Els Tres Amors",
+        "subtitle": "Eros, Philia i Àgape – De la Passió a la Unió Divina",
+        "description": "Aquesta meditació explora les tres dimensions de l'amor en la tradició cristiana: Eros (passió), Philia (amistat) i Àgape (amor incondicional)."
+      },
+      "amizade": {
+        "title": "L'Amistat",
+        "subtitle": "Comunió d'Ànimes en Crist",
+        "description": "Aquesta meditació explora l'amistat com a do precios i expressió de l'amor diví, contemplant l'amistat de Jesús amb els seus apòstols."
+      },
+      "vocacao": {
+        "title": "La Vocació a la Santedat",
+        "subtitle": "La crida universal a la perfecció cristiana",
+        "description": "Aquesta meditació explora la crida universal a la santedat, basada en els ensenyaments de Sant Alfons Maria de Ligori."
+      },
+      "oracao": {
+        "title": "L'Oració",
+        "subtitle": "Unió amb Déu",
+        "description": "Aquesta meditació explora l'oració com a respiració de l'ànima i vincle més profund entre la criatura i el Creador."
+      }
+    },
+    "read_complete": "Llegir meditació completa"
   }
 }

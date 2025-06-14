@@ -1,3 +1,4 @@
+
 {
   "welcome": "Bienvenue à Temperamentum",
   "description": "Découvrez votre tempérament et vos intelligences multiples",
@@ -66,5 +67,38 @@
       "strengths": ["Patient", "Diplomate", "Fiable", "Stable"],
       "weaknesses": ["Passivité", "Indifférence", "Lenteur", "Complaisance"]
     }
+  },
+  "meditations": {
+    "title": "Méditations",
+    "description": "Une collection de réflexions spirituelles sur les tempéraments, vertus et figures importantes de la foi chrétienne.",
+    "subtitle": "Ces méditations cherchent à rapprocher la théorie des tempéraments de la vie spirituelle.",
+    "cards": {
+      "joao": {
+        "title": "Saint Jean l'Évangéliste",
+        "subtitle": "Le Disciple Bien-Aimé et la Profondeur du Tempérament Mélancolique",
+        "description": "Cette méditation explore la figure singulière de saint Jean l'Évangéliste, le disciple que Jésus aimait, sous la perspective de son tempérament mélancolique."
+      },
+      "tres_amores": {
+        "title": "Les Trois Amours",
+        "subtitle": "Éros, Philia et Agapè – De la Passion à l'Union Divine",
+        "description": "Cette méditation explore les trois dimensions de l'amour dans la tradition chrétienne : Éros (passion), Philia (amitié) et Agapè (amour inconditionnel)."
+      },
+      "amizade": {
+        "title": "L'Amitié",
+        "subtitle": "Communion des Âmes dans le Christ",
+        "description": "Cette méditation explore l'amitié comme don précieux et expression de l'amour divin, contemplant l'amitié de Jésus avec ses apôtres."
+      },
+      "vocacao": {
+        "title": "La Vocation à la Sainteté",
+        "subtitle": "L'appel universel à la perfection chrétienne",
+        "description": "Cette méditation explore l'appel universel à la sainteté, basée sur les enseignements de saint Alphonse Marie de Liguori."
+      },
+      "oracao": {
+        "title": "La Prière",
+        "subtitle": "Union avec Dieu",
+        "description": "Cette méditation explore la prière comme souffle de l'âme et lien le plus profond entre la créature et le Créateur."
+      }
+    },
+    "read_complete": "Lire la méditation complète"
   }
 }
