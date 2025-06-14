@@ -14,3 +14,11 @@ export const temperamentFormSchema = z.object({
 });
 
 export type TemperamentFormData = z.infer<typeof temperamentFormSchema>;
+
+export const simpleTemperamentFormSchema = z.object({
+  stressHandling: z.enum(['calm', 'anxious', 'aggressive']),
+  energyLevel: z.enum(['high', 'medium', 'low']),
+  socialPreference: z.enum(['extrovert', 'introvert', 'ambivert'])
+});
+
+export type SimpleTemperamentFormData = z.infer<typeof simpleTemperamentFormSchema>;
