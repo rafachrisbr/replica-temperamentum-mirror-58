@@ -1,6 +1,7 @@
 
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -11,6 +12,7 @@ import { ArrowLeft, RefreshCcw, Home, Share2, BookOpen } from 'lucide-react';
 
 const Results = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const { results, resetQuiz, isQuizComplete } = useQuiz();
   
   useEffect(() => {
@@ -55,7 +57,7 @@ const Results = () => {
           <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-4 md:p-6 rounded-lg shadow-lg border border-gray-800 animate-scale-in">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold uppercase tracking-wider mb-2">
               <span className="bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent">
-                seu temperamento predominante
+                {t('results.title')}
               </span>
             </h2>
             
@@ -84,7 +86,7 @@ const Results = () => {
               className="bg-[#2E7D32] text-white border border-[#388E3C] hover:bg-[#266c2a] transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
             >
               <RefreshCcw className="mr-2 h-4 w-4" />
-              refazer o teste
+              {t('results.buttons.retake')}
             </Button>
             
             <Button
@@ -93,7 +95,7 @@ const Results = () => {
               className="bg-transparent text-white border border-white/20 hover:bg-white/10 transition-all hover:scale-105 uppercase font-semibold tracking-wide rounded-md"
             >
               <Home className="mr-2 h-4 w-4" />
-              página inicial
+              {t('results.buttons.home')}
             </Button>
             
             <Button
@@ -102,18 +104,18 @@ const Results = () => {
               onClick={() => {
                 try {
                   navigator.share({
-                    title: 'Meu Resultado - Teste dos Temperamentos',
-                    text: `Meu temperamento predominante é ${dominantTemperament.name}!`,
+                    title: t('results.share.title'),
+                    text: t('results.share.text', { temperament: dominantTemperament.name }),
                     url: window.location.href,
                   });
                 } catch (error) {
                   console.error('Erro ao compartilhar:', error);
-                  alert('Seu navegador não suporta a função de compartilhamento.');
+                  alert(t('results.share_error'));
                 }
               }}
             >
               <Share2 className="mr-2 h-4 w-4" />
-              compartilhar
+              {t('results.buttons.share')}
             </Button>
             
             <Button
@@ -122,7 +124,7 @@ const Results = () => {
               onClick={() => navigate('/temperamentos')}
             >
               <BookOpen className="mr-2 h-4 w-4" />
-              saiba mais
+              {t('results.buttons.learn_more')}
             </Button>
           </div>
         </div>

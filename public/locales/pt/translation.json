@@ -1,3 +1,4 @@
+
 {
   "welcome": "Bem-vindo ao Temperamentum",
   "description": "Descubra seu temperamento e inteligências múltiplas",
@@ -38,34 +39,88 @@
   "temperaments": {
     "title": "Os Quatro Temperamentos",
     "description": "Compreenda as características fundamentais de cada temperamento e como elas influenciam comportamentos, decisões e relações interpessoais.",
-
     "sanguine": {
       "name": "Sanguíneo",
       "description": "Pessoas com temperamento sanguíneo são extrovertidas, entusiásticas e sociáveis. Buscam constantemente novas experiências e têm facilidade para se adaptar a mudanças.",
       "strengths": ["Comunicativo", "Otimista", "Criativo", "Energético"],
       "weaknesses": ["Impulsivo", "Distraído", "Superficial", "Inconstante"]
     },
-
     "choleric": {
       "name": "Colérico",
       "description": "Indivíduos coléricos são determinados, ambiciosos e líderes natos. Têm alta capacidade de tomada de decisão e foco em resultados.",
       "strengths": ["Liderança", "Determinação", "Eficiência", "Coragem"],
       "weaknesses": ["Autoritarismo", "Impaciência", "Intolerância", "Rigidez"]
     },
-
     "melancholic": {
       "name": "Melancólico",
       "description": "Pessoas melancólicas são analíticas, detalhistas e introspectivas. Valorizam profundidade emocional e buscam perfeição em suas ações.",
       "strengths": ["Organizado", "Leal", "Cuidadoso", "Reflexivo"],
       "weaknesses": ["Perfeccionismo", "Pessimismo", "Indecisão", "Isolamento"]
     },
-
     "phlegmatic": {
       "name": "Fleumático",
       "description": "Indivíduos fleumáticos são calmos, pacientes e equilibrados. Priorizam harmonia e evitam conflitos, agindo com diplomacia.",
       "strengths": ["Paciente", "Diplomata", "Confiável", "Estável"],
       "weaknesses": ["Passividade", "Indiferença", "Lentidão", "Complacência"]
     }
+  },
+  "tests": {
+    "title": "Descubra Quem Você É",
+    "subtitle": "Conheça suas características predominantes com nossos testes de autoconhecimento. Identifique seu temperamento e suas inteligências múltiplas para entender melhor suas forças e potencial.",
+    "quick_test": {
+      "title": "Teste Rápido",
+      "description": "Descubra seu temperamento predominante através de 13 questões. Teste rápido e prático, porém menos preciso que os testes completos.",
+      "button": "Teste Rápido"
+    },
+    "pe_hock_test": {
+      "title": "Teste Pe. Hock",
+      "description": "Descubra seu temperamento com o método do Pe. Hock. Este teste mais detalhado analisa suas tendências naturais com base em 50 questões elaboradas especificamente para identificar seu temperamento predominante.",
+      "button": "Teste Pe. Hock"
+    },
+    "multiple_intelligences": {
+      "title": "Inteligências Múltiplas",
+      "description": "Identifique suas inteligências predominantes dentre as 7 inteligências múltiplas de Howard Gardner. Descubra suas habilidades naturais em 10 etapas de avaliação.",
+      "button": "Teste de Inteligências"
+    },
+    "complete_test": {
+      "title": "Teste Completo",
+      "description": "Realize o teste completo que integra dois testes em sequência: Teste de Pe. Hock (50 questões) e Teste de Inteligências Múltiplas (10 etapas). Receba um relatório integrado mostrando como seus traços de personalidade e habilidades se complementam.",
+      "button": "Teste Completo"
+    },
+    "about": {
+      "title": "Sobre Nossos Testes",
+      "description": "Nossos testes são baseados em teorias consolidadas sobre temperamento e inteligências múltiplas. O teste rápido identifica a predominância de quatro tipos clássicos: Sanguíneo (extrovertido e sociável), Colérico (determinado e líder), Melancólico (analítico e perfeccionista) e Fleumático (calmo e equilibrado).",
+      "pe_hock_description": "O teste de Pe. Hock é uma análise mais detalhada dos temperamentos, baseada no Questionário dos Temperamentos do Pe. Hock (edição brasileira), que utiliza 50 perguntas para determinar com maior precisão seu perfil predominante.",
+      "intelligences_description": "O teste de inteligências múltiplas fundamenta-se na teoria do psicólogo Howard Gardner, que identificou sete tipos distintos de inteligência: Verbal-Linguística, Lógico-matemática, Espacial, Musical, Corporal-cinestésica, Interpessoal e Intrapessoal.",
+      "complete_description": "O teste completo combina o teste de Pe. Hock e o teste de inteligências múltiplas em sequência, fornecendo uma análise integrada de como seu temperamento e suas inteligências se complementam, oferecendo insights valiosos para seu autoconhecimento, vida pessoal e desenvolvimento profissional."
+    }
+  },
+  "quiz": {
+    "title": "Teste Rápido de Temperamento",
+    "description": "Este é um teste rápido, com apenas 13 perguntas. Ele é mais prático, porém menos preciso do que os testes completos.",
+    "instructions": {
+      "title": "Instruções",
+      "description": "Responda rapidamente às perguntas, escolhendo a alternativa que mais se aproxima do seu perfil. O teste é breve e serve para uma avaliação inicial do seu temperamento."
+    },
+    "progress": "pergunta {{current}} de {{total}}",
+    "navigation": {
+      "back": "voltar",
+      "restart": "refazer",
+      "tests": "testes"
+    }
+  },
+  "results": {
+    "title": "seu temperamento predominante",
+    "buttons": {
+      "retake": "refazer o teste",
+      "home": "página inicial",
+      "share": "compartilhar",
+      "learn_more": "saiba mais"
+    },
+    "share": {
+      "title": "Meu Resultado - Teste dos Temperamentos",
+      "text": "Meu temperamento predominante é {{temperament}}!"
+    },
+    "share_error": "Seu navegador não suporta a função de compartilhamento."
   }
 }
-

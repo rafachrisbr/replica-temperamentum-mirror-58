@@ -1,5 +1,7 @@
+
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ProgressBar from '@/components/ProgressBar';
@@ -11,6 +13,7 @@ import { ArrowLeft, RefreshCcw, Home } from 'lucide-react';
 
 const Quiz = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const { 
     currentQuestionIndex, 
     answers, 
@@ -70,18 +73,17 @@ const Quiz = () => {
         <div className="w-full max-w-4xl">
           <div className="bg-gradient-to-b from-[#121212] to-[#171717] p-4 rounded-lg shadow-lg border border-gray-800 mb-6 text-center">
             <h1 className="text-xl md:text-2xl font-serif uppercase tracking-wider mb-2 text-amber-400">
-              Teste Rápido de Temperamento
+              {t('quiz.title')}
             </h1>
             
             <p className="text-sm text-gray-400">
-              Este é um teste rápido, com apenas 13 perguntas. Ele é mais prático, porém menos preciso do que os testes completos.
+              {t('quiz.description')}
             </p>
 
             <div className="mt-4 p-4 bg-[#0a0a0a] rounded-lg">
-              <h2 className="text-lg font-medium text-amber-400 mb-2">Instruções</h2>
+              <h2 className="text-lg font-medium text-amber-400 mb-2">{t('quiz.instructions.title')}</h2>
               <p className="text-gray-300 text-sm">
-                Responda rapidamente às perguntas, escolhendo a alternativa que mais se aproxima do seu perfil. 
-                O teste é breve e serve para uma avaliação inicial do seu temperamento.
+                {t('quiz.instructions.description')}
               </p>
             </div>
           </div>
@@ -93,7 +95,9 @@ const Quiz = () => {
             />
             
             <div className="mt-2 flex justify-between text-sm text-gray-400">
-              <span className="first-letter:uppercase">pergunta {currentQuestionIndex + 1} de {questions.length}</span>
+              <span className="first-letter:uppercase">
+                {t('quiz.progress', { current: currentQuestionIndex + 1, total: questions.length })}
+              </span>
             </div>
           </div>
           
@@ -107,7 +111,7 @@ const Quiz = () => {
               size="sm"
             >
               <ArrowLeft className="mr-1 h-3 w-3" />
-              voltar
+              {t('quiz.navigation.back')}
             </Button>
             
             <Button 
@@ -117,7 +121,7 @@ const Quiz = () => {
               size="sm"
             >
               <RefreshCcw className="mr-1 h-3 w-3" />
-              refazer
+              {t('quiz.navigation.restart')}
             </Button>
             
             <Button
@@ -127,7 +131,7 @@ const Quiz = () => {
               size="sm"
             >
               <Home className="mr-1 h-3 w-3" />
-              testes
+              {t('quiz.navigation.tests')}
             </Button>
           </div>
           
