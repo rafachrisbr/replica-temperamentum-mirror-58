@@ -36,6 +36,37 @@
   "index_app_description": "Bem-vindo ao aplicativo para descobrir seu temperamento e suas inteligências múltiplas. Nossos testes são baseados nos ensinamentos sobre os quatro temperamentos e na teoria das inteligências múltiplas de Howard Gardner. Responda às perguntas com sinceridade para uma análise mais precisa.",
   "index_start_test_button": "Iniciar Teste",
   "index_learn_temperaments_button": "Conhecer os quatro temperamentos",
+  "tests": {
+    "title": "Escolha seu Teste",
+    "subtitle": "Descubra aspectos únicos da sua personalidade através de diferentes abordagens",
+    "quick_test": {
+      "title": "Teste Rápido de Temperamento",
+      "description": "Uma avaliação rápida e prática para identificar seu temperamento predominante. Ideal para quem quer uma primeira impressão sobre suas características naturais.",
+      "button": "Iniciar Teste Rápido"
+    },
+    "pe_hock_test": {
+      "title": "Teste de Pe. Hock",
+      "description": "Baseado nos estudos do Padre Rudolf Hock, este teste oferece uma análise aprofundada dos temperamentos com foco na formação cristã e no desenvolvimento espiritual.",
+      "button": "Iniciar Teste Pe. Hock"
+    },
+    "multiple_intelligences": {
+      "title": "Teste de Inteligências Múltiplas",
+      "description": "Descubra seus talentos únicos através da teoria das inteligências múltiplas de Howard Gardner. Identifique suas principais habilidades e potenciais.",
+      "button": "Iniciar Teste de Inteligências"
+    },
+    "complete_test": {
+      "title": "Teste Completo",
+      "description": "Uma experiência integral que combina todos os testes anteriores para oferecer uma visão completa e detalhada da sua personalidade, temperamento e inteligências.",
+      "button": "Iniciar Teste Completo"
+    },
+    "about": {
+      "title": "Sobre os Testes",
+      "description": "Nossos testes são baseados em fundamentos científicos e espirituais sólidos, oferecendo insights valiosos para o autoconhecimento e crescimento pessoal.",
+      "pe_hock_description": "O teste de Pe. Hock utiliza uma abordagem cristã para compreender os temperamentos, ajudando na formação espiritual e no discernimento vocacional.",
+      "intelligences_description": "O teste de inteligências múltiplas revela seus talentos naturais, orientando escolhas educacionais e profissionais de acordo com suas aptidões.",
+      "complete_description": "O teste completo integra todas as dimensões - temperamento, espiritualidade e inteligências - para uma compreensão holística de quem você é."
+    }
+  },
   "temperaments": {
     "title": "Os Quatro Temperamentos",
     "description": "Compreenda as características fundamentais de cada temperamento e como elas influenciam comportamentos, decisões e relacionamentos interpessoais.",
