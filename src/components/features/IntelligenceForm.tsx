@@ -21,9 +21,32 @@ export function IntelligenceForm() {
   });
 
   const onSubmit = (data: IntelligenceFormData) => {
-    const results = calculateIntelligenceResults(data.answers);
+    const rawResults = calculateIntelligenceResults(data.answers);
+    // Map results to match the store's expected format
+    const results = rawResults.map(result => ({
+      type: result.type,
+      name: result.name,
+      score: result.percentage, // Use percentage as score
+      description: result.description,
+      color: getColorForIntelligence(result.type) // Assign colors
+    }));
     setIntelligenceResults(results);
     navigate('/intelligence-results');
+  };
+
+  // Helper function to assign colors
+  const getColorForIntelligence = (type: string): string => {
+    const colors: Record<string, string> = {
+      linguistic: '#E91E63',
+      logical: '#3F51B5',
+      spatial: '#FF9800',
+      musical: '#FFC107',
+      bodily: '#4CAF50',
+      interpersonal: '#2196F3',
+      intrapersonal: '#673AB7',
+      naturalist: '#8BC34A'
+    };
+    return colors[type] || '#9E9E9E';
   };
 
   return (
