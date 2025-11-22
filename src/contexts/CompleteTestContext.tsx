@@ -3,14 +3,17 @@ import React, { createContext, useContext, useState } from 'react';
 import { TemperamentResult } from '@/utils/quiz';
 import { IntelligenceResult } from '@/utils/multipleIntelligencesQuiz';
 
+// Type for Pe. Hock temperament results
+export type PeHockResults = Record<string, number>;
+
 interface CompleteTestContextType {
   // Quick Temperament Test
   quickTemperamentResults: TemperamentResult[] | null;
   setQuickTemperamentResults: (results: TemperamentResult[]) => void;
   
   // Pe. Hock Test
-  peHockResults: any | null;
-  setPeHockResults: (results: any) => void;
+  peHockResults: PeHockResults | null;
+  setPeHockResults: (results: PeHockResults) => void;
   
   // Multiple Intelligences Test
   multipleIntelligencesResults: IntelligenceResult[] | null;
@@ -35,7 +38,7 @@ export const CompleteTestProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const [quickTemperamentResults, setQuickTemperamentResults] = useState<TemperamentResult[] | null>(null);
   
   // Pe. Hock Test
-  const [peHockResults, setPeHockResults] = useState<any | null>(null);
+  const [peHockResults, setPeHockResults] = useState<PeHockResults | null>(null);
   
   // Multiple Intelligences Test
   const [multipleIntelligencesResults, setMultipleIntelligencesResults] = useState<IntelligenceResult[] | null>(null);

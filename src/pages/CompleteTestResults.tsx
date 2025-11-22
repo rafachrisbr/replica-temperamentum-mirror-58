@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
-import { useCompleteTest } from '@/contexts/CompleteTestContext';
+import { useCompleteTest, PeHockResults } from '@/contexts/CompleteTestContext';
 import { RefreshCcw, Home, Share2 } from 'lucide-react';
 import TemperamentIntelligenceRelation from '@/components/TemperamentIntelligenceRelation';
 import { IntelligenceResult } from '@/utils/multipleIntelligencesQuiz';
@@ -65,16 +65,18 @@ const CompleteTestResults = () => {
   };
 
   // Fix: Ensure all values in temperamentTotalPoints are numbers
-  const temperamentTotalPoints = Object.values(peHockResults).reduce(
-    (sum, score) => sum + Number(score), 0
+  const temperamentTotalPoints: number = Object.values(peHockResults as PeHockResults).reduce(
+    (sum: number, score: number) => sum + score, 0
   );
 
   // Fix: Convert all values to numbers in the map function
-  const temperamentChartData = Object.entries(peHockResults).map(([key, value]) => ({
-    name: getTemperamentName(key),
-    value: Number(value),
-    percentage: Math.round((Number(value) / temperamentTotalPoints) * 100)
-  })).sort((a, b) => b.value - a.value);
+  const temperamentChartData = Object.entries(peHockResults as PeHockResults).map(([key, value]: [string, number]) => {
+    return {
+      name: getTemperamentName(key),
+      value: value,
+      percentage: temperamentTotalPoints > 0 ? Math.round((value / temperamentTotalPoints) * 100) : 0
+    };
+  }).sort((a, b) => b.value - a.value);
 
   // Top two intelligences
   const topIntelligences = multipleIntelligencesResults.slice(0, 2);
